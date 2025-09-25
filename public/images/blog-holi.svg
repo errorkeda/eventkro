@@ -1,0 +1,22 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f8f8ff"/>
+  
+  <!-- Colorful Holi powder splashes -->
+  <circle cx="200" cy="150" r="100" fill="#ff5252" opacity="0.7"/>
+  <circle cx="300" cy="200" r="120" fill="#536dfe" opacity="0.7"/>
+  <circle cx="150" cy="250" r="80" fill="#ffeb3b" opacity="0.7"/>
+  <circle cx="400" cy="150" r="90" fill="#4caf50" opacity="0.7"/>
+  <circle cx="500" cy="250" r="110" fill="#ab47bc" opacity="0.7"/>
+  <circle cx="600" cy="180" r="100" fill="#ff9800" opacity="0.7"/>
+  
+  <!-- Silhouettes of people celebrating -->
+  <path d="M300,350 L320,300 L340,350 L360,320 L380,350 L400,310 L420,350 L440,330 L460,350 L480,300 L500,350" fill="#000" opacity="0.8"/>
+  
+  <!-- Text -->
+  <text x="400" y="400" font-family="Arial" font-size="24" text-anchor="middle" fill="#333">Lathmar Holi in Mathura</text>
+  <text x="400" y="430" font-family="Arial" font-size="16" text-anchor="middle" fill="#666">A vibrant cultural celebration</text>
+  
+  <!-- Temple silhouette -->
+  <path d="M250,250 L250,150 L270,130 L290,150 L310,130 L330,150 L350,130 L370,150 L390,130 L410,150 L430,130 L450,150 L470,130 L490,150 L510,130 L530,150 L550,250 Z" fill="#333" opacity="0.2"/>
+</svg>

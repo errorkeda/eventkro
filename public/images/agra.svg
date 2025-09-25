@@ -1,0 +1,8 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#f5f5f5"/>
+  <path d="M400 100 L500 300 L300 300 Z" fill="#ff5722"/>
+  <path d="M450 150 L500 250 L400 250 Z" fill="#ffffff"/>
+  <circle cx="400" cy="200" r="50" fill="#ffc107"/>
+  <text x="400" y="350" font-family="Arial" font-size="24" text-anchor="middle" fill="#333333">Agra</text>
+  <text x="400" y="50" font-family="Arial" font-size="24" text-anchor="middle" fill="#333333">City of Taj Mahal</text>
+</svg>

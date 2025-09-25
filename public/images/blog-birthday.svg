@@ -1,0 +1,10 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#f3e5f5"/>
+  <circle cx="400" cy="200" r="120" fill="#ce93d8" opacity="0.7"/>
+  <path d="M350,150 L450,150 L400,80 Z" fill="#9c27b0"/>
+  <path d="M350,250 L450,250 L400,320 Z" fill="#9c27b0"/>
+  <path d="M350,150 L350,250 L280,200 Z" fill="#9c27b0"/>
+  <path d="M450,150 L450,250 L520,200 Z" fill="#9c27b0"/>
+  <text x="400" y="350" font-family="Arial" font-size="24" text-anchor="middle" fill="#4a148c">Birthday Celebrations</text>
+  <text x="400" y="50" font-family="Arial" font-size="24" text-anchor="middle" fill="#4a148c">Make Your Day Special</text>
+</svg>

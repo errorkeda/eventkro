@@ -1,0 +1,8 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#fff3e0"/>
+  <rect x="300" y="100" width="200" height="200" fill="#ff9800" rx="20" ry="20"/>
+  <circle cx="400" cy="200" r="70" fill="#ffcc80"/>
+  <path d="M350 150 L450 150 L400 250 Z" fill="#e65100"/>
+  <text x="400" y="350" font-family="Arial" font-size="24" text-anchor="middle" fill="#333333">Mainpuri</text>
+  <text x="400" y="50" font-family="Arial" font-size="24" text-anchor="middle" fill="#333333">Cultural Heritage</text>
+</svg>

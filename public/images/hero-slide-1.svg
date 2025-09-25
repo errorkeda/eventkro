@@ -1,0 +1,28 @@
+<svg width="1920" height="800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="weddingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#4ecdc4;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="800" fill="url(#weddingGrad)"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="300" cy="200" r="150" fill="#fff" opacity="0.1"/>
+  <circle cx="1600" cy="600" r="200" fill="#fff" opacity="0.1"/>
+  <circle cx="1500" cy="150" r="100" fill="#fff" opacity="0.15"/>
+  
+  <!-- Wedding rings -->
+  <circle cx="960" cy="300" r="80" fill="none" stroke="#fff" stroke-width="8" opacity="0.3"/>
+  <circle cx="1040" cy="300" r="80" fill="none" stroke="#fff" stroke-width="8" opacity="0.3"/>
+  
+  <!-- Hearts -->
+  <path d="M800,250 C800,230 820,210 840,210 C860,210 880,230 880,250 C880,270 840,310 840,310 C840,310 800,270 800,250 Z" fill="#fff" opacity="0.2"/>
+  <path d="M1100,450 C1100,430 1120,410 1140,410 C1160,410 1180,430 1180,450 C1180,470 1140,510 1140,510 C1140,510 1100,470 1100,450 Z" fill="#fff" opacity="0.2"/>
+  
+  <!-- Text overlay area -->
+  <rect x="0" y="0" width="1920" height="800" fill="rgba(0,0,0,0.3)"/>
+</svg>

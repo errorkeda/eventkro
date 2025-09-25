@@ -1,0 +1,35 @@
+<svg width="1920" height="800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="culturalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="800" fill="url(#culturalGrad)"/>
+  
+  <!-- Cultural elements -->
+  <circle cx="400" cy="300" r="100" fill="#fff" opacity="0.1"/>
+  <circle cx="1500" cy="500" r="150" fill="#fff" opacity="0.1"/>
+  
+  <!-- Temple/cultural architecture -->
+  <path d="M800,200 L900,150 L1000,200 L1000,500 L800,500 Z" fill="#fff" opacity="0.15"/>
+  <path d="M850,150 L900,100 L950,150" fill="#fff" opacity="0.15"/>
+  
+  <!-- Decorative patterns -->
+  <circle cx="600" cy="400" r="5" fill="#fff" opacity="0.3"/>
+  <circle cx="620" cy="420" r="5" fill="#fff" opacity="0.3"/>
+  <circle cx="640" cy="400" r="5" fill="#fff" opacity="0.3"/>
+  <circle cx="1300" cy="300" r="5" fill="#fff" opacity="0.3"/>
+  <circle cx="1320" cy="320" r="5" fill="#fff" opacity="0.3"/>
+  <circle cx="1340" cy="300" r="5" fill="#fff" opacity="0.3"/>
+  
+  <!-- Festival elements -->
+  <path d="M200,600 Q250,550 300,600 Q350,650 400,600" stroke="#fff" stroke-width="3" fill="none" opacity="0.2"/>
+  <path d="M1200,200 Q1250,150 1300,200 Q1350,250 1400,200" stroke="#fff" stroke-width="3" fill="none" opacity="0.2"/>
+  
+  <!-- Text overlay area -->
+  <rect x="0" y="0" width="1920" height="800" fill="rgba(0,0,0,0.3)"/>
+</svg>
