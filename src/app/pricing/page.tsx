@@ -1,5 +1,6 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import Link from 'next/link';
 
 export default function PricingPage() {
   return (
@@ -16,146 +17,65 @@ export default function PricingPage() {
         </div>
       </section>
       
-      {/* Pricing Cards */}
-      <section className="py-16">
+      {/* Pricing Packages Section */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
+          <h2 className="section-title text-3xl font-bold text-center mb-2">Our Most Popular Party Packages</h2>
+          <p className="section-subtitle text-center text-gray-600 mb-12">
+            You can customize everything to suit your needs. This package is just an overview
+            of the services we offer to our customers and serves as a demo.
+          </p>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Basic Package */}
-            <div className="card border border-gray-200 hover:shadow-lg transition-shadow">
-              <div className="p-6 text-center border-b">
-                <h3 className="text-2xl font-bold mb-2">Basic Package</h3>
-                <p className="text-gray-600 mb-4">Perfect for small gatherings</p>
-                <div className="text-4xl font-bold text-[#ff5722]">₹15,000</div>
-                <p className="text-sm text-gray-500">Starting price</p>
-              </div>
-              <div className="p-6">
-                <ul className="space-y-3">
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Venue selection assistance
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Basic decoration
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Catering coordination
-                  </li>
-                  <li className="flex items-center text-gray-400">
-                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
-                    </svg>
-                    Photography services
-                  </li>
-                  <li className="flex items-center text-gray-400">
-                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
-                    </svg>
-                    Entertainment planning
-                  </li>
-                </ul>
-                <button className="btn-secondary w-full mt-6">Get Started</button>
-              </div>
+            <div className="border rounded-xl shadow-sm p-8 text-center hover:shadow-lg transition">
+              <h3 className="text-2xl font-bold text-blue-600">Basic</h3>
+              <p className="text-gray-600 mb-4">Perfect for intimate gatherings</p>
+              <p className="text-3xl font-bold mb-2">₹699 <span className="text-lg font-normal">/ person</span></p>
+              <p className="text-yellow-500 mb-4">★★★★☆ 4.0/5.0</p>
+              <ul className="text-left text-gray-600 mb-6 space-y-2">
+                <li>✔ Basic decoration with any two colors balloons only</li>
+                <li>✔ Basic Food (including starter, food, beverages)</li>
+                <li>✔ Cake (1kg), popper, Knife, candle</li>
+                <li>✔ Essential party supplies included</li>
+              </ul>
+              <Link href="/contact" className="btn-primary block">Get Quote</Link>
+              <p className="text-sm text-gray-500 mt-2">Minimum 10 guests</p>
             </div>
-            
-            {/* Standard Package */}
-            <div className="card border border-[#ff5722] shadow-lg relative">
-              <div className="absolute top-0 right-0 bg-[#ff5722] text-white px-4 py-1 text-sm font-bold">
-                POPULAR
-              </div>
-              <div className="p-6 text-center border-b">
-                <h3 className="text-2xl font-bold mb-2">Standard Package</h3>
-                <p className="text-gray-600 mb-4">Ideal for medium-sized events</p>
-                <div className="text-4xl font-bold text-[#ff5722]">₹35,000</div>
-                <p className="text-sm text-gray-500">Starting price</p>
-              </div>
-              <div className="p-6">
-                <ul className="space-y-3">
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Premium venue selection
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Enhanced decoration
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Premium catering options
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Photography services
-                  </li>
-                  <li className="flex items-center text-gray-400">
-                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
-                    </svg>
-                    VIP guest management
-                  </li>
-                </ul>
-                <button className="btn-primary w-full mt-6">Get Started</button>
-              </div>
-            </div>
-            
+
             {/* Premium Package */}
-            <div className="card border border-gray-200 hover:shadow-lg transition-shadow">
-              <div className="p-6 text-center border-b">
-                <h3 className="text-2xl font-bold mb-2">Premium Package</h3>
-                <p className="text-gray-600 mb-4">For large-scale luxury events</p>
-                <div className="text-4xl font-bold text-[#ff5722]">₹75,000</div>
-                <p className="text-sm text-gray-500">Starting price</p>
-              </div>
-              <div className="p-6">
-                <ul className="space-y-3">
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Exclusive venue access
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Luxury decoration package
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Gourmet catering
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Professional photography & videography
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    VIP guest management
-                  </li>
-                </ul>
-                <button className="btn-secondary w-full mt-6">Get Started</button>
-              </div>
+            <div className="border-2 border-purple-500 rounded-xl shadow-lg p-8 text-center relative hover:shadow-xl transition">
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-500 text-white text-sm px-3 py-1 rounded-full">Most Popular</span>
+              <h3 className="text-2xl font-bold text-purple-600">Premium</h3>
+              <p className="text-gray-600 mb-4">Most popular choice for celebrations</p>
+              <p className="text-3xl font-bold mb-2">₹999 <span className="text-lg font-normal">/ person</span></p>
+              <p className="text-yellow-500 mb-4">★★★★★ 5.0/5.0</p>
+              <ul className="text-left text-gray-600 mb-6 space-y-2">
+                <li>✔ Premium Decoration with balloons, banners, LED etc</li>
+                <li>✔ Premium Food (including Starter, Food, beverages, desserts)</li>
+                <li>✔ Cake (2 floor), popper, cap, knife, ribbon etc</li>
+                <li>✔ Cleaning your party area after party</li>
+                <li>✔ DSLR camera only</li>
+              </ul>
+              <Link href="/contact" className="btn-primary block bg-purple-600 hover:bg-purple-700">Get Quote</Link>
+              <p className="text-sm text-gray-500 mt-2">Minimum 20 guests</p>
+            </div>
+
+            {/* Elite Package */}
+            <div className="border rounded-xl shadow-sm p-8 text-center hover:shadow-lg transition">
+              <h3 className="text-2xl font-bold text-pink-600">Elite</h3>
+              <p className="text-gray-600 mb-4">Ultimate luxury experience</p>
+              <p className="text-3xl font-bold mb-2">₹1499 <span className="text-lg font-normal">/ person</span></p>
+              <p className="text-yellow-500 mb-4">★★★★★ 5.0/5.0</p>
+              <ul className="text-left text-gray-600 mb-6 space-y-2">
+                <li>✔ Elite theme based decoration (customizable also)</li>
+                <li>✔ Elite catering services (including starter, food, beverages, desserts)</li>
+                <li>✔ Cleaning your party area after party</li>
+                <li>✔ Cake (customizable), popper, cap, knife, ribbon etc</li>
+                <li>✔ DSLR camera with specialist photographers</li>
+              </ul>
+              <Link href="/contact" className="btn-primary block bg-pink-600 hover:bg-pink-700">Get Quote</Link>
+              <p className="text-sm text-gray-500 mt-2">Minimum 30 guests</p>
             </div>
           </div>
         </div>

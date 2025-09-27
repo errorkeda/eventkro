@@ -10,21 +10,21 @@ import Footer from '../components/Footer';
 const heroSlides = [
   {
     id: 1,
-    image: '/images/hero-slide-1.svg',
-    title: 'Perfect Wedding Planning',
-    subtitle: 'Create your dream wedding with our expert planning services',
+    image: '/images/hero-1.jpeg',
+    // title: 'Perfect Wedding Planning',
+    // subtitle: 'Create your dream wedding with our expert planning services',
     cta: 'Plan Your Wedding'
   },
   {
     id: 2,
-    image: '/images/hero-slide-2.svg',
-    title: 'Corporate Events Excellence',
-    subtitle: 'Professional planning for conferences and corporate celebrations',
+    image: '/images/hero-slide-3.jpg',
+    // title: 'Corporate Events Excellence',
+    // subtitle: 'Professional planning for conferences and corporate celebrations',
     cta: 'Book Corporate Event'
   },
   {
     id: 3,
-    image: '/images/hero-slide-3.svg',
+    image: '/images/hero-slide-3.jpeg',
     title: 'Cultural Celebrations',
     subtitle: 'Thoughtfully planned cultural and religious ceremonies',
     cta: 'Explore Cultural Events'
@@ -61,7 +61,7 @@ export default function Home() {
           <div
             key={slide.id}
             className={`absolute inset-0 transition-transform duration-1000 ease-in-out ${index === currentSlide ? 'translate-x-0' :
-                index < currentSlide ? '-translate-x-full' : 'translate-x-full'
+              index < currentSlide ? '-translate-x-full' : 'translate-x-full'
               }`}
           >
             <div className="absolute inset-0 bg-black/50 z-10"></div>
@@ -113,56 +113,184 @@ export default function Home() {
       </section>
 
       {/* Event Cards (updated) */}
+
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="section-title">Our Services</h2>
-          <p className="section-subtitle">We offer comprehensive event planning services tailored to your needs</p>
+          <h2 className="section-title">Our Event Planning Services in Agra</h2>
+          <p className="section-subtitle">
+            Our experienced team in Agra handles everything from decoration, catering,
+            and photography to managing the entire event, ensuring it’s stress-free
+            and magical.
+          </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mt-12">
-            {/* Roka / Engagement Ceremony */}
-            <Link href="/contact" className="card text-center hover:-translate-y-2 block cursor-pointer p-6 bg-white rounded-lg shadow-sm">
-              <div className="bg-[#ff5722]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaCalendarCheck className="text-[#ff5722] text-3xl" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+            {/* Wedding Events */}
+            <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+              <img
+                src="/images/haldi.jpg"
+                alt="Best Wedding Event Planners in Agra"
+                className="w-full h-40 object-cover"
+              />  
+              <div className="p-4 text-center">
+                <h3 className="text-lg font-bold">Wedding Events</h3>
+                <p className="text-gray-600 text-sm">
+                  Best Wedding Event Planners in Agra for unforgettable celebrations.
+                </p>
+                <Link
+                  href="/contact"
+                  className="mt-4 inline-block bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700"
+                >
+                  View details
+                </Link>
               </div>
-              <h3 className="text-xl font-bold mb-2">Roka / Engagement Ceremony</h3>
-              <p className="text-gray-600">Plan a beautiful and memorable start to your wedding journey.</p>
-            </Link>
+            </div>
 
-            {/* Tilak / Sagai */}
-            <Link href="/contact" className="card text-center hover:-translate-y-2 block cursor-pointer p-6 bg-white rounded-lg shadow-sm">
-              <div className="bg-[#ffc107]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaGift className="text-[#ffc107] text-3xl" />
+            {/* Engagement Events */}
+            <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+              <img
+                src="/images/engegment.jpg" 
+                alt="Top Engagement Ceremony Planners in Agra"
+                className="w-full h-40 object-cover"
+              />
+              <div className="p-4 text-center">
+                <h3 className="text-lg font-bold">Engagement</h3>
+                <p className="text-gray-600 text-sm">
+                  Professional Engagement Ceremony Planners in Agra.
+                </p>
+                <Link
+                  href="/contact"
+                  className="mt-4 inline-block bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700"
+                >
+                  View details
+                </Link>
               </div>
-              <h3 className="text-xl font-bold mb-2">Tilak / Sagai</h3>
-              <p className="text-gray-600">Celebrate this auspicious pre-wedding ritual with perfect arrangements.</p>
-            </Link>
+            </div>
 
-            {/* Haldi Ceremony */}
-            <Link href="/contact" className="card text-center hover:-translate-y-2 block cursor-pointer p-6 bg-white rounded-lg shadow-sm">
-              <div className="bg-[#e91e63]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaSun className="text-[#e91e63] text-3xl" />
+            {/* Birthday Events */}
+            <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+              <img
+                src="/images/birthday.jpg"
+                alt="Best Birthday Party Planners in Agra"
+                className="w-full h-40 object-cover"
+              />
+              <div className="p-4 text-center">
+                <h3 className="text-lg font-bold">Birthday</h3>
+                <p className="text-gray-600 text-sm">
+                  Creative Birthday Party Planners in Agra for memorable events.
+                </p>
+                <Link
+                  href="/contact" 
+                  className="mt-4 inline-block bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700"
+                >
+                  View details
+                </Link>
               </div>
-              <h3 className="text-xl font-bold mb-2">Haldi Ceremony</h3>
-              <p className="text-gray-600">Bright and colorful Haldi ceremony setup with traditional vibes.</p>
-            </Link>
+            </div>
 
-            {/* Mehendi Ceremony */}
-            <Link href="/contact" className="card text-center hover:-translate-y-2 block cursor-pointer p-6 bg-white rounded-lg shadow-sm">
-              <div className="bg-[#4caf50]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaLeaf className="text-[#4caf50] text-3xl" />
+            {/* Anniversary Events */}
+            <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+              <img
+                src="/images/anniversary.jpg"
+                alt="Best Anniversary Event Planners in Agra"
+                className="w-full h-40 object-cover"
+              />
+              <div className="p-4 text-center">
+                <h3 className="text-lg font-bold">Anniversary</h3>
+                <p className="text-gray-600 text-sm">
+                  Celebrate love with our Anniversary Event Planners in Agra.
+                </p>
+                <Link
+                  href="/contact"
+                  className="mt-4 inline-block bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700"
+                >
+                  View details
+                </Link>
               </div>
-              <h3 className="text-xl font-bold mb-2">Mehendi Ceremony</h3>
-              <p className="text-gray-600">Traditional Mehendi event with music, décor, and celebrations.</p>
-            </Link>
+            </div>
 
-            {/* Pre-Wedding Photoshoot */}
-            <Link href="/contact" className="card text-center hover:-translate-y-2 block cursor-pointer p-6 bg-white rounded-lg shadow-sm">
-              <div className="bg-[#3f51b5]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaCamera className="text-[#3f51b5] text-3xl" />
+            {/* Corporate Events */}
+            <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+              <img
+                src="/images/corporate.jpg"
+                alt="Corporate Event Planners in Agra"
+                className="w-full h-40 object-cover"
+              />
+              <div className="p-4 text-center">
+                <h3 className="text-lg font-bold">Corporate Events</h3>
+                <p className="text-gray-600 text-sm">
+                  Best Corporate Event Planners in Agra for meetings & conferences.
+                </p>
+                <Link 
+                  href="/contact"
+                  className="mt-4 inline-block bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700"
+                >
+                  View details
+                </Link>
               </div>
-              <h3 className="text-xl font-bold mb-2">Pre-Wedding Photoshoot</h3>
-              <p className="text-gray-600">Capture everlasting memories with our professional photoshoot services.</p>
-            </Link>
+            </div>
+
+            {/* House Warming Ceremony */}
+            <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+              <img
+                src="/images/housewarming.jpeg"
+                alt="Housewarming Ceremony Planners in Agra"
+                className="w-full h-40 object-cover"
+              />
+              <div className="p-4 text-center">
+                <h3 className="text-lg font-bold">House Warming Ceremony</h3>
+                <p className="text-gray-600 text-sm">
+                  Best Housewarming Event Planners in Agra.
+                </p>
+                <Link
+                  href="/contact"
+                  className="mt-4 inline-block bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700"
+                >
+                  View details
+                </Link>
+              </div>
+            </div>
+
+            {/* Baby Shower */}
+            <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+              <img
+                src="/images/babyshower.jpeg"
+                alt="Baby Shower Planners in Agra"
+                className="w-full h-40 object-cover"
+              />
+              <div className="p-4 text-center">
+                <h3 className="text-lg font-bold">Baby Shower</h3>
+                <p className="text-gray-600 text-sm">
+                  Creative Baby Shower Event Planners in Agra.
+                </p>
+                <Link
+                  href="/contact"
+                  className="mt-4 inline-block bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700"
+                >
+                  View details
+                </Link>
+              </div>
+            </div>
+
+            {/* Rituals Events */}
+            <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+              <img
+                src="/images/rituals.jpeg"
+                alt="Ritual Ceremony Event Planners in Agra"
+                className="w-full h-40 object-cover"
+              />
+              <div className="p-4 text-center">
+                <h3 className="text-lg font-bold">Rituals Events</h3>
+                <p className="text-gray-600 text-sm">
+                  Best Ritual Event Planners in Agra for traditional functions.
+                </p>
+                <Link
+                  href="/contact"
+                  className="mt-4 inline-block bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700"
+                >
+                  View details
+                </Link>
+              </div>
+            </div>
           </div>
 
           <div className="text-center mt-12">
@@ -172,6 +300,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
 
       {/* Pricing Packages Section */}
       <section className="py-16 bg-white">
@@ -312,9 +442,9 @@ export default function Home() {
                 <span className="text-sm text-[#ff5722] font-medium">Agra</span>
                 <h3 className="text-xl font-bold mb-2">Top 5 Wedding Venues in Agra</h3>
                 <p className="text-gray-600 mb-4">Discover the most romantic and elegant wedding venues with Taj Mahal views...</p>
-                <Link href="/blog/top-wedding-venues-agra" className="text-[#ff5722] font-medium">
+                {/* <Link href="/blog/top-wedding-venues-agra" className="text-[#ff5722] font-medium">
                   Read More →
-                </Link>
+                </Link> */}
               </div>
             </div>
 
@@ -330,9 +460,9 @@ export default function Home() {
                 <span className="text-sm text-[#ff5722] font-medium">Mathura</span>
                 <h3 className="text-xl font-bold mb-2">How to Plan Lathmar Holi in Mathura</h3>
                 <p className="text-gray-600 mb-4">A complete guide to experiencing the authentic Lathmar Holi celebration...</p>
-                <Link href="/blog/lathmar-holi-mathura" className="text-[#ff5722] font-medium">
+                {/* <Link href="/blog/lathmar-holi-mathura" className="text-[#ff5722] font-medium">
                   Read More →
-                </Link>
+                </Link> */}
               </div>
             </div>
 
@@ -348,9 +478,9 @@ export default function Home() {
                 <span className="text-sm text-[#ff5722] font-medium">Firozabad</span>
                 <h3 className="text-xl font-bold mb-2">Best Caterers in Firozabad</h3>
                 <p className="text-gray-600 mb-4">Find the top catering services for your next event in Firozabad...</p>
-                <Link href="/blog/best-caterers-firozabad" className="text-[#ff5722] font-medium">
+                {/* <Link href="/blog/best-caterers-firozabad" className="text-[#ff5722] font-medium">
                   Read More →
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
