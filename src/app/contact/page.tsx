@@ -7,9 +7,9 @@ import Footer from '../../components/Footer';
 import emailjs from 'emailjs-com';
 
 // EmailJS configuration
-const EMAILJS_SERVICE_ID = 'service_p6p4e5o'; // Replace with your EmailJS service ID
-const EMAILJS_TEMPLATE_ID = 'template_4bvfa94'; // Replace with your EmailJS template ID
-const EMAILJS_USER_ID = 'W2EbmhEd8-oEx3vNW'; // Replace with your EmailJS user ID
+const EMAILJS_SERVICE_ID = 'service_p6p4e5o';
+const EMAILJS_TEMPLATE_ID = 'template_4bvfa94';
+const EMAILJS_USER_ID = 'W2EbmhEd8-oEx3vNW';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -28,7 +28,9 @@ export default function Contact() {
     message: string;
   } | null>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -42,7 +44,6 @@ export default function Contact() {
     setSubmitStatus(null);
 
     try {
-      // Send email using EmailJS
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
@@ -63,10 +64,10 @@ export default function Contact() {
 
       setSubmitStatus({
         success: true,
-        message: 'Thank you! Your booking request has been sent successfully. We will contact you shortly.',
+        message:
+          'Thank you! Your booking request has been sent successfully. We will contact you shortly.',
       });
 
-      // Reset form
       setFormData({
         name: '',
         email: '',
@@ -80,7 +81,8 @@ export default function Contact() {
       console.error('Error sending email:', error);
       setSubmitStatus({
         success: false,
-        message: 'There was an error sending your request. Please try again or contact us directly.',
+        message:
+          'There was an error sending your request. Please try again or contact us directly.',
       });
     } finally {
       setIsSubmitting(false);
@@ -101,6 +103,77 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* ✅ Step By Step Process Section */}
+      <section className="bg-gradient-to-r from-[#ff7043] to-[#ff5722] py-16 text-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Step By Step Process
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="space-y-10">
+              <div className="flex items-start">
+                <div className="bg-white text-[#ff5722] font-bold rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                  1
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold">Fill Out The Form</h3>
+                  <p className="text-white/90">
+                    Customers select their desired decoration type and provide event details through an online form.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start">
+                <div className="bg-white text-[#ff5722] font-bold rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                  2
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold">Executive Call</h3>
+                  <p className="text-white/90">
+                    Our team contacts customers to gather more information, offer recommendations, and address any queries or concerns.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start">
+                <div className="bg-white text-[#ff5722] font-bold rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                  3
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold">Decoration</h3>
+                  <p className="text-white/90">
+                    Our dedicated team creates and sets up the decorations according to the customer's chosen style and preferences.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start">
+                <div className="bg-white text-[#ff5722] font-bold rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                  4
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold">Customer Satisfaction</h3>
+                  <p className="text-white/90">
+                    We ensure the customer's approval and happiness by providing a visually appealing and personalized decoration experience.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Image */}
+            <div className="flex justify-center items-center">
+              <img
+                src="/images/Event-Decoration-Process-Infographic.png"
+                alt="Process Illustration"
+                className="max-w-md w-full h-auto rounded-lg shadow-xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Form & Info */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -111,8 +184,11 @@ export default function Contact() {
 
               {submitStatus && (
                 <div
-                  className={`p-4 mb-6 rounded-lg ${submitStatus.success ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
-                    }`}
+                  className={`p-4 mb-6 rounded-lg ${
+                    submitStatus.success
+                      ? 'bg-green-100 text-green-700'
+                      : 'bg-red-100 text-red-700'
+                  }`}
                 >
                   {submitStatus.message}
                 </div>
@@ -171,7 +247,7 @@ export default function Contact() {
                   {/* City */}
                   <div>
                     <label htmlFor="city" className="block text-gray-700 font-medium mb-2">
-                    City / Villages *
+                      City / Villages *
                     </label>
                     <input
                       type="text"
@@ -201,7 +277,6 @@ export default function Contact() {
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff5722] focus:border-transparent"
                     />
                   </div>
-
 
                   {/* Event Date */}
                   <div>
@@ -319,13 +394,17 @@ export default function Contact() {
           <div className="max-w-3xl mx-auto mt-8">
             <div className="space-y-6">
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="font-bold text-lg mb-2">How far in advance should I book my event?</h3>
+                <h3 className="font-bold text-lg mb-2">
+                  How far in advance should I book my event?
+                </h3>
                 <p className="text-gray-600">
                   We recommend booking at least 3-6 months in advance for weddings and large events, and 1-2 months for smaller events to ensure availability.
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="font-bold text-lg mb-2">Do you provide services outside Agra Mandal region?</h3>
+                <h3 className="font-bold text-lg mb-2">
+                  Do you provide services outside Agra Mandal region?
+                </h3>
                 <p className="text-gray-600">
                   While we specialize in Agra, Mathura, Firozabad, and Mainpuri, we can accommodate events in nearby areas for an additional travel fee.
                 </p>
