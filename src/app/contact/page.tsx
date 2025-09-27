@@ -335,8 +335,10 @@ export default function Contact() {
                   <div>
                     <h3 className="font-bold text-lg">Phone</h3>
                     <p className="text-gray-600">+91 7017520811</p>
+                    <p className="text-gray-600">+91 9869950233</p>
                     <p className="text-gray-600">Available 9:00 AM - 8:00 PM</p>
                   </div>
+
                 </div>
 
                 <div className="flex items-start">

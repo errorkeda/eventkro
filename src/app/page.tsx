@@ -124,173 +124,30 @@ export default function Home() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-            {/* Wedding Events */}
-            <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-              <img
-                src="/images/haldi.jpg"
-                alt="Best Wedding Event Planners in Agra"
-                className="w-full h-40 object-cover"
-              />  
-              <div className="p-4 text-center">
-                <h3 className="text-lg font-bold">Wedding Events</h3>
-                <p className="text-gray-600 text-sm">
-                  Best Wedding Event Planners in Agra for unforgettable celebrations.
-                </p>
-                <Link
-                  href="/contact"
-                  className="mt-4 inline-block bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700"
-                >
-                  View details
-                </Link>
+            {[
+              { title: 'Wedding Events', slug: 'agra-wedding-events', img: '/images/haldi.jpg', desc: 'Best Wedding Event Planners in Agra for unforgettable celebrations.' },
+              { title: 'Engagement', slug: 'agra-engagement-ceremony', img: '/images/engegment.jpg', desc: 'Professional Engagement Ceremony Planners in Agra.' },
+              { title: 'Birthday', slug: 'agra-birthday-party', img: '/images/birthday.jpg', desc: 'Creative Birthday Party Planners in Agra for memorable events.' },
+              { title: 'Anniversary', slug: 'agra-anniversary-event', img: '/images/anniversary.jpg', desc: 'Celebrate love with our Anniversary Event Planners in Agra.' },
+              { title: 'Corporate Events', slug: 'agra-corporate-events', img: '/images/corporate.jpg', desc: 'Best Corporate Event Planners in Agra for meetings & conferences.' },
+              { title: 'House Warming Ceremony', slug: 'agra-housewarming-ceremony', img: '/images/housewarming.jpeg', desc: 'Best Housewarming Event Planners in Agra.' },
+              { title: 'Baby Shower', slug: 'agra-baby-shower', img: '/images/babyshower.jpeg', desc: 'Creative Baby Shower Event Planners in Agra.' },
+              { title: 'Rituals Events', slug: 'agra-rituals-events', img: '/images/rituals.jpeg', desc: 'Best Ritual Event Planners in Agra for traditional functions.' },
+            ].map((event) => (
+              <div key={event.slug} className="bg-white rounded-lg shadow-sm overflow-hidden">
+                <img src={event.img} alt={event.title} className="w-full h-40 object-cover" />
+                <div className="p-4 text-center">
+                  <h3 className="text-lg font-bold">{event.title}</h3>
+                  <p className="text-gray-600 text-sm">{event.desc}</p>
+                  <Link
+                    href={`/events/${event.slug}`}
+                    className="mt-4 inline-block bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700"
+                  >
+                    View details
+                  </Link>
+                </div>
               </div>
-            </div>
-
-            {/* Engagement Events */}
-            <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-              <img
-                src="/images/engegment.jpg" 
-                alt="Top Engagement Ceremony Planners in Agra"
-                className="w-full h-40 object-cover"
-              />
-              <div className="p-4 text-center">
-                <h3 className="text-lg font-bold">Engagement</h3>
-                <p className="text-gray-600 text-sm">
-                  Professional Engagement Ceremony Planners in Agra.
-                </p>
-                <Link
-                  href="/contact"
-                  className="mt-4 inline-block bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700"
-                >
-                  View details
-                </Link>
-              </div>
-            </div>
-
-            {/* Birthday Events */}
-            <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-              <img
-                src="/images/birthday.jpg"
-                alt="Best Birthday Party Planners in Agra"
-                className="w-full h-40 object-cover"
-              />
-              <div className="p-4 text-center">
-                <h3 className="text-lg font-bold">Birthday</h3>
-                <p className="text-gray-600 text-sm">
-                  Creative Birthday Party Planners in Agra for memorable events.
-                </p>
-                <Link
-                  href="/contact" 
-                  className="mt-4 inline-block bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700"
-                >
-                  View details
-                </Link>
-              </div>
-            </div>
-
-            {/* Anniversary Events */}
-            <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-              <img
-                src="/images/anniversary.jpg"
-                alt="Best Anniversary Event Planners in Agra"
-                className="w-full h-40 object-cover"
-              />
-              <div className="p-4 text-center">
-                <h3 className="text-lg font-bold">Anniversary</h3>
-                <p className="text-gray-600 text-sm">
-                  Celebrate love with our Anniversary Event Planners in Agra.
-                </p>
-                <Link
-                  href="/contact"
-                  className="mt-4 inline-block bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700"
-                >
-                  View details
-                </Link>
-              </div>
-            </div>
-
-            {/* Corporate Events */}
-            <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-              <img
-                src="/images/corporate.jpg"
-                alt="Corporate Event Planners in Agra"
-                className="w-full h-40 object-cover"
-              />
-              <div className="p-4 text-center">
-                <h3 className="text-lg font-bold">Corporate Events</h3>
-                <p className="text-gray-600 text-sm">
-                  Best Corporate Event Planners in Agra for meetings & conferences.
-                </p>
-                <Link 
-                  href="/contact"
-                  className="mt-4 inline-block bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700"
-                >
-                  View details
-                </Link>
-              </div>
-            </div>
-
-            {/* House Warming Ceremony */}
-            <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-              <img
-                src="/images/housewarming.jpeg"
-                alt="Housewarming Ceremony Planners in Agra"
-                className="w-full h-40 object-cover"
-              />
-              <div className="p-4 text-center">
-                <h3 className="text-lg font-bold">House Warming Ceremony</h3>
-                <p className="text-gray-600 text-sm">
-                  Best Housewarming Event Planners in Agra.
-                </p>
-                <Link
-                  href="/contact"
-                  className="mt-4 inline-block bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700"
-                >
-                  View details
-                </Link>
-              </div>
-            </div>
-
-            {/* Baby Shower */}
-            <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-              <img
-                src="/images/babyshower.jpeg"
-                alt="Baby Shower Planners in Agra"
-                className="w-full h-40 object-cover"
-              />
-              <div className="p-4 text-center">
-                <h3 className="text-lg font-bold">Baby Shower</h3>
-                <p className="text-gray-600 text-sm">
-                  Creative Baby Shower Event Planners in Agra.
-                </p>
-                <Link
-                  href="/contact"
-                  className="mt-4 inline-block bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700"
-                >
-                  View details
-                </Link>
-              </div>
-            </div>
-
-            {/* Rituals Events */}
-            <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-              <img
-                src="/images/rituals.jpeg"
-                alt="Ritual Ceremony Event Planners in Agra"
-                className="w-full h-40 object-cover"
-              />
-              <div className="p-4 text-center">
-                <h3 className="text-lg font-bold">Rituals Events</h3>
-                <p className="text-gray-600 text-sm">
-                  Best Ritual Event Planners in Agra for traditional functions.
-                </p>
-                <Link
-                  href="/contact"
-                  className="mt-4 inline-block bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700"
-                >
-                  View details
-                </Link>
-              </div>
-            </div>
+            ))}
           </div>
 
           <div className="text-center mt-12">

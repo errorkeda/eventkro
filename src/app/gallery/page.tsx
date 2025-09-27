@@ -80,30 +80,6 @@ const galleryItems = [
     eventType: 'birthday',
     image: '/images/gallery-agra-birthday-1.jpg',
     description: 'Luxurious birthday party in historic venue'
-  },
-  {
-    id: 10,
-    title: 'Corporate Retreat with Cultural Program',
-    city: 'mathura',
-    eventType: 'corporate',
-    image: '/images/gallery-mathura-corporate-1.jpg',
-    description: 'Team building event with cultural performances'
-  },
-  {
-    id: 11,
-    title: 'Artisan Trade Fair',
-    city: 'firozabad',
-    eventType: 'exhibition',
-    image: '/images/gallery-firozabad-fair-1.jpg',
-    description: 'Exhibition for local artisans to showcase their crafts'
-  },
-  {
-    id: 12,
-    title: 'Cultural Heritage Festival',
-    city: 'mainpuri',
-    eventType: 'cultural',
-    image: '/images/gallery-mainpuri-festival-1.jpg',
-    description: 'Celebration of local traditions and folk arts'
   }
 ];
 

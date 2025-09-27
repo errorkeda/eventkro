@@ -21,9 +21,15 @@ export default function Footer() {
               {/* <a href="#" className="text-gray-300 hover:text-red-500 transition-colors">
                 <FaTwitter size={20} />
               </a> */}
-              <a href="#" className="text-gray-300 hover:text-red-500 transition-colors">
+              <a
+                href="https://www.instagram.com/eventkro?igsh=MXE0eHlzNzhrdzVwMw=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-red-500 transition-colors"
+              >
                 <FaInstagram size={20} />
               </a>
+
               {/* <a href="#" className="text-gray-300 hover:text-red-500 transition-colors">
                 <FaLinkedin size={20} />
               </a> */}
@@ -78,10 +84,15 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-3">
-              <div className="flex items-center">
-                <FaPhone className="text-red-500 mr-3" />
-                <span className="text-gray-300">+91 7017520811</span>
+              <div className="flex items-start">
+                <FaPhone className="text-red-500 mr-3 mt-1" />
+                <div className="flex flex-col">
+                  <span className="text-gray-300">+91 7017520811</span>
+                  <span className="text-gray-300">+91 9869950233</span>
+                </div>
               </div>
+
+
               <div className="flex items-center">
                 <FaEnvelope className="text-red-500 mr-3" />
                 <span className="text-gray-300">vipabhi12345@gmail.com</span>
@@ -101,10 +112,10 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-300">
-            © 2024 Eventkro. All rights reserved. | 
+            © 2024 Eventkro. All rights reserved. |
             <Link href="/privacy" className="text-red-500 hover:text-red-400 ml-1">
               Privacy Policy
-            </Link> | 
+            </Link> |
             <Link href="/terms" className="text-red-500 hover:text-red-400 ml-1">
               Terms of Service
             </Link>
