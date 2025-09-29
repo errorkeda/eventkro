@@ -29,7 +29,9 @@ export default function Contact() {
   } | null>(null);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -96,24 +98,29 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="bg-[#ff5722] py-16 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold my-10">Book Your Event</h1>
-          <p className="text-xl max-w-2xl mx-auto">
-            Fill out the form below to request a booking for your special event. Our team will get back to you within 24 hours.
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold my-6">
+            Book Your Event
+          </h1>
+          <p className="text-lg sm:text-xl max-w-2xl mx-auto">
+            Fill out the form below to request a booking for your special event.
+            Our team will get back to you within 24 hours.
           </p>
         </div>
       </section>
 
-      {/* ✅ Step By Step Process Section */}
-      <section className="bg-gray-50 py-16 ">
+      {/* Step By Step Process Section */}
+      <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-20">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
             Step By Step Process
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-         <div className="bg-white h-[100%] w-full rounded-xl shadow-lg p-8">
-              <h2 className="text-2xl font-bold mb-6 text-center">Event Booking Form</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Form */}
+            <div className="bg-white w-full rounded-xl shadow-lg p-6 sm:p-8">
+              <h2 className="text-xl sm:text-2xl font-bold mb-6 text-center">
+                Event Booking Form
+              </h2>
 
               {submitStatus && (
                 <div
@@ -131,7 +138,10 @@ export default function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Name */}
                   <div>
-                    <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-gray-700 font-medium mb-2"
+                    >
                       Full Name *
                     </label>
                     <input
@@ -147,7 +157,10 @@ export default function Contact() {
 
                   {/* Email */}
                   <div>
-                    <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-gray-700 font-medium mb-2"
+                    >
                       Email Address *
                     </label>
                     <input
@@ -163,7 +176,10 @@ export default function Contact() {
 
                   {/* Phone */}
                   <div>
-                    <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
+                    <label
+                      htmlFor="phone"
+                      className="block text-gray-700 font-medium mb-2"
+                    >
                       Phone Number *
                     </label>
                     <input
@@ -179,7 +195,10 @@ export default function Contact() {
 
                   {/* City */}
                   <div>
-                    <label htmlFor="city" className="block text-gray-700 font-medium mb-2">
+                    <label
+                      htmlFor="city"
+                      className="block text-gray-700 font-medium mb-2"
+                    >
                       City / Villages *
                     </label>
                     <input
@@ -196,7 +215,10 @@ export default function Contact() {
 
                   {/* Event Type */}
                   <div>
-                    <label htmlFor="eventType" className="block text-gray-700 font-medium mb-2">
+                    <label
+                      htmlFor="eventType"
+                      className="block text-gray-700 font-medium mb-2"
+                    >
                       Event Type *
                     </label>
                     <input
@@ -213,7 +235,10 @@ export default function Contact() {
 
                   {/* Event Date */}
                   <div>
-                    <label htmlFor="eventDate" className="block text-gray-700 font-medium mb-2">
+                    <label
+                      htmlFor="eventDate"
+                      className="block text-gray-700 font-medium mb-2"
+                    >
                       Event Date *
                     </label>
                     <input
@@ -230,7 +255,10 @@ export default function Contact() {
 
                 {/* Message */}
                 <div className="mt-6">
-                  <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-gray-700 font-medium mb-2"
+                  >
                     Additional Details
                   </label>
                   <textarea
@@ -256,86 +284,84 @@ export default function Contact() {
               </form>
             </div>
 
-
             {/* Right Image */}
-            <div className='h-[100%]'>
+            <div className="flex justify-center">
               <img
                 src="/images/Event-Decoration-Process-Infographic.png"
                 alt="Process Illustration"
-                className="w-full  rounded-lg shadow-xl"
+                className="w-full max-w-md lg:max-w-full rounded-lg shadow-xl"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Form & Info */}
+      {/* Contact Information */}
       <section className="py-10">
-        <div className="container mx-auto px-4" >
-           <h2 className="text-4xl font-bold mb-20 text-center">Contact Information</h2>
-          <div >
-            {/* Contact Form */}
-             
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">
+            Contact Information
+          </h2>
 
-            {/* Contact Information */}
-            <div>
-          
-              <div className="px-8 grid grid-cols-3 lg:grid-cols-3 gap-12">
-                <div className="flex items-start ">
-                  <div className="bg-[#ff5722]/10 p-3 rounded-full mr-4">
-                    <FaPhone className="text-[#ff5722] text-xl" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg">Phone</h3>
-                    <p className="text-gray-600">+91 7017520811</p>
-                    <p className="text-gray-600">+91 9869950233</p>
-                    <p className="text-gray-600">Available 9:00 AM - 8:00 PM</p>
-                  </div>
-
-                </div>
-
-                <div className="flex items-start">
-                  <div className="bg-[#ff5722]/10 p-3 rounded-full mr-4">
-                    <FaEnvelope className="text-[#ff5722] text-xl" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg">Email</h3>
-                    <p className="text-gray-600">vipabhi123@gmail.com</p>
-                    <p className="text-gray-600">We respond within 24 hours</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="bg-[#ff5722]/10 p-3 rounded-full mr-4">
-                    <FaMapMarkerAlt className="text-[#ff5722] text-xl" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg">Office Address</h3>
-                    <p className="text-gray-600">
-                      123 Event Street, Agra Mandal Region
-                      <br />
-                      Uttar Pradesh, India
-                    </p>
-                  </div>
-                </div>
+          <div className="px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Phone */}
+            <div className="flex items-start">
+              <div className="bg-[#ff5722]/10 p-3 rounded-full mr-4">
+                <FaPhone className="text-[#ff5722] text-xl" />
               </div>
+              <div>
+                <h3 className="font-bold text-lg">Phone</h3>
+                <p className="text-gray-600">+91 7017520811</p>
+                <p className="text-gray-600">+91 9869950233</p>
+                <p className="text-gray-600">Available 9:00 AM - 8:00 PM</p>
+              </div>
+            </div>
 
-              <div className="mt-12  pt-10 pb-10 bg-[oklch(98.5% 0.001 106.423)]">
-                <h3 className="font-bold text-4xl mb-20 text-center">Service Areas</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-gray-100 p-4 rounded-lg text-center">
-                    <h4 className="font-bold">Agra</h4>
-                  </div>
-                  <div className="bg-gray-100 p-4 rounded-lg text-center">
-                    <h4 className="font-bold">Mathura</h4>
-                  </div>
-                  <div className="bg-gray-100 p-4 rounded-lg text-center">
-                    <h4 className="font-bold">Firozabad</h4>
-                  </div>
-                  <div className="bg-gray-100 p-4 rounded-lg text-center">
-                    <h4 className="font-bold">Mainpuri</h4>
-                  </div>
-                </div>
+            {/* Email */}
+            <div className="flex items-start">
+              <div className="bg-[#ff5722]/10 p-3 rounded-full mr-4">
+                <FaEnvelope className="text-[#ff5722] text-xl" />
+              </div>
+              <div>
+                <h3 className="font-bold text-lg">Email</h3>
+                <p className="text-gray-600">vipabhi123@gmail.com</p>
+                <p className="text-gray-600">We respond within 24 hours</p>
+              </div>
+            </div>
+
+            {/* Address */}
+            <div className="flex items-start">
+              <div className="bg-[#ff5722]/10 p-3 rounded-full mr-4">
+                <FaMapMarkerAlt className="text-[#ff5722] text-xl" />
+              </div>
+              <div>
+                <h3 className="font-bold text-lg">Office Address</h3>
+                <p className="text-gray-600">
+                  123 Event Street, Agra Mandal Region
+                  <br />
+                  Uttar Pradesh, India
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Service Areas */}
+          <div className="mt-12 pt-10 pb-10 bg-gray-50 rounded-lg">
+            <h3 className="font-bold text-2xl sm:text-3xl mb-10 text-center">
+              Service Areas
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="bg-white p-4 rounded-lg text-center shadow">
+                <h4 className="font-bold">Agra</h4>
+              </div>
+              <div className="bg-white p-4 rounded-lg text-center shadow">
+                <h4 className="font-bold">Mathura</h4>
+              </div>
+              <div className="bg-white p-4 rounded-lg text-center shadow">
+                <h4 className="font-bold">Firozabad</h4>
+              </div>
+              <div className="bg-white p-4 rounded-lg text-center shadow">
+                <h4 className="font-bold">Mainpuri</h4>
               </div>
             </div>
           </div>
@@ -345,7 +371,9 @@ export default function Contact() {
       {/* FAQ Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="section-title">Frequently Asked Questions</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-center">
+            Frequently Asked Questions
+          </h2>
           <div className="max-w-5xl mx-auto mt-8">
             <div className="space-y-6">
               <div className="bg-white p-6 rounded-lg shadow-md">
@@ -353,7 +381,9 @@ export default function Contact() {
                   How far in advance should I book my event?
                 </h3>
                 <p className="text-gray-600">
-                  We recommend booking at least 3-6 months in advance for weddings and large events, and 1-2 months for smaller events to ensure availability.
+                  We recommend booking at least 3-6 months in advance for
+                  weddings and large events, and 1-2 months for smaller events
+                  to ensure availability.
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
@@ -361,13 +391,20 @@ export default function Contact() {
                   Do you provide services outside Agra Mandal region?
                 </h3>
                 <p className="text-gray-600">
-                  While we specialize in Agra, Mathura, Firozabad, and Mainpuri, we can accommodate events in nearby areas for an additional travel fee.
+                  While we specialize in Agra, Mathura, Firozabad, and Mainpuri,
+                  we can accommodate events in nearby areas for an additional
+                  travel fee.
                 </p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="font-bold text-lg mb-2">What is your cancellation policy?</h3>
+                <h3 className="font-bold text-lg mb-2">
+                  What is your cancellation policy?
+                </h3>
                 <p className="text-gray-600">
-                  Cancellations made 30+ days before the event receive a full refund minus the booking deposit. Cancellations within 30 days are subject to our detailed policy which will be provided in your contract.
+                  Cancellations made 30+ days before the event receive a full
+                  refund minus the booking deposit. Cancellations within 30 days
+                  are subject to our detailed policy which will be provided in
+                  your contract.
                 </p>
               </div>
             </div>
