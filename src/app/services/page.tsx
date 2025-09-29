@@ -32,9 +32,10 @@ export default function ServicesPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
             {services.map((service) => (
               <div key={service.id} className="card text-center hover:-translate-y-2 bg-white rounded-lg shadow-sm p-6">
-                <div className="mb-4">{iconMap[service.id]}</div>
+                <div className="flex justify-center mb-4">{iconMap[service.id]}</div>
                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description.substring(0, 100)}...</p>
                 <Link href={`/services/${service.id}`} className="text-[#ff5722] font-medium">
@@ -42,6 +43,7 @@ export default function ServicesPage() {
                 </Link>
               </div>
             ))}
+
           </div>
         </div>
       </section>

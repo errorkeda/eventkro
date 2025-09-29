@@ -96,7 +96,7 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="bg-[#ff5722] py-16 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Book Your Event</h1>
+          <h1 className="text-4xl md:text-5xl font-bold my-10">Book Your Event</h1>
           <p className="text-xl max-w-2xl mx-auto">
             Fill out the form below to request a booking for your special event. Our team will get back to you within 24 hours.
           </p>
@@ -104,83 +104,16 @@ export default function Contact() {
       </section>
 
       {/* ✅ Step By Step Process Section */}
-      <section className="bg-gradient-to-r from-[#ff7043] to-[#ff5722] py-16 text-white">
+      <section className="bg-gray-50 py-16 ">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-4xl font-bold text-center mb-20">
             Step By Step Process
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <div className="space-y-10">
-              <div className="flex items-start">
-                <div className="bg-white text-[#ff5722] font-bold rounded-full w-10 h-10 flex items-center justify-center mr-4">
-                  1
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold">Fill Out The Form</h3>
-                  <p className="text-white/90">
-                    Customers select their desired decoration type and provide event details through an online form.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="bg-white text-[#ff5722] font-bold rounded-full w-10 h-10 flex items-center justify-center mr-4">
-                  2
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold">Executive Call</h3>
-                  <p className="text-white/90">
-                    Our team contacts customers to gather more information, offer recommendations, and address any queries or concerns.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="bg-white text-[#ff5722] font-bold rounded-full w-10 h-10 flex items-center justify-center mr-4">
-                  3
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold">Decoration</h3>
-                  <p className="text-white/90">
-                    Our dedicated team creates and sets up the decorations according to the customer's chosen style and preferences.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="bg-white text-[#ff5722] font-bold rounded-full w-10 h-10 flex items-center justify-center mr-4">
-                  4
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold">Customer Satisfaction</h3>
-                  <p className="text-white/90">
-                    We ensure the customer's approval and happiness by providing a visually appealing and personalized decoration experience.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Image */}
-            <div className="flex justify-center items-center">
-              <img
-                src="/images/Event-Decoration-Process-Infographic.png"
-                alt="Process Illustration"
-                className="max-w-md w-full h-auto rounded-lg shadow-xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form & Info */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-2xl font-bold mb-6">Event Booking Form</h2>
+         <div className="bg-white h-[100%] w-full rounded-xl shadow-lg p-8">
+              <h2 className="text-2xl font-bold mb-6 text-center">Event Booking Form</h2>
 
               {submitStatus && (
                 <div
@@ -323,12 +256,32 @@ export default function Contact() {
               </form>
             </div>
 
+
+            {/* Right Image */}
+            <div className='h-[100%]'>
+              <img
+                src="/images/Event-Decoration-Process-Infographic.png"
+                alt="Process Illustration"
+                className="w-full  rounded-lg shadow-xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form & Info */}
+      <section className="py-10">
+        <div className="container mx-auto px-4" >
+           <h2 className="text-4xl font-bold mb-20 text-center">Contact Information</h2>
+          <div >
+            {/* Contact Form */}
+             
+
             {/* Contact Information */}
             <div>
-              <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
-
-              <div className="space-y-8">
-                <div className="flex items-start">
+          
+              <div className="px-8 grid grid-cols-3 lg:grid-cols-3 gap-12">
+                <div className="flex items-start ">
                   <div className="bg-[#ff5722]/10 p-3 rounded-full mr-4">
                     <FaPhone className="text-[#ff5722] text-xl" />
                   </div>
@@ -367,8 +320,8 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="mt-12">
-                <h3 className="font-bold text-lg mb-4">Service Areas</h3>
+              <div className="mt-12  pt-10 pb-10 bg-[oklch(98.5% 0.001 106.423)]">
+                <h3 className="font-bold text-4xl mb-20 text-center">Service Areas</h3>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-gray-100 p-4 rounded-lg text-center">
                     <h4 className="font-bold">Agra</h4>
@@ -393,7 +346,7 @@ export default function Contact() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="section-title">Frequently Asked Questions</h2>
-          <div className="max-w-3xl mx-auto mt-8">
+          <div className="max-w-5xl mx-auto mt-8">
             <div className="space-y-6">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="font-bold text-lg mb-2">

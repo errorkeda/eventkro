@@ -21,7 +21,7 @@ const venues = [
     capacity: '200-800 guests',
     features: ['Historic building', 'Multiple halls', 'Customizable spaces', 'Valet parking'],
     rating: 4.7,
-    image: '/images/venue-heritage.jpg'
+    image: '/images/venue-heritage.jpeg'
   },
   {
     name: 'Agra Convention Center',
@@ -33,21 +33,24 @@ const venues = [
   }
 ];
 
+
+
 const events = [
-  {
-    title: 'Royal Mughal Wedding',
-    description: 'Experience the grandeur of a traditional Mughal-themed wedding with royal decor, cuisine, and entertainment.',
-    image: '/images/event-wedding.jpg'
-  },
   {
     title: 'Taj Heritage Tour & Dinner',
     description: 'Combine a guided tour of the Taj Mahal with an elegant dinner event featuring local cuisine and cultural performances.',
-    image: '/images/event-heritage.jpg'
+    image: '/images/event-heritage.jpg',
   },
   {
     title: 'Corporate Retreat with Taj View',
     description: 'Elevate your corporate events with meeting spaces offering views of the Taj Mahal and team-building activities.',
-    image: '/images/event-corporate.jpg'
+    image: '/images/event-corporate.jpg',
+  },
+  // ✅ New Famous Agra Events
+  {
+    title: 'Taj Mahotsav Celebration',
+    description: 'Enjoy a week-long cultural carnival featuring folk dances, craft exhibitions, and local cuisine near the Taj Mahal.',
+    image: '/images/event-taj-mahotsav.jpg',
   }
 ];
 
@@ -228,14 +231,14 @@ export default function AgraPage() {
                         </div>
                         
                         <Link href="/contact" className="btn-primary inline-block">
-                          Inquire About This Venue
+                          Inquire
                         </Link>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
-            </div>
+            </div>  
           )}
 
           {/* Events Tab */}
@@ -254,9 +257,9 @@ export default function AgraPage() {
                     <div className="p-6">
                       <h3 className="text-xl font-bold mb-2">{event.title}</h3>
                       <p className="text-gray-600 mb-4">{event.description}</p>
-                      <Link href="/contact" className="text-[#ff5722] font-medium">
+                      {/* <Link href="/contact" className="text-[#ff5722] font-medium">
                         Learn More →
-                      </Link>
+                      </Link> */}
                     </div>
                   </div>
                 ))}

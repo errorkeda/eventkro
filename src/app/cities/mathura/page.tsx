@@ -13,7 +13,7 @@ const venues = [
     capacity: '100-400 guests',
     features: ['Temple architecture', 'Riverside location', 'Traditional decor', 'Cultural performance area'],
     rating: 4.9,
-    image: '/images/venue-krishna-hall.jpg'
+    image: '/images/venue-krishna-hall.jpeg'
   },
   {
     name: 'Yamuna Celebration Gardens',
@@ -21,7 +21,7 @@ const venues = [
     capacity: '200-1000 guests',
     features: ['Riverside views', 'Open-air spaces', 'Festival facilities', 'Traditional catering'],
     rating: 4.7,
-    image: '/images/venue-yamuna-gardens.jpg'
+    image: '/images/venue-yamuna-gardens.jpeg'
   },
   {
     name: 'Brij Cultural Center',
@@ -37,12 +37,12 @@ const events = [
   {
     title: 'Lathmar Holi Celebration',
     description: 'Experience the famous Lathmar Holi with traditional customs, colors, and cultural performances.',
-    image: '/images/event-holi.jpg'
+    image: '/images/event-holi.jpeg'
   },
   {
     title: 'Krishna Janmashtami Festival',
     description: 'Celebrate the birth of Lord Krishna with religious ceremonies, bhajans, and cultural programs.',
-    image: '/images/event-janmashtami.jpg'
+    image: '/images/event-janmashtami.jpeg'
   },
   {
     title: 'Braj Wedding Experience',
@@ -227,7 +227,7 @@ export default function MathuraPage() {
                         </div>
                         
                         <Link href="/contact" className="btn-primary inline-block">
-                          Inquire About This Venue
+                          Inquire
                         </Link>
                       </div>
                     </div>
@@ -253,9 +253,9 @@ export default function MathuraPage() {
                     <div className="p-6">
                       <h3 className="text-xl font-bold mb-2">{event.title}</h3>
                       <p className="text-gray-600 mb-4">{event.description}</p>
-                      <Link href="/contact" className="text-[#ff5722] font-medium">
+                      {/* <Link href="/contact" className="text-[#ff5722] font-medium">
                         Learn More →
-                      </Link>
+                      </Link> */}
                     </div>
                   </div>
                 ))}

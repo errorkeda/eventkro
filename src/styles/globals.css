@@ -36,3 +36,9 @@ body {
     @apply bg-white rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl;
   }
 }
+
+.section-two{
+  display: flex;
+  align-items: center;
+
+}
