@@ -37,17 +37,17 @@ const events = [
   {
     title: 'Glass Craft Exhibition',
     description: 'Showcase of traditional and modern glass craftsmanship with live demonstrations and workshops.',
-    image: '/images/event-glass-craft.jpg'
+    image: '/images/venue-glass-convention.jpeg'
   },
   {
     title: 'Traditional Wedding with Glass Art',
     description: 'Elegant wedding celebrations featuring unique glass art decorations and traditional ceremonies.',
-    image: '/images/event-glass-wedding.jpg'
+    image: '/images/venue-krishna-hall.jpeg'
   },
   {
     title: 'Artisan Trade Fair',
     description: 'Exhibition and marketplace for local artisans to showcase and sell their handcrafted products.',
-    image: '/images/event-trade-fair.jpg'
+    image: '/images/venue-brij-center.jpg'
   }
 ];
 
@@ -254,9 +254,9 @@ export default function FirozabadPage() {
                     <div className="p-6">
                       <h3 className="text-xl font-bold mb-2">{event.title}</h3>
                       <p className="text-gray-600 mb-4">{event.description}</p>
-                      <Link href="/contact" className="text-[#ff5722] font-medium">
+                      {/* <Link href="/contact" className="text-[#ff5722] font-medium">
                         Learn More →
-                      </Link>
+                      </Link> */}
                     </div>
                   </div>
                 ))}

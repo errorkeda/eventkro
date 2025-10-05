@@ -254,9 +254,9 @@ export default function MainpuriPage() {
                     <div className="p-6">
                       <h3 className="text-xl font-bold mb-2">{event.title}</h3>
                       <p className="text-gray-600 mb-4">{event.description}</p>
-                      <Link href="/contact" className="text-[#ff5722] font-medium">
+                      {/* <Link href="/contact" className="text-[#ff5722] font-medium">
                         Learn More →
-                      </Link>
+                      </Link> */}
                     </div>
                   </div>
                 ))}
