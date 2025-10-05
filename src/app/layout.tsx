@@ -103,7 +103,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             description:
               'Professional event planning and decoration services in Agra Mandal region, including Agra, Mathura, Firozabad, Mainpuri, Etah, Etawah, and more.',
             sameAs: [
-              'https://www.facebook.com/eventkro',
+              'https://www.facebook.com/eventkro.in.agra',
               'https://www.instagram.com/eventkro?igsh=MXE0eHlzNzhrdzVwMw==',
             ],
           })}
