@@ -13,7 +13,7 @@ const venues = [
     capacity: '200-800 guests',
     features: ['Glass art displays', 'Exhibition space', 'Modern amenities', 'Customizable lighting'],
     rating: 4.7,
-    image: '/images/venue-glass-convention.jpg'
+    image: '/images/venue-glass-convention.jpeg'
   },
   {
     name: 'Heritage Banquet Hall',
@@ -21,7 +21,7 @@ const venues = [
     capacity: '100-500 guests',
     features: ['In-house catering', 'Decoration services', 'Parking space', 'Air conditioning'],
     rating: 4.5,
-    image: '/images/venue-heritage-hall.jpg'
+    image: '/images/venue-krishna-hall.jpeg'
   },
   {
     name: 'Craft Exhibition Center',
@@ -29,7 +29,7 @@ const venues = [
     capacity: '300-1000 guests',
     features: ['Display booths', 'Demonstration areas', 'Visitor facilities', 'Technical support'],
     rating: 4.6,
-    image: '/images/venue-craft-center.jpg'
+    image: '/images/venue-brij-center.jpg'
   }
 ];
 
