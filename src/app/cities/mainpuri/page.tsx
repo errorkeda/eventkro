@@ -13,7 +13,7 @@ const venues = [
     capacity: '100-400 guests',
     features: ['Rural setting', 'Traditional decor', 'Open spaces', 'Local cuisine'],
     rating: 4.6,
-    image: '/images/venue-rural-center.jpg'
+    image: '/images/venue-rural-center.jpeg'
   },
   {
     name: 'Mainpuri Community Hall',
@@ -21,7 +21,7 @@ const venues = [
     capacity: '150-600 guests',
     features: ['Air conditioning', 'Catering services', 'Decoration options', 'Parking space'],
     rating: 4.5,
-    image: '/images/venue-community-hall.jpg'
+    image: '/images/venue-community-hall.jpeg'
   },
   {
     name: 'Village Fair Grounds',
@@ -29,7 +29,7 @@ const venues = [
     capacity: '500-2000 guests',
     features: ['Open grounds', 'Tent facilities', 'Rural ambiance', 'Traditional setup'],
     rating: 4.4,
-    image: '/images/venue-fair-grounds.jpg'
+    image: '/images/venue-fair-grounds.jpeg'
   }
 ];
 
@@ -37,17 +37,17 @@ const events = [
   {
     title: 'Traditional Village Fair',
     description: 'Experience authentic rural culture with local crafts, food, games, and cultural performances.',
-    image: '/images/event-village-fair.jpg'
+    image: '/images/venue-rural-center.jpeg'
   },
   {
     title: 'Rural Wedding Experience',
     description: 'Traditional wedding with local customs, folk music, and authentic village cuisine.',
-    image: '/images/event-rural-wedding.jpg'
+    image: '/images/venue-community-hall.jpeg'
   },
   {
     title: 'Cultural Heritage Festival',
     description: 'Celebration of local traditions, folk arts, and cultural performances unique to the region.',
-    image: '/images/event-heritage-festival.jpg'
+    image: '/images/venue-fair-grounds.jpeg'
   }
 ];
 
