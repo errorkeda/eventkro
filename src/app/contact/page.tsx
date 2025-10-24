@@ -4,12 +4,9 @@ import { useState, FormEvent } from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import emailjs from 'emailjs-com';
 
-// EmailJS configuration
-const EMAILJS_SERVICE_ID = 'service_p6p4e5o';
-const EMAILJS_TEMPLATE_ID = 'template_4bvfa94';
-const EMAILJS_USER_ID = 'W2EbmhEd8-oEx3vNW';
+// ✅ Mailtrap API Configuration
+const MAILTRAP_API_TOKEN = '66d95969738e2af5fc0904c018ccd933';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -46,36 +43,49 @@ export default function Contact() {
     setSubmitStatus(null);
 
     try {
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        from_phone: formData.phone,
-        city: formData.city,
-        event_type: formData.eventType,
-        event_date: formData.eventDate,
-        message: formData.message,
-        to_email: 'vipabhi123@gmail.com',
+      const emailData = {
+        from: { email: 'hello@demomailtrap.com', name: 'Event Booking Form' },
+        to: [{ email: 'vipabhi12345@gmail.com' }],
+        subject: `🎉 New Event Booking Request from ${formData.name}`,
+        text: `
+You have received a new event booking request:
+
+Full Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+City: ${formData.city}
+Event Type: ${formData.eventType}
+Event Date: ${formData.eventDate}
+
+Message:
+${formData.message}
+        `,
+        category: 'Booking Request',
       };
 
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        templateParams,
-        EMAILJS_USER_ID
-      );
+      const response = await fetch('https://send.api.mailtrap.io/api/send', {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${MAILTRAP_API_TOKEN}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(emailData),
+      });
+
+      if (!response.ok) throw new Error('Mailtrap API request failed');
 
       setSubmitStatus({
         success: true,
         message:
-          'Thank you! Your booking request has been sent successfully. We will contact you shortly.',
+          '✅ Thank you! Your booking request has been sent successfully. We’ll contact you shortly.',
       });
 
       setFormData({
         name: '',
         email: '',
         phone: '',
-        city: 'Agra',
-        eventType: 'Wedding',
+        city: '',
+        eventType: '',
         eventDate: '',
         message: '',
       });
@@ -84,7 +94,7 @@ export default function Contact() {
       setSubmitStatus({
         success: false,
         message:
-          'There was an error sending your request. Please try again or contact us directly.',
+          '❌ There was an error sending your request. Please try again or contact us directly.',
       });
     } finally {
       setIsSubmitting(false);
@@ -96,35 +106,35 @@ export default function Contact() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-[#ff5722] py-16 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold my-6">
+      <section className="bg-[#ff5722] py-16 text-white text-center">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Book Your Event
           </h1>
-          <p className="text-lg sm:text-xl max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
             Fill out the form below to request a booking for your special event.
             Our team will get back to you within 24 hours.
           </p>
         </div>
       </section>
 
-      {/* Step By Step Process Section */}
+      {/* Booking Form Section */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
-            Step By Step Process
+            Step-by-Step Booking Process
           </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Form */}
-            <div className="bg-white w-full rounded-xl shadow-lg p-6 sm:p-8">
-              <h2 className="text-xl sm:text-2xl font-bold mb-6 text-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Form Section */}
+            <div className="bg-white rounded-xl shadow-lg p-6 sm:p-8">
+              <h3 className="text-2xl font-bold text-center mb-6">
                 Event Booking Form
-              </h2>
+              </h3>
 
               {submitStatus && (
                 <div
-                  className={`p-4 mb-6 rounded-lg ${
+                  className={`p-4 mb-6 rounded-lg text-center ${
                     submitStatus.success
                       ? 'bg-green-100 text-green-700'
                       : 'bg-red-100 text-red-700'
@@ -134,285 +144,218 @@ export default function Contact() {
                 </div>
               )}
 
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Name */}
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-gray-700 font-medium mb-2"
-                    >
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff5722] focus:border-transparent"
-                    />
-                  </div>
-
-                  {/* Email */}
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-gray-700 font-medium mb-2"
-                    >
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff5722] focus:border-transparent"
-                    />
-                  </div>
-
-                  {/* Phone */}
-                  <div>
-                    <label
-                      htmlFor="phone"
-                      className="block text-gray-700 font-medium mb-2"
-                    >
-                      Phone Number *
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff5722] focus:border-transparent"
-                    />
-                  </div>
-
-                  {/* City */}
-                  <div>
-                    <label
-                      htmlFor="city"
-                      className="block text-gray-700 font-medium mb-2"
-                    >
-                      City / Villages *
-                    </label>
-                    <input
-                      type="text"
-                      id="city"
-                      name="city"
-                      value={formData.city}
-                      onChange={handleChange}
-                      required
-                      placeholder="Enter your city"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff5722] focus:border-transparent"
-                    />
-                  </div>
-
-                  {/* Event Type */}
-                  <div>
-                    <label
-                      htmlFor="eventType"
-                      className="block text-gray-700 font-medium mb-2"
-                    >
-                      Event Type *
-                    </label>
-                    <input
-                      type="text"
-                      id="eventType"
-                      name="eventType"
-                      value={formData.eventType}
-                      onChange={handleChange}
-                      required
-                      placeholder="Enter event type (e.g., Wedding, Birthday, etc.)"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff5722] focus:border-transparent"
-                    />
-                  </div>
-
-                  {/* Event Date */}
-                  <div>
-                    <label
-                      htmlFor="eventDate"
-                      className="block text-gray-700 font-medium mb-2"
-                    >
-                      Event Date *
-                    </label>
-                    <input
-                      type="date"
-                      id="eventDate"
-                      name="eventDate"
-                      value={formData.eventDate}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff5722] focus:border-transparent"
-                    />
-                  </div>
-                </div>
-
-                {/* Message */}
-                <div className="mt-6">
-                  <label
-                    htmlFor="message"
-                    className="block text-gray-700 font-medium mb-2"
-                  >
-                    Additional Details
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
+                  <InputField
+                    label="Full Name *"
+                    name="name"
+                    type="text"
+                    value={formData.name}
                     onChange={handleChange}
-                    rows={5}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff5722] focus:border-transparent"
-                  ></textarea>
+                    required
+                  />
+                  <InputField
+                    label="Email Address *"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
+                  <InputField
+                    label="Phone Number *"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                  />
+                  <InputField
+                    label="City / Village *"
+                    name="city"
+                    type="text"
+                    value={formData.city}
+                    onChange={handleChange}
+                    required
+                  />
+                  <InputField
+                    label="Event Type *"
+                    name="eventType"
+                    type="text"
+                    value={formData.eventType}
+                    onChange={handleChange}
+                    required
+                  />
+                  <InputField
+                    label="Event Date *"
+                    name="eventDate"
+                    type="date"
+                    value={formData.eventDate}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
 
-                {/* Submit Button */}
-                <div className="mt-8">
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="btn-primary w-full flex justify-center items-center"
-                  >
-                    {isSubmitting ? 'Sending...' : 'Submit Booking Request'}
-                  </button>
-                </div>
+                <TextareaField
+                  label="Additional Details"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                />
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className={`w-full py-3 font-semibold rounded-lg text-white transition ${
+                    isSubmitting
+                      ? 'bg-gray-400 cursor-not-allowed'
+                      : 'bg-[#ff5722] hover:bg-[#e64a19]'
+                  }`}
+                >
+                  {isSubmitting ? 'Sending...' : 'Submit Booking Request'}
+                </button>
               </form>
             </div>
 
-            {/* Right Image */}
-            <div className="flex justify-center">
+            {/* Image Section */}
+            <div className="flex justify-center items-center">
               <img
                 src="/images/Event-Decoration-Process-Infographic.png"
-                alt="Process Illustration"
-                className="w-full max-w-md lg:max-w-full rounded-lg shadow-xl"
+                alt="Event Planning Process"
+                className="w-full max-w-md lg:max-w-full rounded-xl shadow-lg"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Information */}
-      <section className="py-10">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">
-            Contact Information
-          </h2>
-
-          <div className="px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Phone */}
-            <div className="flex items-start">
-              <div className="bg-[#ff5722]/10 p-3 rounded-full mr-4">
-                <FaPhone className="text-[#ff5722] text-xl" />
-              </div>
-              <div>
-                <h3 className="font-bold text-lg">Phone</h3>
-                <p className="text-gray-600">+91 7017520811</p>
-                <p className="text-gray-600">+91 9869950233</p>
-                <p className="text-gray-600">Available 9:00 AM - 8:00 PM</p>
-              </div>
-            </div>
-
-            {/* Email */}
-            <div className="flex items-start">
-              <div className="bg-[#ff5722]/10 p-3 rounded-full mr-4">
-                <FaEnvelope className="text-[#ff5722] text-xl" />
-              </div>
-              <div>
-                <h3 className="font-bold text-lg">Email</h3>
-                <p className="text-gray-600">vipabhi12345@gmail.com</p>
-                <p className="text-gray-600">We respond within 24 hours</p>
-              </div>
-            </div>
-
-            {/* Address */}
-            <div className="flex items-start">
-              <div className="bg-[#ff5722]/10 p-3 rounded-full mr-4">
-                <FaMapMarkerAlt className="text-[#ff5722] text-xl" />
-              </div>
-              <div>
-                <h3 className="font-bold text-lg">Office Address</h3>
-                <p className="text-gray-600">
-                  123 Event Street, Agra Mandal Region
-                  <br />
-                  Uttar Pradesh, India
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Service Areas */}
-          <div className="mt-12 pt-10 pb-10 bg-gray-50 rounded-lg">
-            <h3 className="font-bold text-2xl sm:text-3xl mb-10 text-center">
-              Service Areas
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="bg-white p-4 rounded-lg text-center shadow">
-                <h4 className="font-bold">Agra</h4>
-              </div>
-              <div className="bg-white p-4 rounded-lg text-center shadow">
-                <h4 className="font-bold">Mathura</h4>
-              </div>
-              <div className="bg-white p-4 rounded-lg text-center shadow">
-                <h4 className="font-bold">Firozabad</h4>
-              </div>
-              <div className="bg-white p-4 rounded-lg text-center shadow">
-                <h4 className="font-bold">Mainpuri</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center">
-            Frequently Asked Questions
-          </h2>
-          <div className="max-w-5xl mx-auto mt-8">
-            <div className="space-y-6">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="font-bold text-lg mb-2">
-                  How far in advance should I book my event?
-                </h3>
-                <p className="text-gray-600">
-                  We recommend booking at least 3-6 months in advance for
-                  weddings and large events, and 1-2 months for smaller events
-                  to ensure availability.
-                </p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="font-bold text-lg mb-2">
-                  Do you provide services outside Agra Mandal region?
-                </h3>
-                <p className="text-gray-600">
-                  While we specialize in Agra, Mathura, Firozabad, and Mainpuri,
-                  we can accommodate events in nearby areas for an additional
-                  travel fee.
-                </p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="font-bold text-lg mb-2">
-                  What is your cancellation policy?
-                </h3>
-                <p className="text-gray-600">
-                  Cancellations made 30+ days before the event receive a full
-                  refund minus the booking deposit. Cancellations within 30 days
-                  are subject to our detailed policy which will be provided in
-                  your contract.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Contact Details */}
+      <ContactDetails />
 
       <Footer />
     </main>
+  );
+}
+
+/* ---------------------------
+ ✅ Reusable Input Components
+---------------------------- */
+
+function InputField({
+  label,
+  name,
+  type,
+  value,
+  onChange,
+  required = false,
+}: {
+  label: string;
+  name: string;
+  type: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  required?: boolean;
+}) {
+  return (
+    <div>
+      <label
+        htmlFor={name}
+        className="block text-gray-700 font-medium mb-2"
+      >
+        {label}
+      </label>
+      <input
+        type={type}
+        id={name}
+        name={name}
+        value={value}
+        onChange={onChange}
+        required={required}
+        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff5722] focus:border-transparent"
+      />
+    </div>
+  );
+}
+
+function TextareaField({
+  label,
+  name,
+  value,
+  onChange,
+}: {
+  label: string;
+  name: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+}) {
+  return (
+    <div>
+      <label
+        htmlFor={name}
+        className="block text-gray-700 font-medium mb-2"
+      >
+        {label}
+      </label>
+      <textarea
+        id={name}
+        name={name}
+        value={value}
+        onChange={onChange}
+        rows={5}
+        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff5722] focus:border-transparent"
+      />
+    </div>
+  );
+}
+
+/* ---------------------------
+ ✅ Contact Info Section
+---------------------------- */
+
+function ContactDetails() {
+  const contacts = [
+    {
+      icon: <FaPhone className="text-[#ff5722] text-xl" />,
+      title: 'Phone',
+      lines: ['+91 7017520811', '+91 9869950233', 'Available 9:00 AM - 8:00 PM'],
+    },
+    {
+      icon: <FaEnvelope className="text-[#ff5722] text-xl" />,
+      title: 'Email',
+      lines: ['vipabhi12345@gmail.com', 'We respond within 24 hours'],
+    },
+    {
+      icon: <FaMapMarkerAlt className="text-[#ff5722] text-xl" />,
+      title: 'Office Address',
+      lines: ['123 Event Street, Agra Mandal Region', 'Uttar Pradesh, India'],
+    },
+  ];
+
+  return (
+    <section className="py-16 bg-white">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
+          Contact Information
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {contacts.map((c, i) => (
+            <div key={i} className="flex items-start">
+              <div className="bg-[#ff5722]/10 p-3 rounded-full mr-4">
+                {c.icon}
+              </div>
+              <div>
+                <h3 className="font-bold text-lg">{c.title}</h3>
+                {c.lines.map((line, j) => (
+                  <p key={j} className="text-gray-600">
+                    {line}
+                  </p>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
