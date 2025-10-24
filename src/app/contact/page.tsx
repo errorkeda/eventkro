@@ -5,7 +5,7 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
-// ✅ Mailtrap API Configuration
+// ✅ Mailtrap API Token
 const MAILTRAP_API_TOKEN = '66d95969738e2af5fc0904c018ccd933';
 
 export default function Contact() {
@@ -44,8 +44,11 @@ export default function Contact() {
 
     try {
       const emailData = {
-        from: { email: 'hello@demomailtrap.com', name: 'Event Booking Form' },
-        to: [{ email: 'vipabhi12345@gmail.com' }],
+        from: {
+          email: formData.email, // ✅ Sender email is user’s input
+          name: formData.name || 'Event Booking Form',
+        },
+        to: [{ email: 'vipabhi12345@gmail.com' }], // ✅ Admin email
         subject: `🎉 New Event Booking Request from ${formData.name}`,
         text: `
 You have received a new event booking request:
@@ -80,6 +83,7 @@ ${formData.message}
           '✅ Thank you! Your booking request has been sent successfully. We’ll contact you shortly.',
       });
 
+      // Reset form after success
       setFormData({
         name: '',
         email: '',
@@ -108,9 +112,7 @@ ${formData.message}
       {/* Hero Section */}
       <section className="bg-[#ff5722] py-16 text-white text-center">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Book Your Event
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Book Your Event</h1>
           <p className="text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
             Fill out the form below to request a booking for your special event.
             Our team will get back to you within 24 hours.
@@ -237,9 +239,7 @@ ${formData.message}
   );
 }
 
-/* ---------------------------
- ✅ Reusable Input Components
----------------------------- */
+/* ✅ Reusable Components */
 
 function InputField({
   label,
@@ -258,10 +258,7 @@ function InputField({
 }) {
   return (
     <div>
-      <label
-        htmlFor={name}
-        className="block text-gray-700 font-medium mb-2"
-      >
+      <label htmlFor={name} className="block text-gray-700 font-medium mb-2">
         {label}
       </label>
       <input
@@ -290,10 +287,7 @@ function TextareaField({
 }) {
   return (
     <div>
-      <label
-        htmlFor={name}
-        className="block text-gray-700 font-medium mb-2"
-      >
+      <label htmlFor={name} className="block text-gray-700 font-medium mb-2">
         {label}
       </label>
       <textarea
@@ -308,9 +302,7 @@ function TextareaField({
   );
 }
 
-/* ---------------------------
- ✅ Contact Info Section
----------------------------- */
+/* ✅ Contact Info Section */
 
 function ContactDetails() {
   const contacts = [
@@ -337,13 +329,10 @@ function ContactDetails() {
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
           Contact Information
         </h2>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {contacts.map((c, i) => (
             <div key={i} className="flex items-start">
-              <div className="bg-[#ff5722]/10 p-3 rounded-full mr-4">
-                {c.icon}
-              </div>
+              <div className="bg-[#ff5722]/10 p-3 rounded-full mr-4">{c.icon}</div>
               <div>
                 <h3 className="font-bold text-lg">{c.title}</h3>
                 {c.lines.map((line, j) => (
