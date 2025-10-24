@@ -4,9 +4,12 @@ import { useState, FormEvent } from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import emailjs from 'emailjs-com';
 
-// Mailtrap API token
-const MAILTRAP_API_TOKEN = '66d95969738e2af5fc0904c018ccd933';
+// EmailJS configuration
+const EMAILJS_SERVICE_ID = 'service_p6p4e5o';
+const EMAILJS_TEMPLATE_ID = 'template_4bvfa94';
+const EMAILJS_USER_ID = 'W2EbmhEd8-oEx3vNW';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -43,55 +46,36 @@ export default function Contact() {
     setSubmitStatus(null);
 
     try {
-      const emailData = {
-        from: {
-          email: 'hello@demomailtrap.com',
-          name: 'Event Booking Form',
-        },
-        to: [{ email: 'vipabhi12345@gmail.com' }],
-        subject: `New Event Booking Request from ${formData.name}`,
-        text: `
-You have received a new event booking request:
-
-Full Name: ${formData.name}
-Email: ${formData.email}
-Phone: ${formData.phone}
-City: ${formData.city}
-Event Type: ${formData.eventType}
-Event Date: ${formData.eventDate}
-
-Message:
-${formData.message}
-        `,
-        category: 'Booking Request',
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        from_phone: formData.phone,
+        city: formData.city,
+        event_type: formData.eventType,
+        event_date: formData.eventDate,
+        message: formData.message,
+        to_email: 'vipabhi123@gmail.com',
       };
 
-      const response = await fetch('https://send.api.mailtrap.io/api/send', {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${MAILTRAP_API_TOKEN}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(emailData),
-      });
-
-      if (!response.ok) {
-        throw new Error('Mailtrap API request failed');
-      }
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_USER_ID
+      );
 
       setSubmitStatus({
         success: true,
         message:
-          '✅ Thank you! Your booking request has been sent successfully. We will contact you shortly.',
+          'Thank you! Your booking request has been sent successfully. We will contact you shortly.',
       });
 
-      // Reset form after success
       setFormData({
         name: '',
         email: '',
         phone: '',
-        city: '',
-        eventType: '',
+        city: 'Agra',
+        eventType: 'Wedding',
         eventDate: '',
         message: '',
       });
@@ -100,7 +84,7 @@ ${formData.message}
       setSubmitStatus({
         success: false,
         message:
-          '❌ There was an error sending your request. Please try again or contact us directly.',
+          'There was an error sending your request. Please try again or contact us directly.',
       });
     } finally {
       setIsSubmitting(false);
@@ -124,7 +108,7 @@ ${formData.message}
         </div>
       </section>
 
-      {/* Booking Form Section */}
+      {/* Step By Step Process Section */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
@@ -152,56 +136,124 @@ ${formData.message}
 
               <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <InputField
-                    label="Full Name *"
-                    name="name"
-                    type="text"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                  />
-                  <InputField
-                    label="Email Address *"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                  <InputField
-                    label="Phone Number *"
-                    name="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                  />
-                  <InputField
-                    label="City / Villages *"
-                    name="city"
-                    type="text"
-                    value={formData.city}
-                    onChange={handleChange}
-                    required
-                  />
-                  <InputField
-                    label="Event Type *"
-                    name="eventType"
-                    type="text"
-                    value={formData.eventType}
-                    onChange={handleChange}
-                    required
-                  />
-                  <InputField
-                    label="Event Date *"
-                    name="eventDate"
-                    type="date"
-                    value={formData.eventDate}
-                    onChange={handleChange}
-                    required
-                  />
+                  {/* Name */}
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="block text-gray-700 font-medium mb-2"
+                    >
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff5722] focus:border-transparent"
+                    />
+                  </div>
+
+                  {/* Email */}
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block text-gray-700 font-medium mb-2"
+                    >
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff5722] focus:border-transparent"
+                    />
+                  </div>
+
+                  {/* Phone */}
+                  <div>
+                    <label
+                      htmlFor="phone"
+                      className="block text-gray-700 font-medium mb-2"
+                    >
+                      Phone Number *
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff5722] focus:border-transparent"
+                    />
+                  </div>
+
+                  {/* City */}
+                  <div>
+                    <label
+                      htmlFor="city"
+                      className="block text-gray-700 font-medium mb-2"
+                    >
+                      City / Villages *
+                    </label>
+                    <input
+                      type="text"
+                      id="city"
+                      name="city"
+                      value={formData.city}
+                      onChange={handleChange}
+                      required
+                      placeholder="Enter your city"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff5722] focus:border-transparent"
+                    />
+                  </div>
+
+                  {/* Event Type */}
+                  <div>
+                    <label
+                      htmlFor="eventType"
+                      className="block text-gray-700 font-medium mb-2"
+                    >
+                      Event Type *
+                    </label>
+                    <input
+                      type="text"
+                      id="eventType"
+                      name="eventType"
+                      value={formData.eventType}
+                      onChange={handleChange}
+                      required
+                      placeholder="Enter event type (e.g., Wedding, Birthday, etc.)"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff5722] focus:border-transparent"
+                    />
+                  </div>
+
+                  {/* Event Date */}
+                  <div>
+                    <label
+                      htmlFor="eventDate"
+                      className="block text-gray-700 font-medium mb-2"
+                    >
+                      Event Date *
+                    </label>
+                    <input
+                      type="date"
+                      id="eventDate"
+                      name="eventDate"
+                      value={formData.eventDate}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff5722] focus:border-transparent"
+                    />
+                  </div>
                 </div>
 
+                {/* Message */}
                 <div className="mt-6">
                   <label
                     htmlFor="message"
@@ -219,6 +271,7 @@ ${formData.message}
                   ></textarea>
                 </div>
 
+                {/* Submit Button */}
                 <div className="mt-8">
                   <button
                     type="submit"
@@ -243,103 +296,123 @@ ${formData.message}
         </div>
       </section>
 
-      {/* Contact Section */}
-      <ContactDetails />
+      {/* Contact Information */}
+      <section className="py-10">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">
+            Contact Information
+          </h2>
+
+          <div className="px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Phone */}
+            <div className="flex items-start">
+              <div className="bg-[#ff5722]/10 p-3 rounded-full mr-4">
+                <FaPhone className="text-[#ff5722] text-xl" />
+              </div>
+              <div>
+                <h3 className="font-bold text-lg">Phone</h3>
+                <p className="text-gray-600">+91 7017520811</p>
+                <p className="text-gray-600">+91 9869950233</p>
+                <p className="text-gray-600">Available 9:00 AM - 8:00 PM</p>
+              </div>
+            </div>
+
+            {/* Email */}
+            <div className="flex items-start">
+              <div className="bg-[#ff5722]/10 p-3 rounded-full mr-4">
+                <FaEnvelope className="text-[#ff5722] text-xl" />
+              </div>
+              <div>
+                <h3 className="font-bold text-lg">Email</h3>
+                <p className="text-gray-600">vipabhi12345@gmail.com</p>
+                <p className="text-gray-600">We respond within 24 hours</p>
+              </div>
+            </div>
+
+            {/* Address */}
+            <div className="flex items-start">
+              <div className="bg-[#ff5722]/10 p-3 rounded-full mr-4">
+                <FaMapMarkerAlt className="text-[#ff5722] text-xl" />
+              </div>
+              <div>
+                <h3 className="font-bold text-lg">Office Address</h3>
+                <p className="text-gray-600">
+                  123 Event Street, Agra Mandal Region
+                  <br />
+                  Uttar Pradesh, India
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Service Areas */}
+          <div className="mt-12 pt-10 pb-10 bg-gray-50 rounded-lg">
+            <h3 className="font-bold text-2xl sm:text-3xl mb-10 text-center">
+              Service Areas
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="bg-white p-4 rounded-lg text-center shadow">
+                <h4 className="font-bold">Agra</h4>
+              </div>
+              <div className="bg-white p-4 rounded-lg text-center shadow">
+                <h4 className="font-bold">Mathura</h4>
+              </div>
+              <div className="bg-white p-4 rounded-lg text-center shadow">
+                <h4 className="font-bold">Firozabad</h4>
+              </div>
+              <div className="bg-white p-4 rounded-lg text-center shadow">
+                <h4 className="font-bold">Mainpuri</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center">
+            Frequently Asked Questions
+          </h2>
+          <div className="max-w-5xl mx-auto mt-8">
+            <div className="space-y-6">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="font-bold text-lg mb-2">
+                  How far in advance should I book my event?
+                </h3>
+                <p className="text-gray-600">
+                  We recommend booking at least 3-6 months in advance for
+                  weddings and large events, and 1-2 months for smaller events
+                  to ensure availability.
+                </p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="font-bold text-lg mb-2">
+                  Do you provide services outside Agra Mandal region?
+                </h3>
+                <p className="text-gray-600">
+                  While we specialize in Agra, Mathura, Firozabad, and Mainpuri,
+                  we can accommodate events in nearby areas for an additional
+                  travel fee.
+                </p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="font-bold text-lg mb-2">
+                  What is your cancellation policy?
+                </h3>
+                <p className="text-gray-600">
+                  Cancellations made 30+ days before the event receive a full
+                  refund minus the booking deposit. Cancellations within 30 days
+                  are subject to our detailed policy which will be provided in
+                  your contract.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </main>
-  );
-}
-
-// ✅ Reusable Input Component
-function InputField({
-  label,
-  name,
-  type,
-  value,
-  onChange,
-  required = false,
-}: any) {
-  return (
-    <div>
-      <label
-        htmlFor={name}
-        className="block text-gray-700 font-medium mb-2"
-      >
-        {label}
-      </label>
-      <input
-        type={type}
-        id={name}
-        name={name}
-        value={value}
-        onChange={onChange}
-        required={required}
-        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff5722] focus:border-transparent"
-      />
-    </div>
-  );
-}
-
-// ✅ Contact Info Section
-function ContactDetails() {
-  return (
-    <section className="py-10">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">
-          Contact Information
-        </h2>
-
-        <div className="px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <ContactCard
-            icon={<FaPhone className="text-[#ff5722] text-xl" />}
-            title="Phone"
-            lines={[
-              '+91 7017520811',
-              '+91 9869950233',
-              'Available 9:00 AM - 8:00 PM',
-            ]}
-          />
-          <ContactCard
-            icon={<FaEnvelope className="text-[#ff5722] text-xl" />}
-            title="Email"
-            lines={['vipabhi12345@gmail.com', 'We respond within 24 hours']}
-          />
-          <ContactCard
-            icon={<FaMapMarkerAlt className="text-[#ff5722] text-xl" />}
-            title="Office Address"
-            lines={[
-              '123 Event Street, Agra Mandal Region',
-              'Uttar Pradesh, India',
-            ]}
-          />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ✅ Contact Info Card
-function ContactCard({
-  icon,
-  title,
-  lines,
-}: {
-  icon: JSX.Element;
-  title: string;
-  lines: string[];
-}) {
-  return (
-    <div className="flex items-start">
-      <div className="bg-[#ff5722]/10 p-3 rounded-full mr-4">{icon}</div>
-      <div>
-        <h3 className="font-bold text-lg">{title}</h3>
-        {lines.map((line, i) => (
-          <p key={i} className="text-gray-600">
-            {line}
-          </p>
-        ))}
-      </div>
-    </div>
   );
 }
