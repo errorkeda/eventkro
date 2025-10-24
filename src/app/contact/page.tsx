@@ -5,9 +5,6 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
-// ✅ Mailtrap API Token
-const MAILTRAP_API_TOKEN = '66d95969738e2af5fc0904c018ccd933';
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -43,39 +40,24 @@ export default function Contact() {
     setSubmitStatus(null);
 
     try {
-      const emailData = {
-        from: {
-          email: formData.email, // ✅ Sender email is user’s input
-          name: formData.name || 'Event Booking Form',
-        },
-        to: [{ email: 'vipabhi12345@gmail.com' }], // ✅ Admin email
-        subject: `🎉 New Event Booking Request from ${formData.name}`,
-        text: `
-You have received a new event booking request:
-
-Full Name: ${formData.name}
-Email: ${formData.email}
-Phone: ${formData.phone}
-City: ${formData.city}
-Event Type: ${formData.eventType}
-Event Date: ${formData.eventDate}
-
-Message:
-${formData.message}
-        `,
-        category: 'Booking Request',
-      };
-
-      const response = await fetch('https://send.api.mailtrap.io/api/send', {
+      // ✅ Send data to backend API route
+      const response = await fetch('/api/send-mail', {
         method: 'POST',
-        headers: {
-          Authorization: `Bearer ${MAILTRAP_API_TOKEN}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(emailData),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          fromEmail: formData.email, // user’s email as "from"
+          phone: formData.phone,
+          city: formData.city,
+          eventType: formData.eventType,
+          eventDate: formData.eventDate,
+          message: formData.message,
+        }),
       });
 
-      if (!response.ok) throw new Error('Mailtrap API request failed');
+      const result = await response.json();
+
+      if (!result.success) throw new Error(result.message || 'Failed to send');
 
       setSubmitStatus({
         success: true,
@@ -83,7 +65,7 @@ ${formData.message}
           '✅ Thank you! Your booking request has been sent successfully. We’ll contact you shortly.',
       });
 
-      // Reset form after success
+      // Reset form
       setFormData({
         name: '',
         email: '',
@@ -240,7 +222,6 @@ ${formData.message}
 }
 
 /* ✅ Reusable Components */
-
 function InputField({
   label,
   name,
@@ -303,7 +284,6 @@ function TextareaField({
 }
 
 /* ✅ Contact Info Section */
-
 function ContactDetails() {
   const contacts = [
     {
