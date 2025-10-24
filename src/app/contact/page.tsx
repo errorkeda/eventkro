@@ -5,7 +5,7 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
-// ✅ Mailtrap API Configuration
+// Mailtrap API token
 const MAILTRAP_API_TOKEN = '66d95969738e2af5fc0904c018ccd933';
 
 export default function Contact() {
@@ -44,9 +44,12 @@ export default function Contact() {
 
     try {
       const emailData = {
-        from: { email: 'hello@demomailtrap.com', name: 'Event Booking Form' },
+        from: {
+          email: 'hello@demomailtrap.com',
+          name: 'Event Booking Form',
+        },
         to: [{ email: 'vipabhi12345@gmail.com' }],
-        subject: `🎉 New Event Booking Request from ${formData.name}`,
+        subject: `New Event Booking Request from ${formData.name}`,
         text: `
 You have received a new event booking request:
 
@@ -72,14 +75,17 @@ ${formData.message}
         body: JSON.stringify(emailData),
       });
 
-      if (!response.ok) throw new Error('Mailtrap API request failed');
+      if (!response.ok) {
+        throw new Error('Mailtrap API request failed');
+      }
 
       setSubmitStatus({
         success: true,
         message:
-          '✅ Thank you! Your booking request has been sent successfully. We’ll contact you shortly.',
+          '✅ Thank you! Your booking request has been sent successfully. We will contact you shortly.',
       });
 
+      // Reset form after success
       setFormData({
         name: '',
         email: '',
@@ -106,12 +112,12 @@ ${formData.message}
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-[#ff5722] py-16 text-white text-center">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+      <section className="bg-[#ff5722] py-16 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold my-6">
             Book Your Event
           </h1>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl max-w-2xl mx-auto">
             Fill out the form below to request a booking for your special event.
             Our team will get back to you within 24 hours.
           </p>
@@ -122,19 +128,19 @@ ${formData.message}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
-            Step-by-Step Booking Process
+            Step By Step Process
           </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            {/* Form Section */}
-            <div className="bg-white rounded-xl shadow-lg p-6 sm:p-8">
-              <h3 className="text-2xl font-bold text-center mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Form */}
+            <div className="bg-white w-full rounded-xl shadow-lg p-6 sm:p-8">
+              <h2 className="text-xl sm:text-2xl font-bold mb-6 text-center">
                 Event Booking Form
-              </h3>
+              </h2>
 
               {submitStatus && (
                 <div
-                  className={`p-4 mb-6 rounded-lg text-center ${
+                  className={`p-4 mb-6 rounded-lg ${
                     submitStatus.success
                       ? 'bg-green-100 text-green-700'
                       : 'bg-red-100 text-red-700'
@@ -144,7 +150,7 @@ ${formData.message}
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <InputField
                     label="Full Name *"
@@ -171,7 +177,7 @@ ${formData.message}
                     required
                   />
                   <InputField
-                    label="City / Village *"
+                    label="City / Villages *"
                     name="city"
                     type="text"
                     value={formData.city}
@@ -196,40 +202,48 @@ ${formData.message}
                   />
                 </div>
 
-                <TextareaField
-                  label="Additional Details"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                />
+                <div className="mt-6">
+                  <label
+                    htmlFor="message"
+                    className="block text-gray-700 font-medium mb-2"
+                  >
+                    Additional Details
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={5}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff5722] focus:border-transparent"
+                  ></textarea>
+                </div>
 
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className={`w-full py-3 font-semibold rounded-lg text-white transition ${
-                    isSubmitting
-                      ? 'bg-gray-400 cursor-not-allowed'
-                      : 'bg-[#ff5722] hover:bg-[#e64a19]'
-                  }`}
-                >
-                  {isSubmitting ? 'Sending...' : 'Submit Booking Request'}
-                </button>
+                <div className="mt-8">
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="btn-primary w-full flex justify-center items-center"
+                  >
+                    {isSubmitting ? 'Sending...' : 'Submit Booking Request'}
+                  </button>
+                </div>
               </form>
             </div>
 
-            {/* Image Section */}
-            <div className="flex justify-center items-center">
+            {/* Right Image */}
+            <div className="flex justify-center">
               <img
                 src="/images/Event-Decoration-Process-Infographic.png"
-                alt="Event Planning Process"
-                className="w-full max-w-md lg:max-w-full rounded-xl shadow-lg"
+                alt="Process Illustration"
+                className="w-full max-w-md lg:max-w-full rounded-lg shadow-xl"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Details */}
+      {/* Contact Section */}
       <ContactDetails />
 
       <Footer />
@@ -237,10 +251,7 @@ ${formData.message}
   );
 }
 
-/* ---------------------------
- ✅ Reusable Input Components
----------------------------- */
-
+// ✅ Reusable Input Component
 function InputField({
   label,
   name,
@@ -248,14 +259,7 @@ function InputField({
   value,
   onChange,
   required = false,
-}: {
-  label: string;
-  name: string;
-  type: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  required?: boolean;
-}) {
+}: any) {
   return (
     <div>
       <label
@@ -277,85 +281,65 @@ function InputField({
   );
 }
 
-function TextareaField({
-  label,
-  name,
-  value,
-  onChange,
-}: {
-  label: string;
-  name: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
-}) {
-  return (
-    <div>
-      <label
-        htmlFor={name}
-        className="block text-gray-700 font-medium mb-2"
-      >
-        {label}
-      </label>
-      <textarea
-        id={name}
-        name={name}
-        value={value}
-        onChange={onChange}
-        rows={5}
-        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff5722] focus:border-transparent"
-      />
-    </div>
-  );
-}
-
-/* ---------------------------
- ✅ Contact Info Section
----------------------------- */
-
+// ✅ Contact Info Section
 function ContactDetails() {
-  const contacts = [
-    {
-      icon: <FaPhone className="text-[#ff5722] text-xl" />,
-      title: 'Phone',
-      lines: ['+91 7017520811', '+91 9869950233', 'Available 9:00 AM - 8:00 PM'],
-    },
-    {
-      icon: <FaEnvelope className="text-[#ff5722] text-xl" />,
-      title: 'Email',
-      lines: ['vipabhi12345@gmail.com', 'We respond within 24 hours'],
-    },
-    {
-      icon: <FaMapMarkerAlt className="text-[#ff5722] text-xl" />,
-      title: 'Office Address',
-      lines: ['123 Event Street, Agra Mandal Region', 'Uttar Pradesh, India'],
-    },
-  ];
-
   return (
-    <section className="py-16 bg-white">
+    <section className="py-10">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">
           Contact Information
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {contacts.map((c, i) => (
-            <div key={i} className="flex items-start">
-              <div className="bg-[#ff5722]/10 p-3 rounded-full mr-4">
-                {c.icon}
-              </div>
-              <div>
-                <h3 className="font-bold text-lg">{c.title}</h3>
-                {c.lines.map((line, j) => (
-                  <p key={j} className="text-gray-600">
-                    {line}
-                  </p>
-                ))}
-              </div>
-            </div>
-          ))}
+        <div className="px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <ContactCard
+            icon={<FaPhone className="text-[#ff5722] text-xl" />}
+            title="Phone"
+            lines={[
+              '+91 7017520811',
+              '+91 9869950233',
+              'Available 9:00 AM - 8:00 PM',
+            ]}
+          />
+          <ContactCard
+            icon={<FaEnvelope className="text-[#ff5722] text-xl" />}
+            title="Email"
+            lines={['vipabhi12345@gmail.com', 'We respond within 24 hours']}
+          />
+          <ContactCard
+            icon={<FaMapMarkerAlt className="text-[#ff5722] text-xl" />}
+            title="Office Address"
+            lines={[
+              '123 Event Street, Agra Mandal Region',
+              'Uttar Pradesh, India',
+            ]}
+          />
         </div>
       </div>
     </section>
+  );
+}
+
+// ✅ Contact Info Card
+function ContactCard({
+  icon,
+  title,
+  lines,
+}: {
+  icon: JSX.Element;
+  title: string;
+  lines: string[];
+}) {
+  return (
+    <div className="flex items-start">
+      <div className="bg-[#ff5722]/10 p-3 rounded-full mr-4">{icon}</div>
+      <div>
+        <h3 className="font-bold text-lg">{title}</h3>
+        {lines.map((line, i) => (
+          <p key={i} className="text-gray-600">
+            {line}
+          </p>
+        ))}
+      </div>
+    </div>
   );
 }
