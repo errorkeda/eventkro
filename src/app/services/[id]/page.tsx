@@ -3,6 +3,7 @@
   import Header from "../../../components/Header";
   import Footer from "../../../components/Footer";
   import { services } from "../../data/servicesData";
+  import { pageMetadata } from "../../../lib/seo";
   import { FaCalendarCheck, FaGift, FaSun, FaLeaf, FaCamera } from "react-icons/fa";
 
   const iconMap: Record<string, JSX.Element> = {
@@ -17,16 +18,13 @@
     const service = services.find((s) => s.id === params.id);
     if (!service) return { title: "Service Not Found | Eventkro Agra" };
 
-    return {
+    return pageMetadata({
       title: service.seo.title,
       description: service.seo.description,
+      path: `/services/${params.id}`,
       keywords: service.seo.keywords,
-      openGraph: {
-        title: service.seo.title,
-        description: service.seo.description,
-        images: [service.image],
-      },
-    };
+      image: service.image,
+    });
   }
 
   export default function ServiceDetails({ params }: { params: { id: string } }) {

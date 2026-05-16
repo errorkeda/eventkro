@@ -99,7 +99,7 @@ export default function Contact() {
       <section className="bg-[#ff5722] py-16 text-white">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold my-6">
-            Book Your Event
+            Book Event Planners in Agra, Mathura & Firozabad
           </h1>
           <p className="text-lg sm:text-xl max-w-2xl mx-auto">
             Fill out the form below to request a booking for your special event.

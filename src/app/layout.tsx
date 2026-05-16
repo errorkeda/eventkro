@@ -30,12 +30,12 @@ export const metadata: Metadata = {
     apple: '/favicon-512x512.png',
   },
   manifest: '/site.webmanifest',
-  metadataBase: new URL('https://eventkro.in'),
+  metadataBase: new URL('https://www.eventkro.in'),
   openGraph: {
     title: 'Eventkro - Agra Mandal Event Planners',
     description:
       'Hire the best event planners for weddings, birthdays, and corporate events across Agra, Mathura, Firozabad, Mainpuri, Etah, Etawah & nearby cities.',
-    url: 'https://eventkro.in',
+    url: 'https://www.eventkro.in',
     siteName: 'Eventkro',
     images: [
       {
@@ -73,9 +73,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
             name: 'Eventkro',
-            image: 'https://eventkro.in/favicon-512x512.png',
-            '@id': 'https://eventkro.in',
-            url: 'https://eventkro.in',
+            image: 'https://www.eventkro.in/favicon-512x512.png',
+            '@id': 'https://www.eventkro.in',
+            url: 'https://www.eventkro.in',
             telephone: '+91-7017520811',
             address: {
               '@type': 'PostalAddress',

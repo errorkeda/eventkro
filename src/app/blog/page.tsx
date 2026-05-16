@@ -254,7 +254,7 @@ export default function BlogPage() {
         ></div>
         <div className="container mx-auto px-4 h-full flex items-center relative z-20">
           <div className="text-white max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Event Planning Insights</h1>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Event Planning Insights</h2>
             <p className="text-xl">
               Discover tips, trends, and inspiration for planning events across Agra Mandal
             </p>
