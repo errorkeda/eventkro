@@ -3,8 +3,11 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { getServicesByCategory } from '../app/data/servicesData';
 import Header from './Header';
 import Footer from './Footer';
+
+const balloonServices = getServicesByCategory('balloon');
 
 const heroH1 =
   'Best Event Planners in Agra, Mathura & Firozabad | Eventkro';
@@ -121,6 +124,30 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* SEO intro — targets GSC queries */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Eventkro is among the trusted <strong>event planners in Agra</strong> for weddings,
+            corporate functions, and family celebrations. As experienced{' '}
+            <strong>wedding planners in Agra</strong>, we offer venue decoration,{' '}
+            <strong>catering services in Agra</strong>, photography, and complete on-day
+            coordination across Agra, Mathura, and Firozabad.
+          </p>
+          <div className="mt-6 flex flex-wrap justify-center gap-4">
+            <Link
+              href="/events/agra-wedding-events"
+              className="text-[#ff5722] font-semibold hover:underline"
+            >
+              Wedding planners in Agra →
+            </Link>
+            <Link href="/contact" className="text-[#ff5722] font-semibold hover:underline">
+              Get a free quote →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Event Cards (updated) */}
 
       <section className="py-16 bg-gray-50">
@@ -144,7 +171,7 @@ export default function HomePage() {
               { title: 'Rituals Events', slug: 'agra-rituals-events', img: '/images/rituals.jpeg', desc: 'Best Ritual Event Planners in Agra for traditional functions.' },
             ].map((event) => (
               <div key={event.slug} className="bg-white rounded-lg shadow-sm overflow-hidden">
-                <img src={event.img} alt={event.title} className="w-full h-40 object-cover" />
+                <img src={event.img} alt={`${event.title} — Eventkro event planners in Agra`} className="w-full h-40 object-cover" />
                 <div className="p-4 text-center">
                   <h3 className="text-lg font-bold">{event.title}</h3>
                   <p className="text-gray-600 text-sm">{event.desc}</p>
@@ -167,6 +194,69 @@ export default function HomePage() {
         </div>
       </section>
 
+
+      {/* Balloon decoration services */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="section-title">Balloon Decoration Services in Agra</h2>
+          <p className="section-subtitle">
+            Premium balloon decor for birthdays, weddings, baby showers, corporate events, arches, backdrops, and bouquets.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+            {balloonServices.map((service) => (
+              <div
+                key={service.id}
+                className="bg-gray-50 rounded-lg p-5 hover:shadow-md transition border border-gray-100"
+              >
+                <h3 className="font-bold text-gray-900 mb-2">
+                  {service.title.replace(' in Agra', '')}
+                </h3>
+                <p className="text-yellow-500 text-sm mb-2">
+                  {'★'.repeat(service.rating)}
+                  {'☆'.repeat(5 - service.rating)}
+                </p>
+                <p className="text-gray-600 text-sm mb-4 line-clamp-3">{service.description}</p>
+                <Link
+                  href={`/services/${service.id}/agra`}
+                  className="text-[#ff5722] font-medium text-sm hover:underline"
+                >
+                  View details →
+                </Link>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link href="/services" className="btn-primary">
+              View All Balloon &amp; Event Services
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Catering & decoration — GSC query coverage */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="section-title">Catering &amp; Decoration in Agra</h2>
+          <p className="section-subtitle">
+            Full-service <strong>agra decoration</strong>, <strong>balloon decoration</strong>, and <strong>catering services in Agra</strong> for weddings, birthdays, and corporate events.
+          </p>
+          <div className="grid md:grid-cols-2 gap-8 mt-8">
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-3">Event Decoration in Agra</h3>
+              <p className="text-gray-600">Theme-based stage decor, floral arrangements, mandap designs, and LED setups for weddings and rituals.</p>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-3">Catering Services in Agra</h3>
+              <p className="text-gray-600">Custom menus, live counters, beverages, and desserts for weddings and corporate gatherings.</p>
+            </div>
+          </div>
+          <div className="text-center mt-8">
+            <Link href="/events/agra-wedding-events" className="btn-primary mr-4 inline-block mb-2">Wedding packages</Link>
+            <Link href="/services/balloon-decoration/agra" className="btn-secondary inline-block mr-2 mb-2">Balloon decoration</Link>
+            <Link href="/contact" className="btn-secondary inline-block">Request quote</Link>
+          </div>
+        </div>
+      </section>
 
 
       {/* Pricing Packages Section */}

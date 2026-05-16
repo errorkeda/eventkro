@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { eventSlugs } from './data/eventData';
-import { services } from './data/servicesData';
-import { SITE_URL } from '../lib/site';
+import { siteUrl } from '../lib/site';
+import { getServiceCityParams } from '../lib/serviceSeo';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
@@ -24,19 +24,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticRoutes.map((path) => ({
-      url: `${SITE_URL}${path}`,
+      url: siteUrl(path === '' ? '/' : path),
       lastModified: now,
       changeFrequency: 'weekly' as const,
       priority: path === '' ? 1 : 0.8,
     })),
-    ...services.map((service) => ({
-      url: `${SITE_URL}/services/${service.id}`,
+    ...getServiceCityParams().map(({ id, city }) => ({
+      url: siteUrl(`/services/${id}/${city}`),
       lastModified: now,
       changeFrequency: 'monthly' as const,
-      priority: 0.7,
+      priority: 0.75,
     })),
     ...eventSlugs.map((slug) => ({
-      url: `${SITE_URL}/events/${slug}`,
+      url: siteUrl(`/events/${slug}`),
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.85,

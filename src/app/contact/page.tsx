@@ -4,6 +4,8 @@ import { useState, FormEvent } from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import FaqAccordion from '../../components/FaqAccordion';
+import { contactFaqItems } from '../data/faq';
 import emailjs from 'emailjs-com';
 
 // EmailJS configuration
@@ -374,40 +376,8 @@ export default function Contact() {
           <h2 className="text-3xl sm:text-4xl font-bold text-center">
             Frequently Asked Questions
           </h2>
-          <div className="max-w-5xl mx-auto mt-8">
-            <div className="space-y-6">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="font-bold text-lg mb-2">
-                  How far in advance should I book my event?
-                </h3>
-                <p className="text-gray-600">
-                  We recommend booking at least 3-6 months in advance for
-                  weddings and large events, and 1-2 months for smaller events
-                  to ensure availability.
-                </p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="font-bold text-lg mb-2">
-                  Do you provide services outside Agra Mandal region?
-                </h3>
-                <p className="text-gray-600">
-                  While we specialize in Agra, Mathura, Firozabad, and Mainpuri,
-                  we can accommodate events in nearby areas for an additional
-                  travel fee.
-                </p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="font-bold text-lg mb-2">
-                  What is your cancellation policy?
-                </h3>
-                <p className="text-gray-600">
-                  Cancellations made 30+ days before the event receive a full
-                  refund minus the booking deposit. Cancellations within 30 days
-                  are subject to our detailed policy which will be provided in
-                  your contract.
-                </p>
-              </div>
-            </div>
+          <div className="max-w-3xl mx-auto mt-8">
+            <FaqAccordion items={contactFaqItems} />
           </div>
         </div>
       </section>

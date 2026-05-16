@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "eventkro.in" }],
+      "destination": "https://www.eventkro.in/:path*",
+      "permanent": true
+    }
+  ]
+}

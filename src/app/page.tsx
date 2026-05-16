@@ -1,16 +1,19 @@
 import type { Metadata } from 'next';
 import HomePage from '../components/HomePage';
 import { pageMetadata } from '../lib/seo';
+import { SITE_PHONE_PRIMARY } from '../lib/site';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Best Event Planners in Agra, Mathura & Firozabad | Eventkro',
-  description:
-    'Eventkro is the top event management company in Agra, Mathura, and Firozabad. We specialize in dream weddings, corporate events, birthdays, and cultural functions. Book now!',
+  description: `Top event planners in Agra — weddings, corporate events, catering & decoration. Free quote in 24 hrs. Call Eventkro ${SITE_PHONE_PRIMARY}. Serving Mathura & Firozabad.`,
   path: '/',
   keywords: [
+    'event planner in agra',
     'event planners in agra',
+    'best event planner in agra',
     'wedding planners in agra',
-    'best decorators in agra',
+    'catering services agra',
+    'agra decoration',
     'event management company',
     'Eventkro',
   ],

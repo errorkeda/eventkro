@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { SITE_NAME, SITE_URL } from './site';
+import { SITE_NAME, siteUrl } from './site';
 
 type PageMetadataOptions = {
   title: string;
@@ -12,11 +12,11 @@ type PageMetadataOptions = {
 export function pageMetadata({
   title,
   description,
-  path = '',
+  path = '/',
   keywords,
   image = '/favicon-512x512.png',
 }: PageMetadataOptions): Metadata {
-  const url = `${SITE_URL}${path}`;
+  const url = siteUrl(path);
 
   return {
     title,

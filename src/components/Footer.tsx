@@ -12,7 +12,8 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl font-bold text-red-500 mb-4">Eventkro</h3>
             <p className="text-gray-300 mb-4">
-              Creating unforgettable moments with professional event management services across India.
+              Professional event planners in Agra, Mathura, Firozabad &amp; Mainpuri — weddings,
+              catering, decoration &amp; corporate events.
             </p>
             <div className="flex space-x-4">
               {/* <a href="#" className="text-gray-300 hover:text-red-500 transition-colors">
@@ -72,11 +73,41 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              <li className="text-gray-300">Wedding Planning</li>
-              <li className="text-gray-300">Corporate Events</li>
-              <li className="text-gray-300">Birthday Parties</li>
-              <li className="text-gray-300">Cultural Events</li>
-              <li className="text-gray-300">Catering Services</li>
+              <li>
+                <Link href="/events/agra-wedding-events" className="text-gray-300 hover:text-red-500">
+                  Wedding planners in Agra
+                </Link>
+              </li>
+              <li>
+                <Link href="/events/agra-corporate-events" className="text-gray-300 hover:text-red-500">
+                  Corporate events
+                </Link>
+              </li>
+              <li>
+                <Link href="/events/agra-birthday-party" className="text-gray-300 hover:text-red-500">
+                  Birthday parties
+                </Link>
+              </li>
+              <li>
+                <Link href="/events/agra-rituals-events" className="text-gray-300 hover:text-red-500">
+                  Cultural &amp; ritual events
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/balloon-decoration/agra" className="text-gray-300 hover:text-red-500">
+                  Balloon decoration in Agra
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/birthday-balloon-decoration/agra" className="text-gray-300 hover:text-red-500">
+                  Birthday party decoration
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-gray-300 hover:text-red-500">
+                  Book event planner
+                </Link>
+              </li>
             </ul>
           </div>
 

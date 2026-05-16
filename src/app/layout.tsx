@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
+import { SITE_EMAIL, SITE_PHONE_PRIMARY, SITE_PHONE_SECONDARY, siteUrl } from '../lib/site';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -31,11 +32,14 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   metadataBase: new URL('https://www.eventkro.in'),
+  alternates: {
+    canonical: siteUrl('/'),
+  },
   openGraph: {
     title: 'Eventkro - Agra Mandal Event Planners',
     description:
       'Hire the best event planners for weddings, birthdays, and corporate events across Agra, Mathura, Firozabad, Mainpuri, Etah, Etawah & nearby cities.',
-    url: 'https://www.eventkro.in',
+    url: siteUrl('/'),
     siteName: 'Eventkro',
     images: [
       {
@@ -74,9 +78,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             '@type': 'LocalBusiness',
             name: 'Eventkro',
             image: 'https://www.eventkro.in/favicon-512x512.png',
-            '@id': 'https://www.eventkro.in',
-            url: 'https://www.eventkro.in',
-            telephone: '+91-7017520811',
+            '@id': siteUrl('/'),
+            url: siteUrl('/'),
+            telephone: [SITE_PHONE_PRIMARY, SITE_PHONE_SECONDARY],
+            email: SITE_EMAIL,
+            priceRange: '₹₹',
+            geo: {
+              '@type': 'GeoCoordinates',
+              latitude: 27.1767,
+              longitude: 78.0081,
+            },
             address: {
               '@type': 'PostalAddress',
               streetAddress: 'Agra Mandal Region',

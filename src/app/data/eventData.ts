@@ -3,6 +3,8 @@ export type EventEntry = {
   image: string;
   description: string;
   features: string[];
+  bodyParagraphs?: string[];
+  relatedLinks?: { href: string; label: string }[];
   testimonial: {
     quote: string;
     client: string;
@@ -29,15 +31,25 @@ export type EventSlug = (typeof eventSlugs)[number];
 
 export const eventData: Record<EventSlug, EventEntry> = {
   'agra-wedding-events': {
-    title: 'Wedding Events in Agra',
+    title: 'Wedding Planners in Agra',
     image: '/images/haldi.jpg',
     description:
-      'Best Wedding Event Planners in Agra. We handle everything from decor to catering, making your special day stress-free.',
+      'Looking for the best wedding planners in Agra? Eventkro manages your full wedding — venue decor, catering services, photography, and guest coordination — so your celebration is stress-free.',
+    bodyParagraphs: [
+      'As trusted event planners in Agra, we design weddings that reflect your style — from intimate ceremonies to large banquets near the Taj Mahal region. Our team handles timelines, vendors, and on-day coordination.',
+      'Our Agra decoration specialists create stunning mandap, stage, floral, and theme-based setups. We also arrange catering services in Agra with customizable menus for North Indian and multi-cuisine weddings.',
+      'Whether you need wedding planners in Agra for pre-wedding functions (Haldi, Mehendi, Roka) or the main wedding day, Eventkro delivers end-to-end planning across Agra, Mathura, and Firozabad.',
+    ],
+    relatedLinks: [
+      { href: '/services/haldi/agra', label: 'Haldi ceremony planning' },
+      { href: '/services/mehendi/agra', label: 'Mehendi event planning' },
+      { href: '/contact', label: 'Get a free wedding quote' },
+    ],
     features: [
-      'Custom wedding themes and decor',
+      'Custom wedding themes and Agra decoration',
+      'Catering services in Agra with personalized menus',
       'Professional photography and videography',
-      'Expert catering with personalized menus',
-      'Complete event management from start to finish',
+      'Complete wedding event management from start to finish',
     ],
     testimonial: {
       quote:
@@ -45,13 +57,16 @@ export const eventData: Record<EventSlug, EventEntry> = {
       client: 'Priya & Rohit, Agra',
     },
     seo: {
-      title: 'Wedding Event Planners in Agra | Eventkro',
+      title: 'Wedding Planners in Agra | Best Wedding Event Planners | Eventkro',
       description:
-        'Book the best wedding event planners in Agra. Decor, catering, photography and full wedding management by Eventkro.',
+        'Top wedding planners in Agra — decor, catering services, photography & full management. Free quote in 24 hrs. Call Eventkro +91 7017520811.',
       keywords: [
         'wedding planners in agra',
+        'wedding planners agra',
         'wedding event planners agra',
-        'Eventkro',
+        'catering services agra',
+        'agra decoration',
+        'event planner in agra',
       ],
     },
   },

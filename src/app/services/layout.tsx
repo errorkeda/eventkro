@@ -2,14 +2,17 @@ import type { Metadata } from 'next';
 import { pageMetadata } from '../../lib/seo';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Event Planning Services in Agra | Roka, Haldi, Mehendi | Eventkro',
+  title: 'Balloon Decoration & Event Services in Agra | Eventkro',
   description:
-    'Full event planning services in Agra — Roka, Tilak, Haldi, Mehendi, pre-wedding shoots and more. Professional decorators and coordinators across Agra Mandal.',
+    'Balloon decoration services in Agra — birthday decor, balloon arch, backdrop wall, wedding & corporate styling. Plus Roka, Haldi, Mehendi & full event planning.',
   path: '/services',
   keywords: [
+    'balloon decoration agra',
+    'birthday party decoration agra',
+    'balloon arch agra',
+    'wedding decoration agra',
     'event services agra',
-    'haldi ceremony agra',
-    'mehendi planners agra',
+    'event planner in agra',
   ],
 });
 
