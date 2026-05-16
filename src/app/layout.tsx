@@ -1,7 +1,11 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
+import { Suspense } from 'react';
 import './globals.css';
+import GoogleAnalytics from '../components/GoogleAnalytics';
+import GoogleAnalyticsPageView from '../components/GoogleAnalyticsPageView';
+import { isGaEnabled } from '../lib/analytics';
 import { SITE_EMAIL, SITE_PHONE_PRIMARY, SITE_PHONE_SECONDARY, siteUrl } from '../lib/site';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -120,7 +124,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           })}
         </Script>
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <GoogleAnalytics />
+        {isGaEnabled() && (
+          <Suspense fallback={null}>
+            <GoogleAnalyticsPageView />
+          </Suspense>
+        )}
+        {children}
+      </body>
     </html>
   );
 }
