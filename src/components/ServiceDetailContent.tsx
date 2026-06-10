@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Service } from '../app/data/servicesData';
 import { citySlugFromName } from '../lib/cities';
 import { getServiceCityContent } from '../lib/serviceSeo';
@@ -46,10 +47,13 @@ export default function ServiceDetailContent({ service, cityName, citySlug }: Pr
               <ServiceIcon id={service.id} size="lg" />
             </div>
 
-            <img
+            <Image
               src={service.image}
               alt={`${content.h1} by Eventkro`}
               className="w-full h-64 object-cover rounded-md mb-6"
+              width={800}
+              height={256}
+              priority
             />
 
             <h2 className="text-2xl font-bold mb-4">

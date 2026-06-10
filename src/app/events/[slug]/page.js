@@ -1,6 +1,7 @@
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
 import Script from 'next/script';
 import { eventData, eventSlugs } from '../../data/eventData';
 import { pageMetadata } from '../../../lib/seo';
@@ -68,10 +69,13 @@ export default function EventPage({ params }) {
             <span className="text-gray-800">{event.title}</span>
           </nav>
           <h1 className="text-4xl font-bold text-center mb-6">{event.title}</h1>
-          <img
+          <Image
             src={event.image}
             alt={`${event.title} by Eventkro in Agra`}
             className="w-full max-w-3xl mx-auto h-96 object-cover rounded-lg shadow-md mb-6"
+            width={768}
+            height={384}
+            priority
           />
           <p className="text-gray-700 text-center max-w-3xl mx-auto mb-8 text-lg">
             {event.description}

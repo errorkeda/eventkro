@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import FaqAccordion from '../../components/FaqAccordion';
@@ -288,10 +289,12 @@ export default function Contact() {
 
             {/* Right Image */}
             <div className="flex justify-center">
-              <img
+              <Image
                 src="/images/Event-Decoration-Process-Infographic.png"
                 alt="Process Illustration"
                 className="w-full max-w-md lg:max-w-full rounded-lg shadow-xl"
+                width={500}
+                height={500}
               />
             </div>
           </div>

@@ -27,6 +27,13 @@ export const ALL_CITIES = [
     latitude: 27.2296,
     longitude: 79.0234,
   },
+  {
+    slug: 'shikohabad',
+    name: 'Shikohabad',
+    postalCode: '283135',
+    latitude: 27.1065,
+    longitude: 78.5835,
+  },
 ] as const;
 
 export type CitySlug = (typeof ALL_CITIES)[number]['slug'];

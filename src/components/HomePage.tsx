@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { getServicesByCategory } from '../app/data/servicesData';
 import Header from './Header';
@@ -10,7 +11,7 @@ import Footer from './Footer';
 const balloonServices = getServicesByCategory('balloon');
 
 const heroH1 =
-  'Best Event Planners in Agra, Mathura & Firozabad | Eventkro';
+  'Best Event Planner in Agra, Mathura, Firozabad & Shikohabad';
 const heroSubheadline =
   'Creating unforgettable weddings, corporate functions, and traditional celebrations with stress-free management.';
 
@@ -171,7 +172,7 @@ export default function HomePage() {
               { title: 'Rituals Events', slug: 'agra-rituals-events', img: '/images/rituals.jpeg', desc: 'Best Ritual Event Planners in Agra for traditional functions.' },
             ].map((event) => (
               <div key={event.slug} className="bg-white rounded-lg shadow-sm overflow-hidden">
-                <img src={event.img} alt={`${event.title} — Eventkro event planners in Agra`} className="w-full h-40 object-cover" />
+                <Image src={event.img} alt={`${event.title} — Eventkro event planners in Agra`} className="w-full h-40 object-cover" width={400} height={160} />
                 <div className="p-4 text-center">
                   <h3 className="text-lg font-bold">{event.title}</h3>
                   <p className="text-gray-600 text-sm">{event.desc}</p>
@@ -323,6 +324,73 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* City-Specific SEO Section */}
+      <section className="py-16 bg-white border-t border-b border-gray-100">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-6">
+            Event Planning Services in Agra, Mathura, Firozabad &amp; Shikohabad
+          </h2>
+          <p className="text-gray-600 text-center max-w-3xl mx-auto mb-12 leading-relaxed">
+            Eventkro is proud to offer professional event management and styling services across the major hubs of the Agra Mandal region. We specialize in custom decorations, corporate event coordination, birthday theme party setups, and delicious catering services. Click on your city below to explore our local venues and specialized services.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            {/* Agra Card */}
+            <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100 flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Event Planner in Agra</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  Planning a dream wedding or corporate meeting in the city of the Taj Mahal has never been easier. As a premier <strong>event planner in agra</strong>, Eventkro designs breathtaking events tailored to your style. We handle everything from mandap setup at Taj View Gardens to themed balloon arch decoration in Kamla Nagar and luxury catering on Fatehabad Road. Our local networks ensure seamless vendor coordination and high-quality floral, structural, and lighting designs.
+                </p>
+              </div>
+              <Link href="/event-planner-in-agra" className="text-[#ff5722] font-semibold text-sm hover:underline mt-2 inline-block">
+                Explore Agra Event Services &amp; Venues →
+              </Link>
+            </div>
+
+            {/* Mathura Card */}
+            <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100 flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Event Planner in Mathura</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  Host your religious, wedding, or cultural ceremonies in the spiritual birthplace of Lord Krishna. As the leading <strong>event planner in mathura</strong>, we understand the local customs and Brijwasi heritage. We specialize in 100% pure vegetarian and Brijwasi sweet catering, open-air setups along the Yamuna River, and temple-style floral decorations. We also plan and manage themed birthday parties, baby showers, and school/college annual functions across Mathura and Vrindavan.
+                </p>
+              </div>
+              <Link href="/event-planner-in-mathura" className="text-[#ff5722] font-semibold text-sm hover:underline mt-2 inline-block">
+                Explore Mathura Event Services &amp; Venues →
+              </Link>
+            </div>
+
+            {/* Firozabad Card */}
+            <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100 flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Event Planner in Firozabad</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  Introduce a touch of royal brilliance to your celebrations in the famous Glass City. As a dedicated <strong>event planner in firozabad</strong>, Eventkro specializes in combining local glass craftsmanship, crystal lighting, and fresh floral setups to design glowing stages. We coordinate weddings, ring ceremonies (Sagai), store inaugurations, dealer meets, and birthday balloon decorations in Suhag Nagar, Kotla Road, and other key localities.
+                </p>
+              </div>
+              <Link href="/event-planner-in-firozabad" className="text-[#ff5722] font-semibold text-sm hover:underline mt-2 inline-block">
+                Explore Firozabad Event Services &amp; Venues →
+              </Link>
+            </div>
+
+            {/* Shikohabad Card */}
+            <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100 flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Event Planner in Shikohabad</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  For budget-friendly, spacious, and professionally managed events, look no further than Shikohabad. As the go-to <strong>event planner in shikohabad</strong>, Eventkro organizes grand outdoor weddings at major party lawns, corporate seminars with clear audio-visual systems along NH19, and creative balloon backdrop decorations. Our on-site coordinator manages your catering menus, timeline tracking, and stage logistics, ensuring a hassle-free celebration.
+                </p>
+              </div>
+              <Link href="/event-planner-in-shikohabad" className="text-[#ff5722] font-semibold text-sm hover:underline mt-2 inline-block">
+                Explore Shikohabad Event Services &amp; Venues →
+              </Link>
+            </div>
+
+          </div>
+        </div>
+      </section>
 
       {/* Testimonials */}
       <section className="py-16 bg-gray-50">
@@ -446,6 +514,33 @@ export default function HomePage() {
               View All Posts
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Expanded SEO Content Section */}
+      <section className="py-16 bg-gray-50 border-t border-gray-100">
+        <div className="container mx-auto px-4 max-w-4xl text-gray-700 prose leading-relaxed">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
+            Professional Event Management in the Agra Mandal Region
+          </h2>
+          <p className="mb-4">
+            Planning a significant event requires coordinating multiple moving parts: designing decoration themes, selecting local venues, coordinating multi-cuisine menus, managing guest logistics, and ensuring advanced audio-visual execution. At Eventkro, we believe that you should be a guest at your own celebration. Our experienced planners operate as a single point of contact, managing everything from initial concepts and budget outlines to vendor selection, on-day scheduling, and final cleanup. 
+          </p>
+          <p className="mb-4">
+            Whether you are searching for a creative <strong>event planner in agra</strong>, a culturally aware <strong>event planner in mathura</strong>, a structural design expert for an <strong>event planner in firozabad</strong>, or a cost-effective setup from an <strong>event planner in shikohabad</strong>, we customize our packages (Basic, Premium, and Elite) to fit your requirements. We use premium materials, follow high food safety standards in catering, and deliver on-time installations.
+          </p>
+          <h3 className="text-2xl font-bold text-gray-900 mt-6 mb-4">
+            Bespoke Wedding Planning, Themed Birthdays &amp; Corporate Staging
+          </h3>
+          <p className="mb-4">
+            Our specialized wedding planning services cover all pre-wedding and wedding-day ceremonies. We plan vibrant Haldi setups, Mehendi stages, Roka welcome panels, and grand wedding mandaps decorated with fresh marigolds, roses, and crystal hangings. For birthday parties, our team designs balloon arches, photo backdrop walls, cake table displays, and arranges entertainment options (magic shows, game hosts, and photo booths) to keep your guests fully engaged.
+          </p>
+          <p className="mb-4">
+            For businesses, we provide corporate event staging. We manage dealer meets, annual award ceremonies, branch openings, and conferences. We set up professional stages, sound systems, microphones, and LED screens, while coordinating high-tea and buffet catering designed to impress your stakeholders.
+          </p>
+          <p>
+            Ready to plan your next event? Explore our <Link href="/services" className="text-[#ff5722] hover:underline font-semibold">Event Services</Link>, view our packages on our <Link href="/pricing" className="text-[#ff5722] hover:underline font-semibold">Pricing</Link> page, or request a custom quote directly through our <Link href="/contact" className="text-[#ff5722] hover:underline font-semibold">Contact Us</Link> page. Our team is ready to deliver a stress-free and magical experience.
+          </p>
         </div>
       </section>
 

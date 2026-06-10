@@ -10,6 +10,7 @@ const cities = [
   { name: 'Mathura', slug: 'mathura' },
   { name: 'Firozabad', slug: 'firozabad' },
   { name: 'Mainpuri', slug: 'mainpuri' },
+  { name: 'Shikohabad', slug: 'shikohabad' },
 ];
 
 export default function CitiesPage() {
