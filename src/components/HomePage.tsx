@@ -544,6 +544,47 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Trending Services Section */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-4">
+          <h2 className="section-title">Trending Services</h2>
+          <p className="text-gray-600 text-center max-w-3xl mx-auto mb-12 leading-relaxed">
+            Explore our most popular event planning and decoration services across Agra, Mathura, Firozabad and Shikohabad, including wedding planning, car boot surprise decorations and special event setups.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
+            {[
+              { name: 'Car Boot Decoration in Agra', path: '/car-boot-decoration-in-agra', desc: 'Surprise car boot balloon & light setups in the city of Taj.' },
+              { name: 'Car Boot Decoration in Mathura', path: '/car-boot-decoration-in-mathura', desc: 'Romantic and surprise car trunk setups in Brij region.' },
+              { name: 'Car Boot Decoration in Firozabad', path: '/car-boot-decoration-in-firozabad', desc: 'Premium car dikki balloon styling with glass-art lights.' },
+              { name: 'Car Boot Decoration in Shikohabad', path: '/car-boot-decoration-in-shikohabad', desc: 'Doorstep surprise car trunk layouts at affordable rates.' },
+              { name: 'Wedding Planner in Agra', path: '/wedding-planner-in-agra', desc: 'Luxury heritage destination wedding management near Taj.' },
+              { name: 'Wedding Planner in Mathura', path: '/wedding-planner-in-mathura', desc: 'Traditional Braj-style pure vegetarian wedding ceremonies.' },
+              { name: 'Wedding Planner in Firozabad', path: '/wedding-planner-in-firozabad', desc: 'Stunning glass art themed setups and royal stage designs.' },
+              { name: 'Wedding Planner in Shikohabad', path: '/wedding-planner-in-shikohabad', desc: 'Budget-friendly wedding decoration & catering packages.' },
+            ].map((item, index) => (
+              <Link
+                key={index}
+                href={item.path}
+                className="group bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-[#ff5722] flex flex-col justify-between"
+              >
+                <div>
+                  <h3 className="font-bold text-gray-900 group-hover:text-[#ff5722] transition-colors mb-2">
+                    {item.name}
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+                <span className="text-[#ff5722] font-semibold text-sm inline-flex items-center group-hover:underline">
+                  View Service →
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </main>
   );
