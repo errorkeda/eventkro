@@ -84,7 +84,7 @@ export default function AgraCarBootPage() {
       <Header />
 
       {/* Hero Banner Section */}
-      <section className="relative h-[65vh] flex items-center justify-center text-center text-white overflow-hidden pt-16">
+      <section className="relative min-h-[65vh] flex flex-col justify-center items-center text-center text-white overflow-hidden pt-28 pb-12">
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center transition-transform duration-1000"
