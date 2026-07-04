@@ -35,6 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/pricing',
     '/terms',
     '/privacy',
+    '/partner-with-eventkro',
   ];
 
   const now = new Date();

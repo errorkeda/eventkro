@@ -66,6 +66,11 @@ export default function Footer() {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link href="/partner-with-eventkro" className="text-gray-300 hover:text-red-500 transition-colors">
+                  Partner With Eventkro
+                </Link>
+              </li>
             </ul>
           </div>
 
