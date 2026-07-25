@@ -36,6 +36,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/terms',
     '/privacy',
     '/partner-with-eventkro',
+    '/balloon-decoration-in-delhi',
+    '/birthday-decoration-in-delhi',
+    '/anniversary-decoration-in-delhi',
+    '/proposal-decoration-in-delhi',
   ];
 
   const now = new Date();
