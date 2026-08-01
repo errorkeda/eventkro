@@ -82,7 +82,8 @@ const packages = [
     startingPrice: '₹1,499',
     description: 'Perfect for living rooms, bedrooms, and cozy surprise setups.',
     setupTime: '60 - 90 Minutes',
-    suitableFor: 'Living Rooms, Bedrooms, and Cozy surprise home settings',
+    suitableFor: 'Living Rooms, Bedrooms, Cozy surprise home settings',
+    customization: 'Add foil balloons, LED lights, or custom banners',
     features: [
       '100-120 Metallic Balloons (Choice of 2 colors)',
       '1 Cardboard "Happy Birthday" Banner',
@@ -91,7 +92,7 @@ const packages = [
       'Damage-free wall-safe setup by local decorator'
     ],
     rating: 4.8,
-    cta: 'Get Free Quote'
+    cta: 'Book Same-Day Decoration'
   },
   {
     name: 'Premium Theme Backdrop',
@@ -99,6 +100,7 @@ const packages = [
     description: 'Our most popular design for drawing rooms and hotel setups.',
     setupTime: '2 Hours',
     suitableFor: 'Drawing Rooms, Banquet Halls, Hotel Rooms & Rooftops',
+    customization: 'Add Neon Signs, Custom Name Boards, Cake Tables',
     features: [
       '200 Premium Pastel & Chrome Balloons',
       '7ft Circular Ring Frame or Arch Backdrop (Rental)',
@@ -108,7 +110,7 @@ const packages = [
     ],
     popular: true,
     rating: 4.9,
-    cta: 'Get Free Quote'
+    cta: 'Get Instant Quote'
   },
   {
     name: 'Elite Grand Celebration VIP',
@@ -116,6 +118,7 @@ const packages = [
     description: 'A massive visual feast with organic balloon waves, shimmer grids, and spotlights.',
     setupTime: '3 Hours',
     suitableFor: 'Large Banquets, Villa Lawns, Grand Milestone Celebrations (1st, 18th, 50th)',
+    customization: 'Fully tailored thematic experience with props & floral touches',
     features: [
       '350+ Luxury Chrome, Pastel & Confetti Balloons',
       'Sequin Shimmer Wall (8x8 ft) or Arch Trio (Rental)',
@@ -125,7 +128,7 @@ const packages = [
       'On-site senior design team coordination'
     ],
     rating: 5.0,
-    cta: 'Get Free Quote'
+    cta: 'Talk to Decoration Expert'
   }
 ];
 
@@ -145,20 +148,26 @@ const themes = [
 ];
 
 const localities = [
-  { name: 'Dwarka', desc: 'Doorstep setups for builder floors, high-rises, and kids birthday themes.' },
-  { name: 'Rohini', desc: 'Fast local decorators for residential sectors, apartments, and halls.' },
-  { name: 'Janakpuri', desc: 'Vibrant drawing room decors, theme backdrops, and kids surprises.' },
-  { name: 'Rajouri Garden', desc: 'Cafe birthday party decorations, rooftops, and glam adult setups.' },
-  { name: 'Laxmi Nagar', desc: 'Affordable balloon setups, welcoming babies, and budget surprise decors.' },
-  { name: 'Pitampura', desc: 'Pastel themes, mesh ring backdrops, and shop opening balloon decor.' },
-  { name: 'Vasant Kunj', desc: 'Premium farmhouses, luxury villas, and high-concept designer styling.' },
-  { name: 'Vasant Vihar', desc: 'Chic, minimalist balloon garlands and organic ring backdrops.' },
-  { name: 'Connaught Place', desc: 'Corporate birthday setups, office surprises, and banquet decorations.' },
-  { name: 'Saket', desc: 'Terrace balloon structures, cabanas, and couples birthday styling.' },
-  { name: 'Greater Kailash', desc: 'Elite family birthday dinners, luxury backdrops, and balloon boxes.' },
-  { name: 'Karol Bagh', desc: 'Hotel room surprises, retail display balloon arches, and budget decors.' },
-  { name: 'Punjabi Bagh', desc: 'Grand lawns, marquee number setups, and outdoor birthday styling.' },
-  { name: 'Mayur Vihar', desc: 'Cozy home balloon arches, welcoming kids, and anniversary events.' }
+  { name: 'Dwarka', desc: 'Doorstep setups for builder floors, high-rises, and kids birthday themes in Dwarka sectors.' },
+  { name: 'Rohini', desc: 'Fast local decorators in Rohini for residential sectors, apartments, and banquet halls.' },
+  { name: 'Janakpuri', desc: 'Vibrant drawing room decors, premium theme backdrops, and kids surprises in Janakpuri.' },
+  { name: 'Rajouri Garden', desc: 'Cafe birthday party decorations, rooftop celebrations, and glam adult setups.' },
+  { name: 'Laxmi Nagar', desc: 'Affordable balloon setups, welcoming babies, and budget surprise decors in East Delhi.' },
+  { name: 'Pitampura', desc: 'Pastel themes, mesh ring backdrops, and customized party balloon decor.' },
+  { name: 'Vasant Kunj', desc: 'Premium farmhouse styling, luxury villas, and high-concept designer birthday styling.' },
+  { name: 'Vasant Vihar', desc: 'Chic, minimalist balloon garlands and organic ring backdrops for elegant celebrations.' },
+  { name: 'Connaught Place', desc: 'Corporate birthday setups, office surprises, and premium banquet decorations in Central Delhi.' },
+  { name: 'Saket', desc: 'Terrace balloon structures, romantic cabanas, and elegant couples birthday styling.' },
+  { name: 'Greater Kailash', desc: 'Elite family birthday dinners, luxury sequin backdrops, and personalized balloon boxes.' },
+  { name: 'Karol Bagh', desc: 'Hotel room surprises, retail display balloon arches, and budget-friendly decors.' },
+  { name: 'Punjabi Bagh', desc: 'Grand lawns, marquee number setups, and expansive outdoor birthday styling.' },
+  { name: 'Mayur Vihar', desc: 'Cozy home balloon arches, welcoming kids, and memorable anniversary events.' }
+];
+
+const testimonials = [
+  { name: 'Priya Sharma', location: 'Dwarka, Delhi', text: 'The Cocomelon setup for my 2-year-old was absolutely stunning. The team arrived right on time and set everything up within an hour. Highly recommend for stress-free birthday decorations!', rating: 5 },
+  { name: 'Rahul Verma', location: 'South Delhi, Delhi', text: 'Booked them for a surprise hotel room decoration for my wife\'s 30th. The rose gold theme with fairy lights totally transformed the room. She was thrilled. Transparent pricing, no hidden costs.', rating: 5 },
+  { name: 'Neha Gupta', location: 'Rohini, Delhi', text: 'Eventkro delivered exactly what was promised. The premium ring backdrop looked premium and high quality. The decorators were very polite and cleaned up perfectly after dismantling the next day.', rating: 5 }
 ];
 
 const galleryImages = [
@@ -299,16 +308,18 @@ export default function DelhiBirthdayPage() {
             <button
               onClick={scrollToContact}
               className="btn-primary text-lg px-8 py-3.5 rounded-lg shadow-lg font-bold hover:scale-105 transition-transform"
+              aria-label="Book Same-Day Decoration"
             >
-              Get Free Quote
+              Book Same-Day Decoration
             </button>
             <a
               href="https://wa.me/917017520811"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-600 text-white hover:bg-green-700 text-lg px-8 py-3.5 rounded-lg shadow-lg font-bold flex items-center justify-center gap-2 hover:scale-105 transition-transform"
+              aria-label="Talk to Decoration Expert"
             >
-              Chat on WhatsApp
+              Talk to Decoration Expert
             </a>
           </div>
           {/* Trust points */}
@@ -417,9 +428,15 @@ export default function DelhiBirthdayPage() {
                             </p>
                           </div>
                           <div>
-                            <strong className="text-xs text-gray-450 uppercase tracking-wider block mb-1 font-bold text-gray-500">Suitable For</strong>
+                            <strong className="text-xs text-gray-450 uppercase tracking-wider block mb-1 font-bold text-gray-500">Best For</strong>
                             <p className="text-sm text-gray-600">{pkg.suitableFor}</p>
                           </div>
+                          {pkg.customization && (
+                            <div>
+                              <strong className="text-xs text-gray-450 uppercase tracking-wider block mb-1 font-bold text-gray-500">Customization Available</strong>
+                              <p className="text-sm text-gray-600">{pkg.customization}</p>
+                            </div>
+                          )}
                         </div>
                       </div>
 
@@ -723,17 +740,47 @@ export default function DelhiBirthdayPage() {
                   <button
                     onClick={scrollToContact}
                     className="bg-white text-orange-600 hover:bg-gray-100 px-6 py-2.5 rounded-lg font-bold text-sm shadow-sm transition-all"
+                    aria-label="Get Instant Quote"
                   >
-                    Get Free Quote
+                    Get Instant Quote
                   </button>
                   <a
                     href="https://wa.me/917017520811"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-green-600 hover:bg-green-700 text-white px-6 py-2.5 rounded-lg font-bold text-sm shadow-sm transition-all flex items-center gap-1.5"
+                    aria-label="Talk to Decoration Expert"
                   >
-                    WhatsApp Now
+                    Talk to Decoration Expert
                   </a>
+                </div>
+              </div>
+
+              {/* 13.5 TESTIMONIALS */}
+              <div id="testimonials" className="prose max-w-none mt-16 mb-16">
+                <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-gray-150">
+                  What Families Say About Our Decorations
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 not-prose">
+                  {testimonials.map((testimonial, idx) => (
+                    <div key={idx} className="bg-gray-50 p-6 rounded-2xl border border-gray-150 shadow-sm">
+                      <div className="flex gap-1 mb-3">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <FaStar key={i} className="text-yellow-400 text-sm" />
+                        ))}
+                      </div>
+                      <p className="text-sm text-gray-600 italic mb-4 leading-relaxed">"{testimonial.text}"</p>
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 font-bold text-lg">
+                          {testimonial.name.charAt(0)}
+                        </div>
+                        <div>
+                          <strong className="text-gray-900 text-sm block">{testimonial.name}</strong>
+                          <span className="text-xs text-gray-500">{testimonial.location}</span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
 
@@ -945,14 +992,16 @@ export default function DelhiBirthdayPage() {
             <button
               onClick={scrollToContact}
               className="bg-white text-[#ff5722] hover:bg-gray-100 text-lg px-8 py-3 rounded-lg shadow-md font-bold transition-all"
+              aria-label="Book Same-Day Decoration"
             >
-              Request Free Quote
+              Book Same-Day Decoration
             </button>
             <a
               href="tel:+917017520811"
               className="bg-gray-900 text-white hover:bg-black text-lg px-8 py-3 rounded-lg shadow-md font-bold transition-all"
+              aria-label="Talk to Decoration Expert"
             >
-              Call Our Team
+              Talk to Decoration Expert
             </a>
           </div>
         </div>
