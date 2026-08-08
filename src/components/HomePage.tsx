@@ -18,19 +18,22 @@ const heroSubheadline =
 const heroSlides = [
   {
     id: 1,
-    image: '/images/hero-1.jpeg',
+    image: '/images/home/eventkro-luxury-wedding-decoration.webp',
+    alt: 'Luxury wedding decoration by Eventkro',
     cta: 'Plan Your Wedding',
     href: '/events/agra-wedding-events',
   },
   {
     id: 2,
-    image: '/images/hero-slide-3.jpg',
+    image: '/images/home/eventkro-event-planning-decoration.webp',
+    alt: 'Eventkro event planning and decoration services',
     cta: 'Book a Corporate Event',
     href: '/events/agra-corporate-events',
   },
   {
     id: 3,
-    image: '/images/hero-slide-3.jpeg',
+    image: '/images/home/eventkro-birthday-decoration.webp',
+    alt: 'Birthday decoration services by Eventkro',
     cta: 'Plan a Traditional Celebration',
     href: '/events/agra-rituals-events',
   },
@@ -70,11 +73,15 @@ export default function HomePage() {
               index < currentSlide ? '-translate-x-full' : 'translate-x-full'
               }`}
           >
+            <Image
+              src={slide.image}
+              alt={slide.alt}
+              fill
+              priority={index === 0}
+              className="object-cover object-center"
+              sizes="100vw"
+            />
             <div className="absolute inset-0 bg-black/50 z-10"></div>
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url('${slide.image}')` }}
-            ></div>
 
           </div>
         ))}
