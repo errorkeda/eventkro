@@ -4,8 +4,8 @@ import { pageMetadata } from '../../lib/seo';
 import { siteUrl, SITE_PHONE_PRIMARY, SITE_PHONE_SECONDARY, SITE_EMAIL } from '../../lib/site';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Best Event Planner in Agra | Wedding & Corporate Event Management | Eventkro',
-  description: 'Looking for the best event planner in Agra? Eventkro offers premium wedding planning, birthday party decoration, balloon decor, catering, and corporate events in Agra.',
+  title: 'Event Planner in Agra | Event Planning Services | Eventkro',
+  description: 'Looking for an event planner in Agra? Eventkro helps plan birthdays, weddings, anniversaries, proposals and other memorable celebrations with professional event services and decoration.',
   path: '/event-planner-in-agra',
   keywords: [
     'event planner in agra',
@@ -22,42 +22,50 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Why is Eventkro considered the best event planner in Agra?',
+      name: 'How much does an event planner in Agra cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Eventkro is highly rated due to our comprehensive end-to-end management, innovative theme decorations (including premium balloon and floral setups), professional catering services, and a dedicated network of premium local venues near the Taj Mahal. We ensure a stress-free planning experience from concept to cleanup.'
+        text: 'The cost of hiring an event planner in Agra varies depending on the event type, scale, guest count, and decoration requirements. Eventkro offers flexible and customizable packages tailored to your budget. Contact us for a free consultation and a detailed, personalized quote.'
       }
     },
     {
       '@type': 'Question',
-      name: 'What event planning services do you offer in Agra?',
+      name: 'What types of events does Eventkro plan in Agra?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We offer full-service wedding planning, birthday party coordination, corporate event management, traditional ceremonies (such as Roka, Sagai, Haldi, and Mehendi), balloon arches and backdrops, photography packages, and premium multi-cuisine catering.'
+        text: 'We plan and manage a wide range of events in Agra, including themed birthday parties, weddings, engagement ceremonies, anniversaries, romantic proposals, baby showers, and corporate events.'
       }
     },
     {
       '@type': 'Question',
-      name: 'Do you offer customized catering packages in Agra?',
+      name: 'Can Eventkro arrange birthday decorations in Agra?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes! We coordinate with premium catering services in Agra to deliver custom menus. Whether you need traditional Mughlai cuisine, North Indian feasts, live chat counters, or customized continental menus, we ensure exceptional taste and hygiene.'
+        text: 'Yes! We specialize in custom birthday decorations in Agra. Our team sets up premium balloon arches, backdrops, themed lighting, and cake tables at your home, restaurant, banquet hall, or private venue.'
       }
     },
     {
       '@type': 'Question',
-      name: 'How far in advance should I book my event in Agra?',
+      name: 'Can I book wedding or engagement event planning?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'For weddings and large corporate events in Agra, we recommend booking 3 to 6 months in advance. For themed birthday parties or quick balloon decorations, 1 to 2 weeks notice is generally sufficient.'
+        text: 'Absolutely. We offer complete wedding and engagement planning services in Agra, covering floral stage decorations, mandap setup, guest hospitality, catering, and pre-wedding ceremonies like Haldi, Mehendi, and Roka.'
       }
     },
     {
       '@type': 'Question',
-      name: 'Which areas near Agra do you provide event planning services to?',
+      name: 'How early should I book an event planner?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'In addition to Agra city, we serve surrounding cities in the Agra Mandal region including Mathura, Firozabad, Shikohabad, Mainpuri, Tundla, and Fatehabad.'
+        text: 'For large celebrations like weddings and corporate events, we recommend booking 3 to 6 months in advance. For themed birthdays, surprise proposals, or balloon decorations, booking 1 to 2 weeks ahead is usually sufficient.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Does Eventkro provide decoration and setup services?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, Eventkro provides full-service decoration and setup in Agra. We design and install custom balloon decor, fresh flower arrangements, lighting structures, and audio-visual equipment, managing everything from setup to post-event cleanup.'
       }
     }
   ]
