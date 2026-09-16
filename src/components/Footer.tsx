@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaInstagram } from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -16,24 +16,15 @@ export default function Footer() {
               catering, decoration &amp; corporate events.
             </p>
             <div className="flex space-x-4">
-              {/* <a href="#" className="text-gray-300 hover:text-red-500 transition-colors">
-                <FaFacebook size={20} />
-              </a> */}
-              {/* <a href="#" className="text-gray-300 hover:text-red-500 transition-colors">
-                <FaTwitter size={20} />
-              </a> */}
               <a
                 href="https://www.instagram.com/eventkro?igsh=MXE0eHlzNzhrdzVwMw=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-red-500 transition-colors"
+                aria-label="Eventkro Instagram"
               >
                 <FaInstagram size={20} />
               </a>
-
-              {/* <a href="#" className="text-gray-300 hover:text-red-500 transition-colors">
-                <FaLinkedin size={20} />
-              </a> */}
             </div>
           </div>
 
@@ -52,6 +43,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/cities" className="text-gray-300 hover:text-red-500 transition-colors">
+                  Cities
+                </Link>
+              </li>
+              <li>
                 <Link href="/gallery" className="text-gray-300 hover:text-red-500 transition-colors">
                   Gallery
                 </Link>
@@ -59,6 +55,11 @@ export default function Footer() {
               <li>
                 <Link href="/blog" className="text-gray-300 hover:text-red-500 transition-colors">
                   Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="/pricing" className="text-gray-300 hover:text-red-500 transition-colors">
+                  Pricing
                 </Link>
               </li>
               <li>
@@ -74,43 +75,63 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Featured Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2">
+            <h4 className="text-lg font-semibold mb-3">Featured Services</h4>
+            
+            <p className="text-xs font-semibold text-[#ff5722] uppercase tracking-wider mb-2">
+              Agra Services
+            </p>
+            <ul className="space-y-1.5 mb-4 text-sm">
               <li>
-                <Link href="/events/agra-wedding-events" className="text-gray-300 hover:text-red-500">
-                  Wedding planners in Agra
+                <Link href="/wedding-planner-in-agra" className="text-gray-300 hover:text-red-500 transition-colors">
+                  Wedding Planner in Agra
                 </Link>
               </li>
               <li>
-                <Link href="/events/agra-corporate-events" className="text-gray-300 hover:text-red-500">
-                  Corporate events
+                <Link href="/event-planner-in-agra" className="text-gray-300 hover:text-red-500 transition-colors">
+                  Event Planner in Agra
                 </Link>
               </li>
               <li>
-                <Link href="/events/agra-birthday-party" className="text-gray-300 hover:text-red-500">
-                  Birthday parties
+                <Link href="/proposal-decoration-in-agra" className="text-gray-300 hover:text-red-500 transition-colors">
+                  Proposal Decoration in Agra
                 </Link>
               </li>
               <li>
-                <Link href="/events/agra-rituals-events" className="text-gray-300 hover:text-red-500">
-                  Cultural &amp; ritual events
+                <Link href="/services/balloon-decoration/agra" className="text-gray-300 hover:text-red-500 transition-colors">
+                  Balloon Decoration in Agra
                 </Link>
               </li>
               <li>
-                <Link href="/services/balloon-decoration/agra" className="text-gray-300 hover:text-red-500">
-                  Balloon decoration in Agra
+                <Link href="/services/birthday-balloon-decoration/agra" className="text-gray-300 hover:text-red-500 transition-colors">
+                  Birthday Party Decoration
+                </Link>
+              </li>
+            </ul>
+
+            <p className="text-xs font-semibold text-[#ff5722] uppercase tracking-wider mb-2">
+              Delhi NCR Decor
+            </p>
+            <ul className="space-y-1.5 text-sm">
+              <li>
+                <Link href="/balloon-decoration-in-delhi" className="text-gray-300 hover:text-red-500 transition-colors">
+                  Balloon Decoration in Delhi
                 </Link>
               </li>
               <li>
-                <Link href="/services/birthday-balloon-decoration/agra" className="text-gray-300 hover:text-red-500">
-                  Birthday party decoration
+                <Link href="/birthday-decoration-in-delhi" className="text-gray-300 hover:text-red-500 transition-colors">
+                  Birthday Decoration in Delhi
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-300 hover:text-red-500">
-                  Book event planner
+                <Link href="/anniversary-decoration-in-delhi" className="text-gray-300 hover:text-red-500 transition-colors">
+                  Anniversary Decoration in Delhi
+                </Link>
+              </li>
+              <li>
+                <Link href="/proposal-decoration-in-delhi" className="text-gray-300 hover:text-red-500 transition-colors">
+                  Proposal Decoration in Delhi
                 </Link>
               </li>
             </ul>
@@ -127,7 +148,6 @@ export default function Footer() {
                   <span className="text-gray-300">+91 9869950233</span>
                 </div>
               </div>
-
 
               <div className="flex items-center">
                 <FaEnvelope className="text-red-500 mr-3" />
