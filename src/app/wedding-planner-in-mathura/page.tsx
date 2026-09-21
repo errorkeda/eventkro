@@ -123,7 +123,7 @@ export default function MathuraWeddingPlannerPage() {
                   Our Full Suite of Wedding Planning Services
                 </h2>
                 <p className="leading-relaxed mb-6">
-                  Managing a traditional wedding in Mathura requires organizing multiple functions, coordinating transportation, and setting up complex decors. Eventkro provides comprehensive services to manage every aspect:
+                  Managing a traditional wedding in Mathura requires organizing multiple functions, coordinating transportation, and setting up complex decors. From intimate pre-wedding celebrations and <Link href="/proposal-decoration-in-mathura" className="text-[#ff5722] hover:underline font-semibold">Proposal Decoration in Mathura</Link> to multi-day wedding ceremonies, Eventkro provides comprehensive services to manage every aspect:
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 not-prose">
                   <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">

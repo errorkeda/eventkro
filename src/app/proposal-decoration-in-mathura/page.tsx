@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { FaMapMarkerAlt, FaCalendarAlt, FaStar, FaChevronDown } from 'react-icons/fa';
 import Header from '../../components/Header';
@@ -168,6 +169,20 @@ export default function MathuraProposalPage() {
                 <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-gray-100">
                   Rooftop Proposal Setup in Mathura
                 </h2>
+                <div className="my-6 not-prose">
+                  <div className="relative h-64 sm:h-80 w-full rounded-xl overflow-hidden shadow-sm border border-gray-100">
+                    <Image
+                      src="/images/proposal/rooftop-proposal-decoration.webp"
+                      alt="Romantic rooftop proposal decoration in Mathura"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 720px"
+                      className="object-cover"
+                    />
+                  </div>
+                  <p className="text-xs text-gray-500 mt-2 text-center italic">
+                    Romantic rooftop proposal setup with warm lighting and skyline views in Mathura
+                  </p>
+                </div>
                 <p className="leading-relaxed mb-4">
                   Rooftop terraces in Mathura offer a beautiful view of temple horizons, temple towers (shikharas), and the serene Yamuna landscape. Setting up a surprise on a rooftop provides an exclusive, intimate space with a dramatic sky view. Our **rooftop proposal decoration** services handle the challenges of outdoor installations, such as securing the backdrops against the wind and optimizing light for low-light photography.
                 </p>
@@ -181,6 +196,20 @@ export default function MathuraProposalPage() {
                 <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-gray-100">
                   Candle Light Proposal Setup in Mathura
                 </h2>
+                <div className="my-6 not-prose">
+                  <div className="relative h-64 sm:h-80 w-full rounded-xl overflow-hidden shadow-sm border border-gray-100">
+                    <Image
+                      src="/images/proposal/candle-light-proposal-setup.webp"
+                      alt="Candle light proposal decoration setup in Mathura"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 720px"
+                      className="object-cover"
+                    />
+                  </div>
+                  <p className="text-xs text-gray-500 mt-2 text-center italic">
+                    Candlelit pathway with rose petal borders and glass hurricane lanterns
+                  </p>
+                </div>
                 <p className="leading-relaxed mb-4">
                   Candlelight has an enduring association with romance. The soft, warm glow of flickering candles creates a quiet, intimate atmosphere that helps you express your feelings. Our **candle light proposal setup** in Mathura utilizes dozens of high-quality wax candles placed safely inside protective glass cylinders, combined with battery-operated LED tea lights for absolute safety near fabrics.
                 </p>
@@ -194,6 +223,20 @@ export default function MathuraProposalPage() {
                 <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-gray-100">
                   Hotel Room Proposal Decoration in Mathura & Vrindavan
                 </h2>
+                <div className="my-6 not-prose">
+                  <div className="relative h-64 sm:h-80 w-full rounded-xl overflow-hidden shadow-sm border border-gray-100">
+                    <Image
+                      src="/images/proposal/hotel-room-proposal-decoration.webp"
+                      alt="Hotel room proposal decoration in Mathura"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 720px"
+                      className="object-cover"
+                    />
+                  </div>
+                  <p className="text-xs text-gray-500 mt-2 text-center italic">
+                    Surprise hotel room balloon styling and rose petal bed decoration in Vrindavan and Mathura
+                  </p>
+                </div>
                 <p className="leading-relaxed mb-4">
                   A **hotel room proposal decoration** is the perfect option if you want to keep the moment private and away from public spaces. Mathura and Vrindavan have many premium resorts, heritage properties, and modern hotels where room decoration is permitted.
                 </p>
@@ -207,6 +250,20 @@ export default function MathuraProposalPage() {
                 <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-gray-100">
                   Unique Marriage Proposal Decoration Ideas
                 </h2>
+                <div className="my-6 not-prose">
+                  <div className="relative h-64 sm:h-80 w-full rounded-xl overflow-hidden shadow-sm border border-gray-100">
+                    <Image
+                      src="/images/proposal/marry-me-proposal-setup.webp"
+                      alt="LED MARRY ME proposal decoration in Mathura"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 720px"
+                      className="object-cover"
+                    />
+                  </div>
+                  <p className="text-xs text-gray-500 mt-2 text-center italic">
+                    Illuminated LED MARRY ME marquee letters with floral arch and warm ambient lighting
+                  </p>
+                </div>
                 <p className="leading-relaxed mb-4">
                   We believe that your marriage proposal decoration should be as unique as your relationship. That is why we provide custom styling options.
                 </p>

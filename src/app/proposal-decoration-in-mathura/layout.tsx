@@ -5,8 +5,9 @@ import { siteUrl, SITE_PHONE_PRIMARY, SITE_PHONE_SECONDARY, SITE_EMAIL } from '.
 
 export const metadata: Metadata = pageMetadata({
   title: 'Proposal Decoration in Mathura | Romantic Proposal Setup & Surprise Planning',
-  description: 'Plan the ultimate surprise with premium proposal decoration in Mathura. Eventkro offers romantic rooftop setups, candle light setups, hotel room decorations, and "Will You Marry Me" balloon and light arrangements in Mathura.',
+  description: 'Plan a romantic surprise proposal in Mathura and Vrindavan with rooftop setups, hotel room decor, candlelight pathways, and MARRY ME letters by Eventkro.',
   path: '/proposal-decoration-in-mathura',
+  image: '/images/proposal/proposal-decoration-og.webp',
   keywords: [
     'proposal decoration mathura',
     'surprise proposal setup',

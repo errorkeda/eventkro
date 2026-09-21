@@ -372,6 +372,9 @@ export default function MathuraCarBootPage() {
                     <Link href="/wedding-planner-in-mathura" className="text-gray-600 hover:text-[#ff5722] text-sm py-2 border-b border-gray-200 transition-colors">
                       Wedding Planner Mathura →
                     </Link>
+                    <Link href="/proposal-decoration-in-mathura" className="text-gray-600 hover:text-[#ff5722] text-sm py-2 border-b border-gray-200 transition-colors">
+                      Proposal Decoration in Mathura →
+                    </Link>
                     <Link href="/pricing" className="text-gray-600 hover:text-[#ff5722] text-sm py-2 transition-colors">
                       Eventkro Service Pricing →
                     </Link>
