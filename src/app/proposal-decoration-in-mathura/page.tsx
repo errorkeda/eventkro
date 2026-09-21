@@ -42,11 +42,13 @@ export default function MathuraProposalPage() {
       <Header />
 
       {/* 1. Hero Section */}
-      <section className="relative h-[65vh] flex items-center justify-center text-center text-white overflow-hidden">
+      <section className="relative min-h-[65vh] flex flex-col justify-center items-center text-center text-white overflow-hidden pt-28 pb-12">
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/hero-slide-3.jpg')" }}
+          style={{ backgroundImage: "url('/images/mathura/proposal-decoration-in-mathura-hero.webp')" }}
+          role="img"
+          aria-label="Romantic proposal decoration setup in Mathura"
         ></div>
         <div className="container mx-auto px-4 relative z-20 max-w-4xl">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 tracking-tight leading-tight">
