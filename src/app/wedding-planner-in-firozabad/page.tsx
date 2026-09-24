@@ -333,8 +333,11 @@ export default function FirozabadWeddingPlannerPage() {
                     <Link href="/wedding-planner-in-mathura" className="text-gray-600 hover:text-[#ff5722] text-sm py-2 border-b border-gray-200 transition-colors">
                       Wedding Planner in Mathura →
                     </Link>
-                    <Link href="/wedding-planner-in-shikohabad" className="text-gray-600 hover:text-[#ff5722] text-sm py-2 transition-colors">
+                    <Link href="/wedding-planner-in-shikohabad" className="text-gray-600 hover:text-[#ff5722] text-sm py-2 border-b border-gray-200 transition-colors">
                       Wedding Planner in Shikohabad →
+                    </Link>
+                    <Link href="/wedding-planner-in-aligarh" className="text-gray-600 hover:text-[#ff5722] text-sm py-2 transition-colors">
+                      Wedding Planner in Aligarh →
                     </Link>
                   </div>
                 </div>

@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/wedding-planner-in-mathura',
     '/wedding-planner-in-firozabad',
     '/wedding-planner-in-shikohabad',
+    '/wedding-planner-in-aligarh',
     '/car-boot-decoration-in-agra',
     '/car-boot-decoration-in-mathura',
     '/car-boot-decoration-in-firozabad',

@@ -178,7 +178,7 @@ export default function AligarhEventPlannerPage() {
                   <li><strong>Reception Evenings:</strong> Contemporary stage backdrops, ambient illumination, guest greeting logistics, and multi-course feast management.</li>
                 </ul>
                 <p className="leading-relaxed">
-                  Our on-site team monitors every vendor on the wedding day—from the arrival of fresh flowers to the timely opening of the dinner buffet—allowing you and your family to participate fully in the rituals without distraction.
+                  Our on-site team monitors every vendor on the wedding day—from the arrival of fresh flowers to the timely opening of the dinner buffet—allowing you and your family to participate fully in the rituals without distraction. If you are planning a full-scale marriage celebration, explore our dedicated <Link href="/wedding-planner-in-aligarh" className="text-[#ff5722] hover:underline font-semibold">Wedding Planner in Aligarh</Link> services for specialized mandap styling and ceremony management.
                 </p>
               </div>
 
