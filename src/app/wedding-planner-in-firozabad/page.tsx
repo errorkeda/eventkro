@@ -37,7 +37,7 @@ const venues = [
     capacity: '300-1200 guests',
     features: ['Spacious green lawn', 'Massive dining area', 'Central city location', 'Bridal dressing rooms'],
     rating: 4.8,
-    image: '/images/venue-heritage.jpeg'
+    image: '/images/firozabad/suhag-nagar-celebration-lawn.webp'
   },
   {
     name: 'Glass City Exhibition & Convention Hall',
@@ -45,7 +45,7 @@ const venues = [
     capacity: '400-1500 guests',
     features: ['Fully air-conditioned', 'Glass-art decor details', 'Valet parking', 'Advanced stage AV routing'],
     rating: 4.7,
-    image: '/images/venue-convention.jpg'
+    image: '/images/firozabad/glass-city-convention-hall.webp'
   },
   {
     name: 'Diamond Palace Hotel & Banquet',
@@ -53,7 +53,7 @@ const venues = [
     capacity: '150-500 guests',
     features: ['Luxurious guest rooms', 'Indoor AC banquets', 'Premium catering services', 'High-end lighting rigs'],
     rating: 4.6,
-    image: '/images/venue-krishna-hall.jpeg'
+    image: '/images/firozabad/diamond-palace-banquet.webp'
   }
 ];
 
@@ -69,11 +69,11 @@ export default function FirozabadWeddingPlannerPage() {
       <Header />
 
       {/* Hero Banner Section */}
-      <section className="relative h-[65vh] flex items-center justify-center text-center text-white overflow-hidden">
+      <section className="relative min-h-[60vh] sm:min-h-[65vh] pt-24 sm:pt-28 pb-12 sm:pb-16 flex items-center justify-center text-center text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/hero-2.jpeg')" }}
+          style={{ backgroundImage: "url('/images/firozabad/wedding-planner-in-firozabad-hero.webp')" }}
         ></div>
         <div className="container mx-auto px-4 relative z-20 max-w-4xl">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 tracking-tight leading-tight">
@@ -107,13 +107,13 @@ export default function FirozabadWeddingPlannerPage() {
                   About Eventkro: Firozabad’s Trusted Wedding Organizers
                 </h2>
                 <p className="leading-relaxed mb-4">
-                  Welcome to Eventkro, your premier choice for planning extraordinary weddings in Firozabad. As the leading <strong>wedding planner in firozabad</strong>, we dedicate ourselves to designing events that combine local heritage with professional logistics. Known around the world as the "Glass City of India" or "Suhag Nagari," Firozabad is a city defined by vibrant colors, incredible craftsmanship, and cultural warmth. Weddings in this beautiful city are lively celebrations that deserve a planning partner capable of bringing this heritage to life through modern event design. At Eventkro, we believe a wedding is not just a single-day event; it is a historic family milestone that represents love, trust, and community.
+                  Welcome to Eventkro, your premier choice for planning extraordinary weddings in Firozabad. As the leading <strong>wedding planner in firozabad</strong>, we dedicate ourselves to designing events that combine local heritage with professional logistics. Known around the world as the "Glass City of India" or "Suhag Nagari," <Link href="/cities/firozabad" className="text-[#ff5722] hover:underline font-medium">Firozabad</Link> is a city defined by vibrant colors, incredible craftsmanship, and cultural warmth. Weddings in this beautiful city are lively celebrations that deserve a planning partner capable of bringing this heritage to life through modern event design. At Eventkro, we believe a wedding is not just a single-day event; it is a historic family milestone that represents love, trust, and community.
                 </p>
                 <p className="leading-relaxed mb-4">
                   Our team consists of dedicated wedding decorators, coordination managers, hospitality specialists, and gourmet catering experts. We handle every step of the planning timeline, beginning with initial design consultations and conceptual stage layouts, and continuing through to supplier bookings, guest accommodation management, and on-day execution. By managing all operational elements, we allow you and your family to focus entirely on enjoying the rituals and celebrating with your guests. We coordinate closely with Firozabad’s top suppliers and venue operators to secure the best rates and ensure smooth deliveries.
                 </p>
                 <p className="leading-relaxed">
-                  We customize our wedding packages to fit your family's unique requirements. Whether you want a traditional Vedic wedding set against a backdrop of fresh marigolds and custom-crafted glass lanterns, a grand modern reception with high-end LED setups, or a vibrant Sangeet party, Eventkro brings your vision to life. Our deep connections within the Firozabad region enable us to source unique decorations, organize local folk performances, and coordinate reliable logistics that make your wedding run like clockwork.
+                  We customize our wedding packages to fit your family's unique requirements. From intimate pre-wedding milestones and <Link href="/proposal-decoration-in-firozabad" className="text-[#ff5722] hover:underline font-medium">proposal decoration in Firozabad</Link> to traditional Vedic weddings set against a backdrop of fresh marigolds and custom-crafted glass lanterns, Eventkro brings your vision to life. Our deep connections within the Firozabad region enable us to source unique decorations, organize local folk performances, and coordinate reliable logistics that make your wedding run like clockwork.
                 </p>
               </div>
 
@@ -248,7 +248,13 @@ export default function FirozabadWeddingPlannerPage() {
                   {venues.map((venue, index) => (
                     <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 p-6 flex flex-col md:flex-row gap-6">
                       <div className="md:w-1/3 h-48 relative rounded-lg overflow-hidden bg-gray-100">
-                        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${venue.image})` }}></div>
+                        <Image
+                          src={venue.image}
+                          alt={`${venue.name} - Wedding venue in Firozabad`}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                          className="object-cover"
+                        />
                       </div>
                       <div className="md:w-2/3 flex flex-col justify-between">
                         <div>

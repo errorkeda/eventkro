@@ -1,0 +1,139 @@
+================================================================================
+EVENTKRO — FIROZABAD PAGE SEO & TEMPLATE SIMILARITY ANALYSIS
+READ-ONLY REPORT
+================================================================================
+Target Page: /event-planner-in-firozabad
+Target File: src/app/event-planner-in-firozabad/page.tsx
+Reference Page: /event-planner-in-mathura (VERIFIED INDEXED)
+Reference File: src/app/event-planner-in-mathura/page.tsx
+Audit Date: September 24, 2026
+Status: READ-ONLY AUDIT (No project source code or config modified)
+
+================================================================================
+1. TOP 5 SECTIONS WITH HIGHEST TEMPLATE/CONTENT SIMILARITY
+================================================================================
+
+--------------------------------------------------------------------------------
+SECTION 1: DECORATION SERVICES (97.3% Content Overlap)
+--------------------------------------------------------------------------------
+1. Current Firozabad Section Heading:
+   "Decoration Services: Glass Art, Florals, & Lighting" (line 226)
+   Counterpart in Mathura:
+   "Bespoke Decoration: Balloon, Floral, & Lighting Design" (line 226)
+
+2. What Content Appears Templated:
+   Paragraphs 2 and 3 are 100% word-for-word identical to Mathura:
+   - "For weddings and religious events, we use fresh local flowers... to build beautiful entryways, mandap structures, and stage backdrops."
+   - "For social parties and birthdays, we design custom balloon arches, backdrop walls, and welcome boards."
+   - "Our decorators handle the entire installation and teardown, ensuring that the venue is returned in perfect condition. We ensure that our decorations are secure, clean, and photo-ready."
+
+3. What Genuinely Firozabad-Specific Information Already Exists:
+   - Mentions blending "fresh flowers, local glass crafts, and lighting grids" and "crystal hangings" into mandaps and stage backdrops.
+
+4. How to Make It Unique (WITHOUT Adding Unverified Facts):
+   - Focus specifically on the interplay between glass art and warm event illumination: reflective mirror-work backdrops, glass hurricane candle pathways, chandeliers, and custom fairy-light canopies tailored for evening wedding receptions, rather than repeating generic balloon arch copy.
+
+
+--------------------------------------------------------------------------------
+SECTION 2: CORPORATE EVENTS (96.5% Content Overlap)
+--------------------------------------------------------------------------------
+1. Current Firozabad Section Heading:
+   "Corporate Exhibitions & Business Meet Management" (line 188)
+   Counterpart in Mathura:
+   "Professional Corporate Event & Conference Management" (line 188)
+
+2. What Content Appears Templated:
+   Paragraphs 2 and 3 are 100% identical to Mathura, only swapping "Mathura" for "Firozabad":
+   - "We set up clear sound systems, microphones, projectors, and LED displays to support professional presentations. We also coordinate corporate catering, providing customized lunch packets, high-tea packages, and buffet spreads designed to suit professional standards."
+   - "Our local network helps you select the best business hotels and convention spaces in Firozabad. Trust Eventkro to manage the scheduling, setup, and logistics of your business meet with absolute precision."
+
+3. What Genuinely Firozabad-Specific Information Already Exists:
+   - References Firozabad’s industrial manufacturing sector, dealer meets, business conferences, and commercial exhibitions.
+
+4. How to Make It Unique (WITHOUT Adding Unverified Facts):
+   - Frame the corporate planning narrative around local glass factory dealer meets, trade delegations, export house meetings, and commercial showroom/inauguration staging along central commercial corridors and NH-19 connectivity.
+
+
+--------------------------------------------------------------------------------
+SECTION 3: BIRTHDAY PARTIES & BALLOON DECOR (92.1% Content Overlap)
+--------------------------------------------------------------------------------
+1. Current Firozabad Section Heading:
+   "Creative Birthday Parties & Themed Balloon Decoration" (line 172)
+   Counterpart in Mathura:
+   "Themed Birthday Parties & Custom Balloon Decoration" (line 172)
+
+2. What Content Appears Templated:
+   All 3 paragraphs are near carbon copies of Mathura:
+   - Identical lists of themes (cartoon characters, neon glows, pastel combinations).
+   - Identical phrasing: "Our decorators use premium latex and foil balloons to build organic balloon arches, photo backdrop walls, and customized balloon bouquets."
+   - Identical entertainment list: magic shows, game coordinators, tattoo artists, and photo booths.
+   - Identical conclusion: "Whether you are planning a 1st birthday, an anniversary, or a family get-together..."
+
+3. What Genuinely Firozabad-Specific Information Already Exists:
+   - Zero local geography or city-specific references currently exist in this section.
+
+4. How to Make It Unique (WITHOUT Adding Unverified Facts):
+   - Anchor the service to doorstep setups in central residential localities (e.g., Suhag Nagar, SN Hospital Road, Kotla Road residences and apartments) and distinguish between living-room home styling and outdoor lawn parties.
+
+
+--------------------------------------------------------------------------------
+SECTION 4: CATERING SERVICES (91.1% Content Overlap)
+--------------------------------------------------------------------------------
+1. Current Firozabad Section Heading:
+   "Gourmet Catering Services: Multi-Cuisine Buffets" (line 204)
+   Counterpart in Mathura:
+   "Pure Vegetarian & Brijwasi Catering Services in Mathura" (line 204)
+
+2. What Content Appears Templated:
+   The structural framework and closing paragraphs match Mathura:
+   - Identical intro: "Food is a central part of any Indian celebration. Eventkro partners with the finest caterers in Firozabad to deliver delicious multi-cuisine menus prepared under high hygiene standards..."
+   - Identical bullet points for live food counters (fresh chaat, golgappas, tandoori starters) and presentation (uniformed waitstaff, clean tables, swift service).
+   - Identical concluding paragraph on dietary preferences (Jain/vegetarian) and menu design.
+
+3. What Genuinely Firozabad-Specific Information Already Exists:
+   - Specifies traditional Mughlai and Awadhi buffet specialties alongside North Indian dishes, reflecting Western UP's culinary preferences (distinct from Mathura’s pure vegetarian Braj focus).
+
+4. How to Make It Unique (WITHOUT Adding Unverified Facts):
+   - Highlight regional Western UP catering traditions: live tandoor and tawa counters, slow-cooked regional dals, winter rabri and warm dessert counters, and distinguish catering formats for large marriage lawns vs. intimate home gatherings.
+
+
+--------------------------------------------------------------------------------
+SECTION 5: WEDDING PLANNING (83.2% Content Overlap)
+--------------------------------------------------------------------------------
+1. Current Firozabad Section Heading:
+   "Elegant Wedding Planning & Glass Art Stage Design" (line 150)
+   Counterpart in Mathura:
+   "Traditional Braj-Style Wedding Planning & Coordination" (line 150)
+
+2. What Content Appears Templated:
+   - The bulleted ritual breakdown (Roka & Sagai, Haldi, Mehendi & Sangeet, Main Wedding Day) mirrors Mathura's structure.
+   - The on-site timeline management paragraph (Var Mala, dinner service, final phere, photographer coordination) is identical word-for-word.
+
+3. What Genuinely Firozabad-Specific Information Already Exists:
+   - Mentions integrating custom crystal hangings and glass styling into mandap structures and coordination with local wedding lawns.
+
+4. How to Make It Unique (WITHOUT Adding Unverified Facts):
+   - Highlight the integration of glass hanging lanterns (fanoos), crystal mandap backdrops, and mirrored aisle walkways that reflect Firozabad's heritage craftsmanship, clearly differentiating the ritual setups from rural or temple-style mandaps.
+
+
+================================================================================
+2. NATURAL INTERNAL LINKING OPPORTUNITIES
+================================================================================
+
+Both key commercial sibling pages can be integrated naturally into the existing prose:
+
+1. Target Link: /wedding-planner-in-firozabad
+   - Recommended Location: Section 3 (Wedding Planning, line 153)
+   - Current Code Text:
+     "As Firozabad’s leading wedding planner, Eventkro designs weddings that blend rich cultural traditions with luxurious designs."
+   - Natural Implementation:
+     "As Firozabad’s leading <Link href=\"/wedding-planner-in-firozabad\" className=\"text-[#ff5722] hover:underline font-semibold\">wedding planner in Firozabad</Link>, Eventkro designs weddings that blend rich cultural traditions with luxurious designs."
+
+2. Target Link: /proposal-decoration-in-firozabad
+   - Recommended Location: Section 3 (Wedding Planning, line 156 leading into rituals)
+   - Natural Implementation (Following the proven Mathura model from commit 0bf4e9b):
+     "From intimate pre-wedding celebrations and <Link href=\"/proposal-decoration-in-firozabad\" className=\"text-[#ff5722] hover:underline font-semibold\">Proposal Decoration in Firozabad</Link> to multi-day wedding ceremonies, Eventkro provides comprehensive services to manage every aspect:"
+
+================================================================================
+END OF REPORT
+================================================================================

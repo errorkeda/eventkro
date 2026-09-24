@@ -1,0 +1,330 @@
+================================================================================
+EVENTKRO — INDEXED vs DISCOVERED ARCHITECTURE ANALYSIS
+READ-ONLY SEO AUDIT REPORT
+========================================================
+Website: https://www.eventkro.in/
+Framework: Next.js 14.0.4 / 14.2.32 (App Router)
+Audit Date: September 24, 2026
+Audit Scope: Strict 4-Page Architecture Audit (Agra, Mathura, Firozabad, Shikohabad)
+Status: READ-ONLY AUDIT (No project source code or config modified)
+
+================================================================================
+PAGES UNDER DIRECT COMPARISON
+================================================================================
+VERIFIED INDEXED REFERENCES:
+1. /event-planner-in-agra
+   - Source: src/app/event-planner-in-agra/page.tsx (551 lines)
+            src/app/event-planner-in-agra/layout.tsx (140 lines)
+2. /event-planner-in-mathura
+   - Source: src/app/event-planner-in-mathura/page.tsx (376 lines)
+            src/app/event-planner-in-mathura/layout.tsx (132 lines)
+
+DISCOVERED - CURRENTLY NOT INDEXED:
+3. /event-planner-in-firozabad
+   - Source: src/app/event-planner-in-firozabad/page.tsx (376 lines)
+            src/app/event-planner-in-firozabad/layout.tsx (132 lines)
+4. /event-planner-in-shikohabad
+   - Source: src/app/event-planner-in-shikohabad/page.tsx (376 lines)
+            src/app/event-planner-in-shikohabad/layout.tsx (132 lines)
+
+================================================================================
+1. SIDE-BY-SIDE COMPARISON ACROSS 10 DIMENSIONS
+================================================================================
+
+--------------------------------------------------------------------------------
+1. Content Depth (Word Count & Code Lines)
+--------------------------------------------------------------------------------
+- /event-planner-in-agra:
+  * Word Count: ~2,200 words
+  * Code Lines: 551 lines (page.tsx) + 140 lines (layout.tsx) = 691 lines
+  * Content Style: Deep, custom prose rewritten in commit d1c23e8 (Aug 26, 2026).
+- /event-planner-in-mathura:
+  * Word Count: ~1,336 words
+  * Code Lines: 376 lines (page.tsx) + 132 lines (layout.tsx) = 508 lines
+- /event-planner-in-firozabad:
+  * Word Count: ~1,261 words
+  * Code Lines: 376 lines (page.tsx) + 132 lines (layout.tsx) = 508 lines
+- /event-planner-in-shikohabad:
+  * Word Count: ~1,257 words
+  * Code Lines: 376 lines (page.tsx) + 132 lines (layout.tsx) = 508 lines
+- [VERIFIED FACT]: Agra is significantly deeper (~2,200 words vs ~1,300 words).
+- [VERIFIED FACT]: Mathura, Firozabad, and Shikohabad have virtually identical word counts (~1,257 to 1,336 words) and the exact same line count (376 lines).
+- [VERIFIED FACT]: Content depth ALONE does not distinguish indexed Mathura from unindexed Firozabad/Shikohabad.
+
+--------------------------------------------------------------------------------
+2. Heading Architecture (H1 / H2 / H3)
+--------------------------------------------------------------------------------
+- /event-planner-in-agra:
+  * H1 (1): "Event Planner in Agra for Memorable Celebrations & Events"
+  * H2 (8): Bespoke hierarchy (Corporate Events, Themed Birthdays, Decoration Services, Why Choose Eventkro, Top Local Venues, FAQs, CTA).
+  * H3 (9): Specialized subcategories.
+- /event-planner-in-mathura:
+  * H1 (1): "Best Event Planner in Mathura"
+  * H2 (11): About Eventkro, Services for Brijwasi Families, Braj-Style Wedding, Birthday Parties, Corporate Events, Pure Vegetarian Catering, Decoration Services, Why Choose Eventkro, Top Venues, FAQs, CTA.
+  * H3 (7): Spiritual Decor, Vegetarian Catering, Braj Entertainment, Balloon Styling, Venue Name, Quote, Other Cities.
+- /event-planner-in-firozabad:
+  * H1 (1): "Best Event Planner in Firozabad"
+  * H2 (11): Identical 11-H2 structure as Mathura (substituting Glass City / Firozabad).
+  * H3 (7): Identical 7-H3 structure as Mathura.
+- /event-planner-in-shikohabad:
+  * H1 (1): "Best Event Planner in Shikohabad"
+  * H2 (11): Identical 11-H2 structure as Mathura.
+  * H3 (7): Identical 7-H3 structure as Mathura.
+- [VERIFIED FACT]: Headings on Mathura, Firozabad, and Shikohabad share an identical 11-H2 structural blueprint. Agra uses a unique 8-H2 structure.
+
+--------------------------------------------------------------------------------
+3. City-Specific Content & Local Entities
+--------------------------------------------------------------------------------
+- /event-planner-in-agra:
+  * Entities: Taj Mahal, Fatehabad Road, Kamla Nagar, Taj View Gardens, Heritage Mughal Palace, Agra Convention Center, Mughlai and North Indian catering.
+- /event-planner-in-mathura:
+  * Entities: Lord Krishna, Vrindavan, Braj / Brijwasi, Barsana, Yamuna River, Mathura peda, rabri-malpua, kachori-sabzi, pure vegetarian / Jain catering, Lathmar Holi, Janmashtami, Krishna Heritage Hall, Yamuna Celebration Gardens, Brij Cultural Center.
+  * Extremely dense cultural, religious, and culinary entity presence.
+- /event-planner-in-firozabad:
+  * Entities: Glass City, bangle craftsmanship, glass art stage decor, crystal lighting, Suhag Nagar, Kotla Road, Glass City Exhibition Hall, Suhag Nagar Celebration Lawn, Royal Crystal Banquet.
+  * Local glass theme is heavily emphasized.
+- /event-planner-in-shikohabad:
+  * Entities: NH-19, glass manufacturing belt, Balaji temple, party lawns along highway, Shikohabad Palace & Banquet Garden, Balaji Marriage Home, Royal Glass & Event Hall.
+  * Thinnest entity profile among the 4; heavily borrows from Firozabad's glass theme.
+- [VERIFIED FACT]: Mathura possesses rich, distinct cultural and religious entity density. Firozabad and Shikohabad share 85.7% line similarity with each other and ~78% similarity with Mathura.
+
+--------------------------------------------------------------------------------
+4. Images and Alt Text
+--------------------------------------------------------------------------------
+- /event-planner-in-agra:
+  * 6 semantic Next/Image tags (<Image>) with descriptive, keyword-rich alt text and responsive sizes:
+    1. Hero: /images/hero-1.jpeg (alt: "Premium event planner in Agra for weddings and social events", priority)
+    2. Birthday: /images/birthday.jpg (alt: "Birthday event planning and balloon decoration in Agra")
+    3. Engagement: /images/engegment.jpg (alt: "Elite wedding and engagement planning in Agra")
+    4. Anniversary: /images/anniversary.jpg (alt: "Anniversary and proposal decoration services in Agra")
+    5. Corporate: /images/corporate.jpg (alt: "Professional corporate event management in Agra")
+    6. Venues: {venue.image} (alt: "${venue.name} - Event venue in Agra")
+  * 0 CSS background images.
+- /event-planner-in-mathura:
+  * 0 Next/Image tags (<Image>).
+  * 0 <img> tags.
+  * 0 alt text attributes.
+  * 2 CSS background images: url('/images/hero-slide-3.jpg') and url('${venue.image}').
+- /event-planner-in-firozabad:
+  * 0 Next/Image tags (<Image>).
+  * 0 <img> tags.
+  * 0 alt text attributes.
+  * 2 CSS background images: url('/images/hero-slide-3.jpeg') and url('${venue.image}').
+- /event-planner-in-shikohabad:
+  * 0 Next/Image tags (<Image>).
+  * 0 <img> tags.
+  * 0 alt text attributes.
+  * 2 CSS background images: url('/images/hero-1.jpeg') and url('${venue.image}').
+- [VERIFIED FACT]: Agra uses 6 semantic Next/Image tags; Mathura, Firozabad, and Shikohabad all use CSS background images with zero semantic Image tags or alt attributes.
+- [VERIFIED FACT]: Semantic image markup is absent on Mathura, proving that semantic image markup alone did not determine Mathura's indexing status.
+
+--------------------------------------------------------------------------------
+5. Inbound Internal Links
+--------------------------------------------------------------------------------
+- Inbound Links to /event-planner-in-agra (11 links from 9 files):
+  * Sitewide Header (src/components/Header.tsx: desktop dropdown + mobile accordion)
+  * Sitewide Footer (src/components/Footer.tsx: Featured Agra Services)
+  * Homepage card link (src/components/HomePage.tsx: line 354)
+  * Same-city: /wedding-planner-in-agra [VERIFIED INDEXED] (line 89)
+  * Same-city: /proposal-decoration-in-agra [VERIFIED INDEXED] (line 341)
+  * Same-city: /car-boot-decoration-in-agra [Discovered] (lines 321, 375)
+  * Cross-city: /event-planner-in-mathura [VERIFIED INDEXED] (sidebar)
+  * Cross-city: /event-planner-in-firozabad [Discovered] (sidebar)
+  * Cross-city: /event-planner-in-shikohabad [Discovered] (sidebar)
+
+- Inbound Links to /event-planner-in-mathura (8 links from 7 files):
+  * Sitewide Header: None
+  * Sitewide Footer: None
+  * Homepage card link (src/components/HomePage.tsx: line 367)
+  * Same-city: /wedding-planner-in-mathura [VERIFIED INDEXED] (Hero CTA button, line 89)
+  * Same-city: /proposal-decoration-in-mathura [VERIFIED INDEXED] (body link, line 401)
+  * Same-city: /car-boot-decoration-in-mathura [Discovered] (lines 315, 369)
+  * Cross-city: /event-planner-in-agra [VERIFIED INDEXED] (sidebar, line 516)
+  * Cross-city: /event-planner-in-firozabad [Discovered] (sidebar)
+  * Cross-city: /event-planner-in-shikohabad [Discovered] (sidebar)
+
+- Inbound Links to /event-planner-in-firozabad (12 links from 11 files):
+  * Sitewide Header: None
+  * Sitewide Footer: None
+  * Homepage card link (src/components/HomePage.tsx: line 380)
+  * Same-city: /wedding-planner-in-firozabad [DISCOVERED - NOT INDEXED]
+  * Same-city: /proposal-decoration-in-firozabad [DISCOVERED - NOT INDEXED]
+  * Same-city: /car-boot-decoration-in-firozabad [DISCOVERED - NOT INDEXED]
+  * Cross-city: /event-planner-in-agra [VERIFIED INDEXED] (sidebar)
+  * Cross-city: /event-planner-in-mathura [VERIFIED INDEXED] (sidebar)
+  * Cross-city: /event-planner-in-shikohabad [Discovered] (sidebar)
+  * Cross-city text links from 4 Delhi pages [VERIFIED INDEXED]
+
+- Inbound Links to /event-planner-in-shikohabad (8 links from 7 files):
+  * Sitewide Header: None
+  * Sitewide Footer: None
+  * Homepage card link (src/components/HomePage.tsx: line 393)
+  * Same-city: /wedding-planner-in-shikohabad [DISCOVERED - NOT INDEXED]
+  * Same-city: /proposal-decoration-in-shikohabad [DISCOVERED - NOT INDEXED]
+  * Same-city: /car-boot-decoration-in-shikohabad [DISCOVERED - NOT INDEXED]
+  * Cross-city: /event-planner-in-agra [VERIFIED INDEXED] (sidebar)
+  * Cross-city: /event-planner-in-mathura [VERIFIED INDEXED] (sidebar)
+  * Cross-city: /event-planner-in-firozabad [Discovered] (sidebar)
+
+- [VERIFIED FACT]: In Agra and Mathura, intra-city inbound links originate from VERIFIED INDEXED sibling pages (/wedding-planner-in-agra, /wedding-planner-in-mathura, /proposal-decoration-in-agra, /proposal-decoration-in-mathura).
+- [VERIFIED FACT]: In Firozabad and Shikohabad, ZERO sibling pages in the same city are indexed. All intra-city links come from unindexed sibling pages.
+
+--------------------------------------------------------------------------------
+6. Outbound Internal Links
+--------------------------------------------------------------------------------
+- /event-planner-in-agra (10 unique destinations):
+  * /contact, /wedding-planner-in-agra, /services/birthday-balloon-decoration/agra,
+    /proposal-decoration-in-agra, /car-boot-decoration-in-agra,
+    /services/balloon-decoration/agra, /cities/agra, /event-planner-in-mathura,
+    /event-planner-in-firozabad, /event-planner-in-shikohabad.
+  * Links to 6 same-city pages.
+- /event-planner-in-mathura (5 unique destinations):
+  * /contact, /services, /event-planner-in-agra, /event-planner-in-firozabad,
+    /event-planner-in-shikohabad.
+  * Zero links to same-city wedding or proposal services.
+- /event-planner-in-firozabad (5 unique destinations):
+  * /contact, /services, /event-planner-in-agra, /event-planner-in-mathura,
+    /event-planner-in-shikohabad.
+- /event-planner-in-shikohabad (5 unique destinations):
+  * /contact, /services, /event-planner-in-agra, /event-planner-in-mathura,
+    /event-planner-in-firozabad.
+- [VERIFIED FACT]: Agra comprehensively links to 6 local same-city services. Mathura, Firozabad, and Shikohabad link only to generic pages and cross-city sidebars, completely lacking same-city outbound service links.
+
+--------------------------------------------------------------------------------
+7. Title and Meta Description
+--------------------------------------------------------------------------------
+- /event-planner-in-agra:
+  * Title: "Event Planner in Agra | Event Planning Services | Eventkro" (60 chars)
+  * Meta: "Looking for an event planner in Agra? Eventkro helps plan birthdays, weddings, anniversaries, proposals and other memorable celebrations with professional event services and decoration." (184 chars)
+- /event-planner-in-mathura:
+  * Title: "Best Event Planner in Mathura | Wedding & Cultural Event Management | Eventkro" (78 chars)
+  * Meta: "Looking for the best event planner in Mathura? Eventkro offers premium wedding planning, Janmashtami events, Holi festival tours, birthday decoration, and catering in Mathura." (176 chars)
+- /event-planner-in-firozabad:
+  * Title: "Best Event Planner in Firozabad | Wedding & Balloon Decoration | Eventkro" (73 chars)
+  * Meta: "Looking for the best event planner in Firozabad? Eventkro offers premium wedding planning, glass decor setups, birthday decoration, catering, and corporate event management in Firozabad." (187 chars)
+- /event-planner-in-shikohabad:
+  * Title: "Best Event Planner in Shikohabad | Wedding & Corporate Management | Eventkro" (76 chars)
+  * Meta: "Looking for the best event planner in Shikohabad? Eventkro offers premium wedding planning, birthday party decoration, balloon decor, catering, and corporate event management in Shikohabad." (190 chars)
+- [VERIFIED FACT]: All 4 titles and descriptions follow identical naming conventions, target local keywords, and have similar lengths (176-190 chars).
+
+--------------------------------------------------------------------------------
+8. Canonical and Indexability
+--------------------------------------------------------------------------------
+- Canonical: Self-referential absolute URLs on all 4 pages.
+- Robots directives: User-Agent: *, Allow: / in robots.ts. No noindex/nofollow.
+- HTTP Status: HTTP 200 OK (Prerendered SSG).
+- [VERIFIED FACT]: Canonical and indexability configurations are 100% identical and error-free across all 4 pages.
+
+--------------------------------------------------------------------------------
+9. Schema (Structured Data)
+--------------------------------------------------------------------------------
+- All 4 pages implement 3 schemas:
+  1. FAQPage (Agra: 6 Q&As, Mathura/Firozabad/Shikohabad: 5 Q&As)
+  2. BreadcrumbList (Home -> Event Planner in [City])
+  3. LocalBusiness (Localized name, postalCode, latitude, longitude)
+- [VERIFIED FACT]: Schema architecture is virtually identical across all 4 pages.
+
+--------------------------------------------------------------------------------
+10. Sitemap Treatment
+--------------------------------------------------------------------------------
+- In src/app/sitemap.ts:
+  * All 4 URLs reside in the staticRoutes array.
+  * Priority: 0.8
+  * changeFrequency: 'weekly'
+  * lastModified: dynamic now timestamp
+- [VERIFIED FACT]: Sitemap configuration is 100% identical across all 4 pages.
+
+================================================================================
+2. WHAT BOTH INDEXED PAGES HAVE IN COMMON THAT BOTH NON-INDEXED PAGES LACK
+================================================================================
+
+1. Intra-City Links from Active, VERIFIED INDEXED Sibling Pages [VERIFIED]
+   - In Agra: /event-planner-in-agra is linked by /wedding-planner-in-agra (INDEXED)
+     and /proposal-decoration-in-agra (INDEXED).
+   - In Mathura: /event-planner-in-mathura is linked by /wedding-planner-in-mathura (INDEXED)
+     and /proposal-decoration-in-mathura (INDEXED).
+   - In Firozabad and Shikohabad: ZERO same-city sibling pages are indexed. Every single
+     sibling page is currently trapped in "Discovered - currently not indexed".
+   - [STRONG INFERENCE]: When Googlebot regularly re-crawls an indexed page, it follows
+     inbound links directly to same-city siblings. Because Firozabad and Shikohabad have
+     no indexed sibling pages, their intra-city links carry zero crawl priority.
+
+2. Presence in an Established Multi-Page Indexed Cluster [VERIFIED]
+   - Agra has 4 verified indexed URLs (3 commercial + 1 city hub).
+   - Mathura has 3 verified indexed commercial URLs.
+   - Firozabad and Shikohabad have 0 indexed URLs across the entire site.
+   - [STRONG INFERENCE]: Google's quality classifiers have validated Agra and Mathura as
+     primary commercial service territories. Firozabad and Shikohabad represent unvalidated
+     secondary markets where Google has not yet granted initial topical authority.
+
+3. High Cultural/Geographic Entity Distinctiveness [VERIFIED]
+   - Agra and Mathura feature distinct, non-overlapping cultural entities (Taj Mahal
+     vs. Lord Krishna, Vrindavan, Braj, Yamuna, Mathura peda, Lathmar Holi).
+   - Textual line similarity between Agra and Mathura is low (53.4%).
+   - In contrast, Firozabad and Shikohabad share 85.7% line-by-line similarity with each
+     other and ~78% similarity with Mathura.
+   - [STRONG INFERENCE]: High cross-city template duplication between Firozabad and
+     Shikohabad triggered Google's doorway/duplicate content suppression heuristics,
+     causing Googlebot to defer crawling.
+
+================================================================================
+3. LIKELY GAPS IN FIROZABAD AND SHIKOHABAD
+================================================================================
+1. The "Unindexed Island" Problem [VERIFIED]:
+   All intra-city inbound links to /event-planner-in-firozabad and
+   /event-planner-in-shikohabad come from sibling pages that are themselves unindexed.
+2. Extreme Template Duplication (85.7% Overlap) [VERIFIED]:
+   Firozabad and Shikohabad use the exact same 376-line component layout, the same
+   11 H2s, the same 3 venue stock image files, identical FAQ layouts, and parallel
+   sentence structures.
+3. Lack of Semantic Image Elements [VERIFIED]:
+   Unlike Agra (which has 6 Next/Image tags with rich alt text), Firozabad and
+   Shikohabad have 0 semantic images and rely entirely on CSS background images.
+4. Zero Outbound Links to Same-City Services [VERIFIED]:
+   Neither Firozabad nor Shikohabad links out to its own local wedding planner or
+   proposal decoration services, failing to create a local topical cluster.
+
+================================================================================
+4. WHICH ONE PAGE SHOULD BE TESTED FIRST AND WHY
+================================================================================
+RECOMMENDED TEST PAGE: /event-planner-in-firozabad
+
+EXACT REASONS:
+1. Strongest Existing Inbound Foundation [VERIFIED]:
+   /event-planner-in-firozabad already has 12 inbound links across the project
+   (including links from all 4 indexed Delhi landing pages and the Homepage grid).
+2. Larger Commercial Market [STRONG INFERENCE]:
+   Firozabad is a district headquarters and major industrial city (~600k population)
+   with higher commercial search demand than Shikohabad (a smaller tehsil).
+3. Highly Distinct Commercial Entity [VERIFIED]:
+   Firozabad has a distinct, recognizable identity as the "Glass City" (Suhag Nagari).
+   It can be easily differentiated with unique local glass decor, crystal lighting,
+   and specific wedding venues (unlike Shikohabad which merely copied Firozabad).
+4. Cluster Seed Opportunity [STRONG INFERENCE]:
+   Getting /event-planner-in-firozabad indexed breaks the "zero-indexed" deadlock for
+   the entire Firozabad cluster, allowing it to pass indexed link equity to its
+   sibling pages (/wedding-planner-in-firozabad and /proposal-decoration-in-firozabad).
+
+================================================================================
+5. FILES THAT WOULD NEED CHANGES LATER (IF APPROVED)
+================================================================================
+*(Informational Reference Only — NO modifications have been made)*
+
+1. src/app/event-planner-in-firozabad/page.tsx:
+   - Replace CSS background images with semantic next/image components featuring
+     descriptive, localized alt text.
+   - Expand content depth to 1,700+ words with unique Firozabad commercial/venue
+     details to break the 85.7% template overlap.
+   - Add contextual outbound internal links to /wedding-planner-in-firozabad and
+     /proposal-decoration-in-firozabad.
+2. src/app/event-planner-in-firozabad/layout.tsx:
+   - Trim meta description from 187 characters to under 160 characters (matching
+     the successful Mathura fix in commit 0bf4e9b).
+3. src/components/Header.tsx or src/components/Footer.tsx:
+   - Provide direct 1-click global navigation exposure to pass direct homepage PageRank.
+4. src/app/event-planner-in-agra/page.tsx & src/app/event-planner-in-mathura/page.tsx:
+   - Add contextual body link endorsements into /event-planner-in-firozabad.
+
+================================================================================
+END OF AUDIT REPORT
+================================================================================

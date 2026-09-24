@@ -37,7 +37,7 @@ const venues = [
     capacity: '200-800 guests',
     features: ['Luxury air-conditioned hall', 'Connected marriage lawn', 'Ample guest parking', 'Premium bridal suites'],
     rating: 4.8,
-    image: '/images/venue-krishna-hall.jpeg'
+    image: '/images/shikohabad/shikohabad-palace-banquet.webp'
   },
   {
     name: 'Balaji Marriage Home',
@@ -45,7 +45,7 @@ const venues = [
     capacity: '300-1000 guests',
     features: ['Spacious green gardens', 'Large in-house kitchen area', 'Budget-friendly packages', 'Central location'],
     rating: 4.6,
-    image: '/images/venue-heritage.jpeg'
+    image: '/images/shikohabad/balaji-marriage-home.webp'
   },
   {
     name: 'Royal Highway Marriage Lawn (NH-19)',
@@ -53,7 +53,7 @@ const venues = [
     capacity: '500-2000 guests',
     features: ['Massive capacity', 'Direct highway accessibility', 'Secure compound wall', 'Grand wedding setups'],
     rating: 4.7,
-    image: '/images/venue-convention.jpg'
+    image: '/images/shikohabad/royal-highway-lawn-nh19.webp'
   }
 ];
 
@@ -69,11 +69,11 @@ export default function ShikohabadWeddingPlannerPage() {
       <Header />
 
       {/* Hero Banner Section */}
-      <section className="relative h-[65vh] flex items-center justify-center text-center text-white overflow-hidden">
+      <section className="relative min-h-[60vh] sm:min-h-[65vh] pt-24 sm:pt-28 pb-12 sm:pb-16 flex items-center justify-center text-center text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/hero-slide-3.jpg')" }}
+          style={{ backgroundImage: "url('/images/shikohabad/wedding-planner-in-shikohabad-hero.webp')" }}
         ></div>
         <div className="container mx-auto px-4 relative z-20 max-w-4xl">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 tracking-tight leading-tight">
@@ -107,13 +107,13 @@ export default function ShikohabadWeddingPlannerPage() {
                   About Eventkro: Shikohabad’s Dedicated Wedding Planners
                 </h2>
                 <p className="leading-relaxed mb-4">
-                  Welcome to Eventkro, the leading <strong>wedding planner in shikohabad</strong>. We specialize in planning and executing weddings that combine the warmth of traditional family rituals with modern design and flawless logistics. Shikohabad, situated along the major national highway (NH-19) in the Firozabad district, is a key connecting town in the region. Due to its strategic location, many families choose Shikohabad to host grand, large-capacity weddings that are easily accessible to guests traveling from Agra, Firozabad, Mainpuri, and Etawah. A wedding hosted here is a celebration of community, culture, and family values. At Eventkro, we believe that every wedding deserves professional timeline coordination, high-end visual decoration, and warm hospitality.
+                  Welcome to Eventkro, the leading <strong>wedding planner in shikohabad</strong>. We specialize in planning and executing weddings that combine the warmth of traditional family rituals with modern design and flawless logistics. <Link href="/cities/shikohabad" className="text-[#ff5722] hover:underline font-medium">Shikohabad</Link>, situated along the major national highway (NH-19) in the Firozabad district, is a key connecting town in the region. Due to its strategic location, many families choose Shikohabad to host grand, large-capacity weddings that are easily accessible to guests traveling from Agra, Firozabad, Mainpuri, and Etawah. A wedding hosted here is a celebration of community, culture, and family values. At Eventkro, we believe that every wedding deserves professional timeline coordination, high-end visual decoration, and warm hospitality.
                 </p>
                 <p className="leading-relaxed mb-4">
                   Our wedding planning team provides complete coordination, managing all pre-wedding and wedding-day details. We collaborate with the best properties in Shikohabad, sourcing venues that range from spacious marriage lawns with massive lawns to traditional banquet halls. We coordinate with local flower markets, regional caterers, music providers, makeup artists, and wedding photographers. By taking over all timeline management and supplier delivery coordination, we leave you free to participate fully in the sacred ceremonies and enjoy the festivities with your loved ones.
                 </p>
                 <p className="leading-relaxed">
-                  We customize our setups according to your family's preferences. Whether you desire a traditional wedding styled with rich marigold arches and drapes, a modern pastel-themed open-air celebration on a spacious highway lawn, or a budget-friendly family gathering, Eventkro creates a customized package. We work with the top regional chefs to offer authentic local catering and ensure that every element reflects the hospitality of Shikohabad.
+                  We customize our setups according to your family's preferences. From intimate pre-wedding milestones and <Link href="/proposal-decoration-in-shikohabad" className="text-[#ff5722] hover:underline font-medium">proposal decoration in Shikohabad</Link> to traditional weddings styled with rich marigold arches and drapes or modern celebrations on a spacious highway lawn, Eventkro creates a customized package. We work with the top regional chefs to offer authentic local catering and ensure that every element reflects the hospitality of Shikohabad.
                 </p>
               </div>
 
@@ -248,7 +248,13 @@ export default function ShikohabadWeddingPlannerPage() {
                   {venues.map((venue, index) => (
                     <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 p-6 flex flex-col md:flex-row gap-6">
                       <div className="md:w-1/3 h-48 relative rounded-lg overflow-hidden bg-gray-100">
-                        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${venue.image})` }}></div>
+                        <Image
+                          src={venue.image}
+                          alt={`${venue.name} - Wedding venue in Shikohabad`}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                          className="object-cover"
+                        />
                       </div>
                       <div className="md:w-2/3 flex flex-col justify-between">
                         <div>
