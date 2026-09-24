@@ -344,8 +344,11 @@ export default function MathuraEventPlannerPage() {
                     <Link href="/event-planner-in-firozabad" className="text-gray-600 hover:text-[#ff5722] text-sm py-2 border-b border-gray-200 transition-colors">
                       Event Planner in Firozabad →
                     </Link>
-                    <Link href="/event-planner-in-shikohabad" className="text-gray-600 hover:text-[#ff5722] text-sm py-2 transition-colors">
+                    <Link href="/event-planner-in-shikohabad" className="text-gray-600 hover:text-[#ff5722] text-sm py-2 border-b border-gray-200 transition-colors">
                       Event Planner in Shikohabad →
+                    </Link>
+                    <Link href="/event-planner-in-aligarh" className="text-gray-600 hover:text-[#ff5722] text-sm py-2 transition-colors">
+                      Event Planner in Aligarh →
                     </Link>
                   </div>
                 </div>
