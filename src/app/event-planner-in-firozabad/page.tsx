@@ -150,10 +150,10 @@ export default function FirozabadEventPlannerPage() {
                   Elegant Wedding Planning & Glass Art Stage Design
                 </h2>
                 <p className="leading-relaxed mb-4">
-                  A wedding is a holy milestone, and celebrating it with beauty, elegance, and traditional honors is our mission. Planning a wedding in Firozabad requires coordinating multiple pre-wedding functions, guest hospitality, decorative setups, and catering menus. As Firozabad’s leading wedding planner, Eventkro designs weddings that blend rich cultural traditions with luxurious designs. We coordinate with the top wedding lawns and banquet halls, creating a beautiful environment for your guests.
+                  A wedding is a holy milestone, and celebrating it with beauty, elegance, and traditional honors is our mission. Planning a wedding in Firozabad requires coordinating multiple pre-wedding functions, guest hospitality, decorative setups, and catering menus. As Firozabad’s leading <Link href="/wedding-planner-in-firozabad" className="text-[#ff5722] hover:underline font-semibold">wedding planner in Firozabad</Link>, Eventkro designs weddings that blend rich cultural traditions with luxurious designs. We coordinate with the top wedding lawns and banquet halls, creating a beautiful environment for your guests.
                 </p>
                 <p className="leading-relaxed mb-4">
-                  We handle the planning for all wedding rituals:
+                  From romantic pre-wedding surprises and <Link href="/proposal-decoration-in-firozabad" className="text-[#ff5722] hover:underline font-semibold">Proposal Decoration in Firozabad</Link> to multi-day wedding celebrations, we handle the planning for every milestone:
                 </p>
                 <ul className="space-y-2 mb-4">
                   <li><strong>Roka & Sagai:</strong> Traditional ring exchange functions featuring elegant drapes, welcome signages, and guest seating layouts.</li>
@@ -172,13 +172,13 @@ export default function FirozabadEventPlannerPage() {
                   Creative Birthday Parties & Themed Balloon Decoration
                 </h2>
                 <p className="leading-relaxed mb-4">
-                  Celebrating your child’s birthday is a special family occasion. Eventkro provides creative birthday party planning and balloon decoration services that delight guests of all ages. We help you choose a theme (such as cartoon characters, neon glows, or elegant pastels) and design a matching cake table, photo backdrop, and welcome board.
+                  Celebrating a milestone birthday or family anniversary calls for customized styling that fits your venue. Eventkro delivers professional birthday party planning and balloon decoration services across Firozabad, tailoring our setups whether you are hosting an intimate home gathering or a large party in a local banquet hall.
                 </p>
                 <p className="leading-relaxed mb-4">
-                  Our decorators use premium latex and foil balloons to build organic balloon arches, photo backdrop walls, and customized balloon bouquets. In addition to decorations, we arrange entertainment activities such as magic shows, game coordinators, tattoo artists, and photo booths to keep children entertained.
+                  For home celebrations in residential areas such as Suhag Nagar and Kotla Road, we specialize in neat, compact living-room setups: themed cake-cutting backdrops, organic balloon garlands, number foil displays, and customized welcome boards that maximize smaller spaces without clutter. For larger celebrations in party lawns or banquet venues, we construct full-scale balloon arches, photo booth backdrops, LED marquee numbers, and stage styling, coordinating with sound systems and entertainers to keep young guests engaged.
                 </p>
                 <p className="leading-relaxed">
-                  Whether you are planning a 1st birthday, an anniversary, or a family get-together, Eventkro designs a customized package that suits your budget. We handle the entire venue setup and teardown, ensuring a hassle-free experience.
+                  Our balloon decorators use high-grade latex and foil materials to ensure long-lasting inflations that look vibrant throughout the party. From initial concept selection to prompt on-site setup and post-party removal, Eventkro handles every detail so families can focus entirely on celebrating.
                 </p>
               </div>
 
@@ -226,13 +226,13 @@ export default function FirozabadEventPlannerPage() {
                   Decoration Services: Glass Art, Florals, & Lighting
                 </h2>
                 <p className="leading-relaxed mb-4">
-                  The visual layout of your venue sets the tone for the entire event. Eventkro provides customized decoration services in Firozabad, designing visual layouts that transform banquet halls and gardens into beautiful settings. We blend fresh flowers, local glass crafts, and lighting grids to match your event theme.
+                  The visual styling of your venue defines the mood of your celebration. In Firozabad, Eventkro takes direct inspiration from the city’s renowned glass-making legacy, integrating artisanal glass craftsmanship into modern event styling. We craft luminous environments where bespoke glass centerpieces, crystal hangings, and structural lighting grids interact to illuminate banquet halls and open celebration lawns.
                 </p>
                 <p className="leading-relaxed mb-4">
-                  For weddings and religious events, we use fresh local flowers and crystal hangings to build beautiful entryways, mandap structures, and stage backdrops. For social parties and birthdays, we design custom balloon arches, backdrop walls, and welcome boards.
+                  For wedding and reception stages, our decorators blend fresh seasonal florals with suspended glass elements, chandelier accents, and reflective backdrop panels. From grand entryway tunnels with ambient fairy lights to glowing mandap pillars and illuminated table arrangements, every decorative element is positioned to create depth, elegance, and stunning evening photography.
                 </p>
                 <p className="leading-relaxed">
-                  Our decorators handle the entire installation and teardown, ensuring that the venue is returned in perfect condition. We ensure that our decorations are secure, clean, and photo-ready.
+                  Our on-site decor team manages complete logistics, careful handling of delicate glass fixtures, structural safety rigging, and timely teardown after the event. Whether styling an indoor banquet or a spacious outdoor garden, Eventkro ensures that your celebration stage is secure, polished, and ready before the first guest arrives.
                 </p>
               </div>
 
