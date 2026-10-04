@@ -461,9 +461,15 @@ export default function AligarhWeddingPlannerPage() {
                   </Link>
                   <Link
                     href="/birthday-decoration-in-aligarh"
-                    className="text-[#ff5722] hover:underline text-sm font-semibold block"
+                    className="text-[#ff5722] hover:underline text-sm font-semibold block mb-2"
                   >
                     Birthday Decoration in Aligarh →
+                  </Link>
+                  <Link
+                    href="/bhagwat-katha-organiser-in-aligarh"
+                    className="text-[#ff5722] hover:underline text-sm font-semibold block"
+                  >
+                    Bhagwat Katha Organiser in Aligarh →
                   </Link>
                 </div>
 

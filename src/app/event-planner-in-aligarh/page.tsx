@@ -240,7 +240,7 @@ export default function AligarhEventPlannerPage() {
                   <div className="p-5 bg-orange-50/60 rounded-xl border border-orange-100">
                     <h3 className="text-lg font-bold text-gray-900 mb-1">Shrimad Bhagwat Katha Programs</h3>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      Multi-day coordination featuring elevated vyas peeth decoration, weather-protected pandal layouts, distributed speaker lines for clear commentary, and devotee crowd management.
+                      Requirement-based coordination for Shrimad Bhagwat Katha programs can include Vyas Peeth and stage decoration, pandal and seating arrangements, sound setup, and other event requirements based on the venue, program needs, and vendor availability. For dedicated planning details, explore our specialized <Link href="/bhagwat-katha-organiser-in-aligarh" className="text-[#ff5722] hover:underline font-semibold">Bhagwat Katha Organiser in Aligarh</Link> services.
                     </p>
                   </div>
                   <div className="p-5 bg-orange-50/60 rounded-xl border border-orange-100">
