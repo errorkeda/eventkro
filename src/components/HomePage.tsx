@@ -569,6 +569,8 @@ export default function HomePage() {
               { name: 'Wedding Planner in Mathura', path: '/wedding-planner-in-mathura', desc: 'Traditional Braj-style pure vegetarian wedding ceremonies.' },
               { name: 'Wedding Planner in Firozabad', path: '/wedding-planner-in-firozabad', desc: 'Stunning glass art themed setups and royal stage designs.' },
               { name: 'Wedding Planner in Shikohabad', path: '/wedding-planner-in-shikohabad', desc: 'Budget-friendly wedding decoration & catering packages.' },
+              { name: 'Wedding Planner in Aligarh', path: '/wedding-planner-in-aligarh', desc: 'Customized wedding coordination, mandap decoration and celebration planning options in Aligarh.' },
+              { name: 'Wedding Planner in Hathras', path: '/wedding-planner-in-hathras', desc: 'Customized wedding coordination, mandap decoration and celebration planning options in Hathras.' },
               { name: 'Proposal Decoration in Agra', path: '/proposal-decoration-in-agra', desc: 'Romantic surprise proposal setups, rooftop designs, and balloon decor near Taj Mahal.' },
               { name: 'Proposal Decoration in Mathura', path: '/proposal-decoration-in-mathura', desc: 'Bespoke surprise proposal arrangements, floral styling, and candle light setups in Brij.' },
               { name: 'Proposal Decoration in Firozabad', path: '/proposal-decoration-in-firozabad', desc: 'Surprise proposal setups with premium balloon arches and custom glass-art lighting.' },
