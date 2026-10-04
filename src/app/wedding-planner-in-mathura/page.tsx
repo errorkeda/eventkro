@@ -321,6 +321,9 @@ export default function MathuraWeddingPlannerPage() {
                 <div className="bg-gray-50 border border-gray-100 rounded-2xl p-6 shadow-sm">
                   <h3 className="text-lg font-bold text-gray-900 mb-4">Explore Other Cities</h3>
                   <div className="flex flex-col gap-2">
+                    <Link href="/wedding-planner-in-hathras" className="text-gray-600 hover:text-[#ff5722] text-sm py-2 border-b border-gray-200 transition-colors">
+                      Wedding Planner in Hathras →
+                    </Link>
                     <Link href="/wedding-planner-in-agra" className="text-gray-600 hover:text-[#ff5722] text-sm py-2 border-b border-gray-200 transition-colors">
                       Wedding Planner in Agra →
                     </Link>
