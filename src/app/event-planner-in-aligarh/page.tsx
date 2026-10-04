@@ -203,7 +203,7 @@ export default function AligarhEventPlannerPage() {
                   We adapt our setups to your chosen venue. For intimate home parties in residential neighborhoods, we design neat, space-conscious setups including themed cake table backdrops, organic balloon garlands, numeric foil displays, and welcoming entry signboards. For larger celebrations hosted in banquet halls or party lawns, we build expansive balloon arches, photo booth backdrops, marquee LED lights, and custom stage platforms.
                 </p>
                 <p className="leading-relaxed">
-                  We use durable, high-grade latex and foil balloons that stay properly inflated throughout your party. To keep young guests engaged, we can also coordinate entertaining activities including magic shows, game coordinators, tattoo artists, and photo booths.
+                  Setups can incorporate latex or foil balloon styling tailored to your preferred colors and theme. Depending on your event requirements and local availability, optional entertainment such as magic shows, game coordinators, tattoo artists, or photo booths can also be discussed. For dedicated theme backdrops, balloon styling, and party setups across homes or venues, explore our specialized <Link href="/birthday-decoration-in-aligarh" className="text-[#ff5722] hover:underline font-semibold">Birthday Decoration in Aligarh</Link> services.
                 </p>
               </div>
 

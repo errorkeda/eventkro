@@ -455,9 +455,15 @@ export default function AligarhWeddingPlannerPage() {
                   </p>
                   <Link
                     href="/event-planner-in-aligarh"
-                    className="text-[#ff5722] hover:underline text-sm font-semibold block"
+                    className="text-[#ff5722] hover:underline text-sm font-semibold block mb-2"
                   >
                     View Aligarh Event Planner →
+                  </Link>
+                  <Link
+                    href="/birthday-decoration-in-aligarh"
+                    className="text-[#ff5722] hover:underline text-sm font-semibold block"
+                  >
+                    Birthday Decoration in Aligarh →
                   </Link>
                 </div>
 
