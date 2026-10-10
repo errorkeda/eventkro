@@ -70,7 +70,7 @@ export default function ShikohabadEventPlannerPage() {
       <Header />
 
       {/* Hero Banner Section */}
-      <section className="relative h-[65vh] flex items-center justify-center text-center text-white overflow-hidden">
+      <section className="relative min-h-[60vh] sm:min-h-[65vh] pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 flex items-center justify-center text-center text-white overflow-hidden">
         <Image
           src="/images/shikohabad/event-planner-in-shikohabad-hero.webp"
           alt="Event planning and celebration stage decoration in Shikohabad"
