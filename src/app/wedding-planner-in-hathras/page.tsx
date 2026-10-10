@@ -213,6 +213,9 @@ export default function HathrasWeddingPlannerPage() {
                     </p>
                   </div>
                 </div>
+                <p className="leading-relaxed">
+                  For standalone birthdays, Roka ceremonies, family celebrations, or devotional programs, explore our dedicated <Link href="/event-planner-in-hathras" className="text-[#ff5722] hover:underline font-semibold">Event Planner in Hathras</Link> services.
+                </p>
               </div>
 
               {/* Mandap & Wedding Stage Decoration Options */}

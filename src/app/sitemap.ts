@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/event-planner-in-firozabad',
     '/event-planner-in-shikohabad',
     '/event-planner-in-aligarh',
+    '/event-planner-in-hathras',
     '/wedding-planner-in-agra',
     '/wedding-planner-in-mathura',
     '/wedding-planner-in-firozabad',
