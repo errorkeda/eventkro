@@ -575,6 +575,7 @@ export default function HomePage() {
               { name: 'Proposal Decoration in Mathura', path: '/proposal-decoration-in-mathura', desc: 'Bespoke surprise proposal arrangements, floral styling, and candle light setups in Brij.' },
               { name: 'Proposal Decoration in Firozabad', path: '/proposal-decoration-in-firozabad', desc: 'Surprise proposal setups with premium balloon arches and custom glass-art lighting.' },
               { name: 'Proposal Decoration in Shikohabad', path: '/proposal-decoration-in-shikohabad', desc: 'Affordable romantic surprise decorations, room transformations, and event planning.' },
+              { name: 'Event Planner in Firozabad', path: '/event-planner-in-firozabad', desc: 'Customized planning for weddings, birthdays, corporate events and celebrations in Firozabad.' },
             ].map((item, index) => (
               <Link
                 key={index}

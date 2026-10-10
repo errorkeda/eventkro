@@ -2,14 +2,15 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { FaMapMarkerAlt, FaCalendarAlt, FaStar, FaChevronDown } from 'react-icons/fa';
+import { FaChevronDown } from 'react-icons/fa';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import Image from 'next/image';
 
 const faqItems = [
   {
     question: 'Why is Eventkro considered the best event planner in Firozabad?',
-    answer: 'Eventkro stands out in Firozabad by offering high-quality design integration (featuring custom local glass art decoration), professional catering, and dynamic timeline management. We deliver premium events at competitive rates. Our local knowledge of halls and lawns in Firozabad allows us to coordinate logistics, guest services, and cleanups without delays.'
+    answer: 'Eventkro stands out in Firozabad by offering high-quality design integration (featuring custom local glass art decoration), professional catering, and dynamic timeline management. We deliver organized events at competitive rates. Our local knowledge of halls and lawns in Firozabad allows us to coordinate logistics, guest services, and cleanups without delays.'
   },
   {
     question: 'What types of decorations do you offer in Firozabad?',
@@ -21,7 +22,7 @@ const faqItems = [
   },
   {
     question: 'Do you provide catering services in Firozabad?',
-    answer: 'Yes, we provide premium catering coordination in Firozabad. We design customizable vegetarian and non-vegetarian menus (North Indian, traditional Mughlai, South Indian, street food snacks, and desserts). We ensure high food safety, fresh ingredients, clean setups, and professional servers.'
+    answer: 'Yes, we provide catering coordination in Firozabad. We design customizable vegetarian and non-vegetarian menus (North Indian, traditional Mughlai, South Indian, street food snacks, and desserts). We ensure high food safety, fresh ingredients, clean setups, and professional servers.'
   },
   {
     question: 'What nearby cities do you serve in the region?',
@@ -29,30 +30,31 @@ const faqItems = [
   }
 ];
 
-const venues = [
+const venueOptions = [
   {
-    name: 'Glass City Exhibition Hall',
-    description: 'A modern indoor convention space equipped with modular stall layouts, high-tech acoustics, and business lobbies, ideal for corporate meets and exhibitions.',
-    capacity: '300-1500 guests',
-    features: ['Modern AV routing', 'Air-conditioned halls', 'Exhibition layouts', 'Central location'],
-    rating: 4.8,
-    image: '/images/venue-convention.jpg'
+    type: 'Banquet Halls',
+    description: 'Indoor air-conditioned halls suitable for engagement ceremonies, corporate meetings, and family celebrations, offering controlled lighting, stage setups, and dining areas depending on the customer\'s chosen venue, event requirements, and availability.',
+    features: ['Indoor staging', 'Climate control', 'Dining setups', 'Acoustic support']
   },
   {
-    name: 'Suhag Nagar Celebration Lawn',
-    description: 'A spacious green lawn perfect for grand outdoor weddings, receptions, and traditional family gatherings, complete with custom staging spaces.',
-    capacity: '200-1000 guests',
-    features: ['Spacious green lawn', 'Open catering area', 'Valet parking', 'Bridal suites'],
-    rating: 4.7,
-    image: '/images/venue-heritage.jpeg'
+    type: 'Marriage Lawns & Open Grounds',
+    description: 'Spacious open-air grounds preferred for large wedding receptions, cultural gatherings, and evening events with custom mandap setups and catering layouts depending on the customer\'s chosen venue, event requirements, and availability.',
+    features: ['Open-air layouts', 'Large guest areas', 'Custom entryway arches', 'Lawn illumination']
   },
   {
-    name: 'Royal Crystal Banquet',
-    description: 'An elegant indoor banquet hall designed with crystal fixtures, LED dance floors, and customizable layouts for weddings and social parties.',
-    capacity: '100-500 guests',
-    features: ['Crystal lighting design', 'AC banquet hall', 'Gourmet kitchen', 'Guest accommodation rooms'],
-    rating: 4.6,
-    image: '/images/venue-krishna-hall.jpeg'
+    type: 'Community Venues & Kalyan Mandaps',
+    description: 'Local community halls and mandaps suitable for traditional family rituals, community dinners, and budget-conscious functions depending on the customer\'s chosen venue, event requirements, and availability.',
+    features: ['Traditional floor seating', 'Basic staging', 'Dining spaces', 'Local accessibility']
+  },
+  {
+    type: 'Hotels & Event Spaces',
+    description: 'Hotel event spaces and conference rooms suitable for business meets, dealer conferences, or out-of-town guest functions with lodging support depending on the customer\'s chosen venue, event requirements, and availability.',
+    features: ['Audio-visual support', 'Executive seating', 'In-house coordination', 'Guest rooms']
+  },
+  {
+    type: 'Private Homes & Family Properties',
+    description: 'Doorstep decor and backyard or rooftop setups for intimate birthday celebrations, haldi ceremonies, or small family gatherings customized to the home layout depending on the customer\'s chosen venue, event requirements, and availability.',
+    features: ['Compact backdrops', 'Living room styling', 'Doorstep coordination', 'Flexible layouts']
   }
 ];
 
@@ -70,16 +72,20 @@ export default function FirozabadEventPlannerPage() {
       {/* Hero Banner Section */}
       <section className="relative h-[65vh] flex items-center justify-center text-center text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/60 z-10"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/hero-slide-3.jpeg')" }}
-        ></div>
+        <Image
+          src="/images/firozabad/event-planner-in-firozabad-hero.webp"
+          alt="Event planning and celebration stage decoration in Firozabad"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
         <div className="container mx-auto px-4 relative z-20 max-w-4xl">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 tracking-tight leading-tight">
             Best Event Planner in Firozabad
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl mb-8 text-gray-200">
-            Elite wedding planning, creative glass-themed decorations, corporate exhibition management, and delicious catering across the Glass City.
+            Wedding planning, creative glass-themed decorations, corporate exhibition management, and catering coordination across the Glass City.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="btn-primary text-lg px-8 py-3 rounded-lg shadow-lg">
@@ -106,13 +112,13 @@ export default function FirozabadEventPlannerPage() {
                   About Eventkro: Firozabad’s Creative Event Management Team
                 </h2>
                 <p className="leading-relaxed mb-4">
-                  Welcome to Eventkro, your premier choice for planning and executing high-impact celebrations in Firozabad. Known as the leading <strong>event planner in firozabad</strong>, we bring an artistic approach, operational rigor, and local vendor connections to every occasion. Firozabad is celebrated globally as the Glass City, producing exquisite glass ornaments, chandeliers, and bangles. We believe that this rich artistic legacy should be reflected in the aesthetics of your events. Our designers specialize in creating custom decorations that merge local glass craft with modern floral styling, creating glowing and elegant environments.
+                  Welcome to Eventkro, your reliable service for planning and executing celebrations in Firozabad. As an <strong>event planner in firozabad</strong>, we bring an artistic approach, operational rigor, and local vendor connections to every occasion. Firozabad is celebrated globally as the Glass City, producing exquisite glass ornaments, chandeliers, and bangles. We believe that this rich artistic legacy should be reflected in the aesthetics of your events. Our designers specialize in creating custom decorations that merge local glass craft with modern floral styling, creating glowing and elegant environments.
                 </p>
                 <p className="leading-relaxed mb-4">
-                  Our team manages the entire event workflow, from layout conceptualization to vendor coordination, logistics, catering, and on-site cleanup. We cooperate with the best local catering services, photographers, AV technicians, and decorators in Firozabad. By keeping our processes structured and transparent, we remove the operational challenges commonly faced during planning. Families, business houses, and community organizers trust Eventkro because we deliver visual excellence, budget control, and reliability.
+                  Our team manages the entire event workflow, from layout conceptualization to vendor coordination, logistics, catering, and on-site cleanup. We coordinate with local catering services, photographers, AV technicians, and decorators in Firozabad. By keeping our processes structured and clear, we help manage the operational steps during planning. Families, business houses, and community organizers work with Eventkro for organized planning, coordination, and reliability.
                 </p>
                 <p className="leading-relaxed">
-                  Whether you are planning a traditional wedding reception in Suhag Nagar, a corporate exhibition at Kotla Road, a colorful birthday party with premium balloon arches, or a private family ceremony, Eventkro guarantees an exceptional experience. Experience the difference of a professional approach with Eventkro.
+                  Whether you are planning a traditional wedding reception in Suhag Nagar, a corporate exhibition at Kotla Road, a colorful birthday party with custom balloon arches, or a private family ceremony, Eventkro works to deliver an organized and memorable celebration. Experience the difference of a professional approach with Eventkro.
                 </p>
               </div>
 
@@ -122,7 +128,7 @@ export default function FirozabadEventPlannerPage() {
                   Event Planning Services Customized for Firozabad
                 </h2>
                 <p className="leading-relaxed mb-6">
-                  At Eventkro, we offer a comprehensive range of planning services designed to handle all aspects of your celebration. We design customized mood boards, secure the best local lawns and banquet halls, coordinate multi-cuisine menus, and provide on-site event coordination to ensure that everything runs smoothly.
+                  At Eventkro, we offer a comprehensive range of planning services designed to handle all aspects of your celebration. We design customized mood boards, assist with local lawn and banquet hall options, coordinate multi-cuisine menus, and provide on-site event coordination to ensure that everything runs smoothly.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 not-prose">
                   <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
@@ -139,7 +145,7 @@ export default function FirozabadEventPlannerPage() {
                   </div>
                   <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Themed Balloon Installations</h3>
-                    <p className="text-gray-600 text-sm">Creating premium balloon arches, backdrop walls, and welcome panels for birthdays and baby showers.</p>
+                    <p className="text-gray-600 text-sm">Creating custom balloon arches, backdrop walls, and welcome panels for birthdays and baby showers.</p>
                   </div>
                 </div>
               </div>
@@ -150,7 +156,7 @@ export default function FirozabadEventPlannerPage() {
                   Elegant Wedding Planning & Glass Art Stage Design
                 </h2>
                 <p className="leading-relaxed mb-4">
-                  A wedding is a holy milestone, and celebrating it with beauty, elegance, and traditional honors is our mission. Planning a wedding in Firozabad requires coordinating multiple pre-wedding functions, guest hospitality, decorative setups, and catering menus. As Firozabad’s leading <Link href="/wedding-planner-in-firozabad" className="text-[#ff5722] hover:underline font-semibold">wedding planner in Firozabad</Link>, Eventkro designs weddings that blend rich cultural traditions with luxurious designs. We coordinate with the top wedding lawns and banquet halls, creating a beautiful environment for your guests.
+                  A wedding is a holy milestone, and celebrating it with beauty, elegance, and traditional honors is our mission. Planning a wedding in Firozabad requires coordinating multiple pre-wedding functions, guest hospitality, decorative setups, and catering menus. As a <Link href="/wedding-planner-in-firozabad" className="text-[#ff5722] hover:underline font-semibold">wedding planner in Firozabad</Link>, Eventkro designs weddings that blend rich cultural traditions with thoughtful designs. We coordinate across available wedding lawns and banquet halls in the area, creating a beautiful environment for your guests.
                 </p>
                 <p className="leading-relaxed mb-4">
                   From romantic pre-wedding surprises and <Link href="/proposal-decoration-in-firozabad" className="text-[#ff5722] hover:underline font-semibold">Proposal Decoration in Firozabad</Link> to multi-day wedding celebrations, we handle the planning for every milestone:
@@ -159,7 +165,7 @@ export default function FirozabadEventPlannerPage() {
                   <li><strong>Roka & Sagai:</strong> Traditional ring exchange functions featuring elegant drapes, welcome signages, and guest seating layouts.</li>
                   <li><strong>Vibrant Haldi:</strong> Yellow-themed setups decorated with fresh marigolds, traditional swings, and folk music.</li>
                   <li><strong>Mehendi & Sangeet:</strong> Multi-colored canopy decor, stage and sound setups for dance performances, and seating for mehndi artists.</li>
-                  <li><strong>Main Wedding Day:</strong> Breathtaking mandap setups (domes styled with fresh flowers, lighting pillars, crystal hangings), welcome gates, and royal entry structures.</li>
+                  <li><strong>Main Wedding Day:</strong> Traditional mandap setups (domes styled with fresh flowers, lighting pillars, crystal hangings), welcome gates, and entry structures.</li>
                 </ul>
                 <p className="leading-relaxed">
                   Our coordinators stay on-site during the wedding day, managing the timeline from the welcome ceremony to the Var Mala, dinner service, and final phere. We also coordinate with photographers and videographers to capture every detail.
@@ -171,6 +177,15 @@ export default function FirozabadEventPlannerPage() {
                 <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-gray-100">
                   Creative Birthday Parties & Themed Balloon Decoration
                 </h2>
+                <div className="relative h-64 sm:h-72 md:h-80 w-full rounded-xl overflow-hidden my-6 not-prose">
+                  <Image
+                    src="/images/firozabad/birthday-balloon-decoration.webp"
+                    alt="Birthday balloon decoration and cake backdrop setup in Firozabad"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 66vw"
+                    className="object-cover"
+                  />
+                </div>
                 <p className="leading-relaxed mb-4">
                   Celebrating a milestone birthday or family anniversary calls for customized styling that fits your venue. Eventkro delivers professional birthday party planning and balloon decoration services across Firozabad, tailoring our setups whether you are hosting an intimate home gathering or a large party in a local banquet hall.
                 </p>
@@ -187,6 +202,15 @@ export default function FirozabadEventPlannerPage() {
                 <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-gray-100">
                   Corporate Exhibitions & Business Meet Management
                 </h2>
+                <div className="relative h-64 sm:h-72 md:h-80 w-full rounded-xl overflow-hidden my-6 not-prose">
+                  <Image
+                    src="/images/firozabad/corporate-event-management.webp"
+                    alt="Corporate event stage and conference setup in Firozabad"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 66vw"
+                    className="object-cover"
+                  />
+                </div>
                 <p className="leading-relaxed mb-4">
                   Firozabad’s industrial growth requires professional event managers to execute business conferences, dealer meets, store openings, and corporate celebrations. Eventkro provides reliable corporate event planning services that align with your branding guidelines and schedules. We handle the setup of stages, podiums, registration desks, and backdrop banners.
                 </p>
@@ -194,7 +218,7 @@ export default function FirozabadEventPlannerPage() {
                   We set up clear sound systems, microphones, projectors, and LED displays to support professional presentations. We also coordinate corporate catering, providing customized lunch packets, high-tea packages, and buffet spreads designed to suit professional standards.
                 </p>
                 <p className="leading-relaxed">
-                  Our local network helps you select the best business hotels and convention spaces in Firozabad. Trust Eventkro to manage the scheduling, setup, and logistics of your business meet with absolute precision.
+                  Our local network helps you select suitable business hotels and meeting spaces in Firozabad. Trust Eventkro to manage the scheduling, setup, and logistics of your business meet with structured coordination.
                 </p>
               </div>
 
@@ -204,7 +228,7 @@ export default function FirozabadEventPlannerPage() {
                   Gourmet Catering Services: Multi-Cuisine Buffets
                 </h2>
                 <p className="leading-relaxed mb-4">
-                  Food is a central part of any Indian celebration. Eventkro partners with the finest caterers in Firozabad to deliver delicious multi-cuisine menus prepared under high hygiene standards. We design custom menus featuring traditional North Indian, Awadhi, Mughlai, and Chinese buffets.
+                  Food is a central part of any Indian celebration. Eventkro coordinates with local catering teams in Firozabad to deliver multi-cuisine menus prepared under high hygiene standards. We design custom menus featuring traditional North Indian, Awadhi, Mughlai, and Chinese buffets.
                 </p>
                 <p className="leading-relaxed mb-4">
                   Our catering service setup includes:
@@ -213,7 +237,7 @@ export default function FirozabadEventPlannerPage() {
                   <li><strong>Live Food Counters:</strong> Interactive stations serving fresh chat, golgappas, tandoori starters, and hot beverages.</li>
                   <li><strong>Mughlai & UP Specialties:</strong> Traditional gravies, paneer tikka, and regional sweets (like rabri and milk desserts).</li>
                   <li><strong>Custom Mocktails & Drinks:</strong> Refreshing welcome drinks, shakes, and mocktails.</li>
-                  <li><strong>Hygienic Presentation:</strong> Uniformed waitstaff, clean tables, premium plates, and swift service.</li>
+                  <li><strong>Hygienic Presentation:</strong> Uniformed waitstaff, clean tables, quality tableware, and swift service.</li>
                 </ul>
                 <p className="leading-relaxed">
                   We work closely with you during menu design to accommodate dietary preferences (such as pure vegetarian or Jain food) and guest counts, ensuring an outstanding dining experience.
@@ -249,42 +273,29 @@ export default function FirozabadEventPlannerPage() {
                   <li><strong>Comprehensive Staging Capabilities:</strong> We set up large exhibition pavilions, stages, and registration desks.</li>
                   <li><strong>Customizable Packages:</strong> We offer flexible options (Basic, Premium, Elite) to suit different budgets and layouts.</li>
                   <li><strong>On-Site Coordination:</strong> Our coordinator stays on-site during the entire event, managing timelines and vendors.</li>
-                  <li><strong>Reliability & Transparency:</strong> We offer transparent billing and ensure on-time setup and teardown.</li>
+                  <li><strong>Clear Planning & Estimates:</strong> We offer clear cost outlines and work toward on-time setup and teardown.</li>
                 </ul>
               </div>
 
-              {/* Local Venues Section */}
+              {/* Event Venue Options Section */}
               <div id="venues" className="space-y-6">
                 <h2 className="text-3xl font-bold text-gray-900 pb-2 border-b-2 border-gray-100">
-                  Top Event Venues in Firozabad
+                  Event Venue Options in Firozabad
                 </h2>
                 <p className="text-gray-600 leading-relaxed">
-                  We coordinate with top-rated hotels, lawns, and banquet halls in Firozabad to secure the ideal venue for your celebration:
+                  Eventkro coordinates decoration, staging, audio-visual support, and catering services across diverse event spaces in Firozabad. Service setups are planned and executed depending on the customer&apos;s chosen venue, event requirements, and availability:
                 </p>
                 <div className="space-y-6">
-                  {venues.map((venue, index) => (
-                    <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 p-6 flex flex-col md:flex-row gap-6">
-                      <div className="md:w-1/3 h-48 relative rounded-lg overflow-hidden bg-gray-100">
-                        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${venue.image})` }}></div>
+                  {venueOptions.map((venue, index) => (
+                    <div key={index} className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col justify-between">
+                      <div>
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">{venue.type}</h3>
+                        <p className="text-gray-600 text-sm mb-4 leading-relaxed">{venue.description}</p>
                       </div>
-                      <div className="md:w-2/3 flex flex-col justify-between">
-                        <div>
-                          <div className="flex justify-between items-start mb-2">
-                            <h3 className="text-2xl font-bold text-gray-900">{venue.name}</h3>
-                            <div className="flex items-center bg-[#ff5722]/10 px-3 py-1 rounded-full text-sm font-semibold text-[#ff5722]">
-                              <FaStar className="mr-1 text-xs" /> {venue.rating}
-                            </div>
-                          </div>
-                          <p className="text-gray-600 text-sm mb-4 leading-relaxed">{venue.description}</p>
-                          <div className="flex items-center text-gray-700 text-sm mb-4">
-                            <FaCalendarAlt className="mr-2 text-[#ff5722]" /> Capacity: {venue.capacity}
-                          </div>
-                        </div>
-                        <div className="flex flex-wrap gap-2">
-                          {venue.features.map((f, idx) => (
-                            <span key={idx} className="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full font-medium">{f}</span>
-                          ))}
-                        </div>
+                      <div className="flex flex-wrap gap-2">
+                        {venue.features.map((f, idx) => (
+                          <span key={idx} className="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full font-medium">{f}</span>
+                        ))}
                       </div>
                     </div>
                   ))}
