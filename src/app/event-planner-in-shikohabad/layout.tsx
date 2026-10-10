@@ -1,16 +1,16 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import { pageMetadata } from '../../lib/seo';
-import { siteUrl, SITE_PHONE_PRIMARY, SITE_PHONE_SECONDARY, SITE_EMAIL } from '../../lib/site';
+import { siteUrl } from '../../lib/site';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Best Event Planner in Shikohabad | Wedding & Corporate Management | Eventkro',
-  description: 'Looking for the best event planner in Shikohabad? Eventkro offers premium wedding planning, birthday party decoration, balloon decor, catering, and corporate event management in Shikohabad.',
+  title: 'Event Planner in Shikohabad | Birthday & Pre-Wedding Events | Eventkro',
+  description: 'Looking for an event planner in Shikohabad? Eventkro provides customized planning for Roka, Engagement, Mehndi, Haldi, birthdays, wedding functions, decoration and family celebrations.',
   path: '/event-planner-in-shikohabad',
   keywords: [
     'event planner in shikohabad',
     'wedding planner in shikohabad',
-    'best event planner in shikohabad',
+    'pre wedding planner shikohabad',
     'balloon decoration shikohabad',
     'event decorators shikohabad',
   ],
@@ -22,10 +22,10 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Why is Eventkro the best event planner in Shikohabad?',
+      name: 'What event planning services does Eventkro provide in Shikohabad?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Eventkro provides reliable end-to-end event planning, localized vendor coordination, premium balloon & floral designs, and professional catering in Shikohabad at competitive prices. We manage every detail, ensuring a stress-free client experience.'
+        text: 'Eventkro provides structured event management in Shikohabad through end-to-end planning, requirement-based theme designs, localized vendor coordination, and catering management. We assist local families and hosts, delivering custom styling (including balloon decor and fresh flowers) based on event requirements and budget preferences. Our coordinators stay on-site during the event to help ensure smooth execution.'
       }
     },
     {
@@ -33,7 +33,7 @@ const faqSchema = {
       name: 'What event planning services do you offer in Shikohabad?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We provide full wedding management, pre-wedding functions (Roka, Sagai, Haldi, Mehendi), themed birthday party decorations, balloon arches and backdrop walls, professional catering services, and corporate meetings setup.'
+        text: 'We provide full wedding planning (stage decor, mandap styling), pre-wedding ceremonies (Roka, Sagai, Haldi, Mehendi), themed birthday party decorations (balloon arches, backdrop walls, table styling), anniversary and family celebrations, pure vegetarian and multi-cuisine catering, and professional lighting and audio setups.'
       }
     },
     {
@@ -41,7 +41,7 @@ const faqSchema = {
       name: 'Do you offer catering services in Shikohabad?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes! We offer fully customizable multi-cuisine catering packages (North Indian, traditional UP dishes, Mughlai, street food stalls, and desserts) prepared under high safety and hygiene conditions.'
+        text: 'Yes! Catering coordination is a key part of our service. We design customizable multi-cuisine menus (North Indian, traditional UP recipes, Mughlai, Chinese, and desserts). We operate under high safety and hygiene conditions, providing uniformed waitstaff, clean tables, and quality tableware.'
       }
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: 'How far in advance should I book my event in Shikohabad?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'For weddings and large corporate events, we suggest booking 3 to 6 months in advance. For themed birthday parties or quick balloon decorations, booking 1 to 2 weeks ahead is usually sufficient.'
+        text: 'For grand weddings, ring ceremonies, or large family functions, we suggest booking at least 3 to 6 months in advance. This allows sufficient time to coordinate with chosen local venues and schedule decorators and caterers. For smaller birthday balloon decorations or baby showers, 1 to 2 weeks notice is generally sufficient.'
       }
     },
     {
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'Which nearby locations in the region do you serve?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Along with Shikohabad, we serve the wider Agra Mandal region including Firozabad, Agra, Mathura, Mainpuri, Tundla, and adjacent towns.'
+        text: 'Along with Shikohabad, we serve the wider Agra Mandal region. We routinely manage events in Firozabad, Agra, Mathura, Mainpuri, Tundla, and adjacent towns. Explore our adjacent city landing pages: Event Planner in Agra, Event Planner in Mathura, and Event Planner in Firozabad.'
       }
     }
   ]
@@ -82,33 +82,6 @@ const breadcrumbSchema = {
   ]
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'Eventkro Shikohabad',
-  image: 'https://www.eventkro.in/favicon-512x512.png',
-  '@id': 'https://www.eventkro.in/event-planner-in-shikohabad#localbusiness',
-  url: 'https://www.eventkro.in/event-planner-in-shikohabad',
-  telephone: [SITE_PHONE_PRIMARY, SITE_PHONE_SECONDARY],
-  email: SITE_EMAIL,
-  priceRange: '₹₹',
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 27.1065,
-    longitude: 78.5835
-  },
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Shikohabad Station Road Office',
-    addressLocality: 'Shikohabad',
-    addressRegion: 'Uttar Pradesh',
-    postalCode: '283135',
-    addressCountry: 'IN'
-  },
-  areaServed: 'Shikohabad',
-  description: 'Professional event planning, wedding management, balloon decoration, and catering services in Shikohabad by Eventkro.'
-};
-
 export default function ShikohabadEventPlannerLayout({
   children,
 }: {
@@ -121,9 +94,6 @@ export default function ShikohabadEventPlannerLayout({
       </Script>
       <Script id="shikohabad-breadcrumb-schema" type="application/ld+json">
         {JSON.stringify(breadcrumbSchema)}
-      </Script>
-      <Script id="shikohabad-localbusiness-schema" type="application/ld+json">
-        {JSON.stringify(localBusinessSchema)}
       </Script>
       {children}
     </>

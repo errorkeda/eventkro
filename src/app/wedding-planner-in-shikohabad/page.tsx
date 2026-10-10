@@ -87,7 +87,7 @@ export default function ShikohabadWeddingPlannerPage() {
               Get Free Quote
             </Link>
             <Link href="/event-planner-in-shikohabad" className="btn-secondary text-lg px-8 py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white border-white/30">
-              Shikohabad General Events
+              Event Planner in Shikohabad
             </Link>
           </div>
         </div>

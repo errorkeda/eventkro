@@ -576,6 +576,7 @@ export default function HomePage() {
               { name: 'Proposal Decoration in Firozabad', path: '/proposal-decoration-in-firozabad', desc: 'Surprise proposal setups with premium balloon arches and custom glass-art lighting.' },
               { name: 'Proposal Decoration in Shikohabad', path: '/proposal-decoration-in-shikohabad', desc: 'Affordable romantic surprise decorations, room transformations, and event planning.' },
               { name: 'Event Planner in Firozabad', path: '/event-planner-in-firozabad', desc: 'Customized planning for weddings, birthdays, corporate events and celebrations in Firozabad.' },
+              { name: 'Event Planner in Shikohabad', path: '/event-planner-in-shikohabad', desc: 'Customized planning for Roka, Engagement, Mehndi, Haldi, birthdays and family celebrations in Shikohabad.' },
             ].map((item, index) => (
               <Link
                 key={index}
