@@ -578,6 +578,7 @@ export default function HomePage() {
               { name: 'Event Planner in Firozabad', path: '/event-planner-in-firozabad', desc: 'Customized planning for weddings, birthdays, corporate events and celebrations in Firozabad.' },
               { name: 'Event Planner in Shikohabad', path: '/event-planner-in-shikohabad', desc: 'Customized planning for Roka, Engagement, Mehndi, Haldi, birthdays and family celebrations in Shikohabad.' },
               { name: 'Event Planner in Hathras', path: '/event-planner-in-hathras', desc: 'Customized planning for birthdays, Roka, family celebrations, devotional programs and special events in Hathras.' },
+              { name: 'Event Planner in Etah', path: '/event-planner-in-etah', desc: 'Customized planning for birthdays, Roka, family celebrations, devotional programs and special events in Etah.' },
             ].map((item, index) => (
               <Link
                 key={index}

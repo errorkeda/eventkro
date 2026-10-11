@@ -465,9 +465,15 @@ export default function AligarhEventPlannerPage() {
                     </Link>
                     <Link
                       href="/event-planner-in-shikohabad"
-                      className="text-gray-600 hover:text-[#ff5722] text-sm py-2 transition-colors"
+                      className="text-gray-600 hover:text-[#ff5722] text-sm py-2 border-b border-gray-200 transition-colors"
                     >
                       Event Planner in Shikohabad →
+                    </Link>
+                    <Link
+                      href="/event-planner-in-etah"
+                      className="text-gray-600 hover:text-[#ff5722] text-sm py-2 transition-colors"
+                    >
+                      Event Planner in Etah →
                     </Link>
                   </div>
                 </div>
