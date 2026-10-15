@@ -126,7 +126,7 @@ export default function FirozabadPage() {
                   </p>
                   <p className="text-gray-600 mb-4">
                     Our event planning services in Firozabad specialize in incorporating the city's unique glass art 
-                    into your events while ensuring professional execution and attention to detail.
+                    into your events while ensuring professional execution and attention to detail. For couples planning romantic milestones, glowing terrace backdrops, or private surprise setups, we also deliver tailored <Link href="/proposal-decoration-in-firozabad" className="text-[#ff5722] hover:underline font-semibold">Proposal Decoration in Firozabad</Link>.
                   </p>
 
                   <h3 className="text-2xl font-bold mt-8 mb-4">Why Choose Firozabad for Your Event</h3>

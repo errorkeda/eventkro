@@ -5,7 +5,7 @@ import { siteUrl, SITE_PHONE_PRIMARY, SITE_PHONE_SECONDARY, SITE_EMAIL } from '.
 
 export const metadata: Metadata = pageMetadata({
   title: 'Proposal Decoration in Firozabad | Romantic Proposal Setup & Surprise Planning',
-  description: 'Plan the ultimate surprise with premium proposal decoration in Firozabad. Eventkro offers romantic rooftop setups, candle light setups, hotel room decorations, and "Will You Marry Me" balloon and light arrangements in Firozabad.',
+  description: 'Surprise proposal decoration in Firozabad by Eventkro. Custom room makeovers, terrace candlelight setups, neon backdrops, and romantic decor tailored to your venue.',
   path: '/proposal-decoration-in-firozabad',
   keywords: [
     'proposal decoration firozabad',
@@ -29,39 +29,39 @@ const faqSchema = {
       name: 'What is the cost of proposal decoration in Firozabad?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The price for proposal decoration in Firozabad starts from ₹3,999 for romantic room balloon decorations and ranges up to ₹17,999+ for premium outdoor terrace or garden setups.'
+        text: 'Proposal decoration pricing in Firozabad is customized based on your setup requirements rather than a rigid fixed package. Pricing depends on your chosen venue (private bedroom, hotel suite, or open terrace), backdrop dimensions, lighting complexity, floral styling, and optional add-ons like live acoustic music or photography. Contact Eventkro with your venue details for a transparent quotation.'
       }
     },
     {
       '@type': 'Question',
-      name: 'Do you provide rooftop proposal decoration?',
+      name: 'Can you set up proposal decoration on a private terrace or rooftop?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes! We specialize in rooftop proposal decorations in Firozabad, using structural frameworks, LED neon signs, fairy lights, and glass candle jars to create a safe and spectacular surprise.'
+        text: 'Yes. We design outdoor terrace and rooftop proposal setups across Firozabad. For open-air spaces, we ensure structural stability for backdrop frameworks, secure lighting connections for neon signs and fairy lights, and arrange illumination suitable for evening photography.'
       }
     },
     {
       '@type': 'Question',
-      name: 'Can you arrange same day proposal decoration?',
+      name: 'How early should we book a surprise proposal in Firozabad?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, same-day bookings are available in Firozabad. Please call our team early in the morning so we can confirm decorator availability and material logistics.'
+        text: 'We recommend discussing your proposal setup at least 2 to 3 days in advance. This allows time to coordinate venue access, prepare custom floral arrangements, and test specialized lighting elements. Short-notice requests are evaluated based on decorator schedule and material availability.'
       }
     },
     {
       '@type': 'Question',
-      name: 'Do you provide hotel room proposal decoration?',
+      name: 'Can you decorate a hotel room or private dining space?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, we provide romantic surprise room makeovers. We decorate hotel rooms across Firozabad with rose petals, custom metallic balloons, and custom lighting setups.'
+        text: 'Yes, provided the hotel management or restaurant host permits outside event decorators. We coordinate setup access in advance so the room or private dining space is completely decorated before your scheduled arrival.'
       }
     },
     {
       '@type': 'Question',
-      name: 'Can you customize proposal themes?',
+      name: 'Can proposal themes and color palettes be customized?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Absolutely! We can customize themes using specific color palettes, custom neon text, fresh flowers, and live guitar players.'
+        text: 'Absolutely. Every setup can be customized to your preferred color palette (such as classic crimson, blush rose gold, or warm ivory), personalized neon signage, balloon styling, and floral selections.'
       }
     }
   ]
@@ -86,64 +86,24 @@ const breadcrumbSchema = {
   ]
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'Eventkro Firozabad Proposal Decoration',
-  image: 'https://www.eventkro.in/favicon-512x512.png',
-  '@id': 'https://www.eventkro.in/proposal-decoration-in-firozabad#localbusiness',
-  url: 'https://www.eventkro.in/proposal-decoration-in-firozabad',
-  telephone: [SITE_PHONE_PRIMARY, SITE_PHONE_SECONDARY],
-  email: SITE_EMAIL,
-  priceRange: '₹₹',
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 27.1592,
-    longitude: 78.3957
-  },
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Firozabad Glass Bazar Office',
-    addressLocality: 'Firozabad',
-    addressRegion: 'Uttar Pradesh',
-    postalCode: '283203',
-    addressCountry: 'IN'
-  },
-  areaServed: 'Firozabad',
-  description: 'Premium surprise proposal decoration, romantic setup, rooftop proposal decoration, candle light dinner proposal, and balloon decor by Eventkro in Firozabad.'
-};
-
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Proposal Decoration in Firozabad',
   serviceType: 'Surprise Proposal Decoration',
   provider: {
-    '@type': 'LocalBusiness',
-    name: 'Eventkro Firozabad Proposal Decoration',
-    image: 'https://www.eventkro.in/favicon-512x512.png',
+    '@type': 'Organization',
+    name: 'Eventkro',
+    url: 'https://www.eventkro.in',
     telephone: [SITE_PHONE_PRIMARY, SITE_PHONE_SECONDARY],
     email: SITE_EMAIL,
-    priceRange: '₹₹',
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 27.1592,
-      longitude: 78.3957
-    },
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Firozabad Glass Bazar Office',
-      addressLocality: 'Firozabad',
-      addressRegion: 'Uttar Pradesh',
-      postalCode: '283203',
-      addressCountry: 'IN'
-    }
+    image: 'https://www.eventkro.in/favicon-512x512.png'
   },
   areaServed: {
-    '@type': 'Place',
-    name: 'Firozabad'
+    '@type': 'AdministrativeArea',
+    name: 'Firozabad, Uttar Pradesh, India'
   },
-  description: 'Premium surprise proposal decoration, romantic setup, rooftop proposal decoration, candle light dinner proposal, and balloon decor by Eventkro in Firozabad.'
+  description: 'Surprise proposal decoration, romantic setups, rooftop proposal setups, candle light dinner decor, and balloon decor by Eventkro in Firozabad.'
 };
 
 export default function FirozabadProposalLayout({
@@ -158,9 +118,6 @@ export default function FirozabadProposalLayout({
       </Script>
       <Script id="firozabad-proposal-breadcrumb-schema" type="application/ld+json">
         {JSON.stringify(breadcrumbSchema)}
-      </Script>
-      <Script id="firozabad-proposal-localbusiness-schema" type="application/ld+json">
-        {JSON.stringify(localBusinessSchema)}
       </Script>
       <Script id="firozabad-proposal-service-schema" type="application/ld+json">
         {JSON.stringify(serviceSchema)}

@@ -1,31 +1,32 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
-import { FaMapMarkerAlt, FaCalendarAlt, FaStar, FaChevronDown } from 'react-icons/fa';
+import { FaChevronDown } from 'react-icons/fa';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
 const faqItems = [
   {
     question: 'What is the cost of proposal decoration in Firozabad?',
-    answer: 'The price for proposal decoration in Firozabad starts from ₹3,999 for romantic room balloon decorations and ranges up to ₹17,999+ for premium outdoor terrace or garden setups.'
+    answer: 'Proposal decoration pricing in Firozabad is customized based on your setup requirements rather than a rigid fixed package. Pricing depends on your chosen venue (private bedroom, hotel suite, or open terrace), backdrop dimensions, lighting complexity, floral styling, and optional add-ons like live acoustic music or photography. Contact Eventkro with your venue details for a transparent quotation.'
   },
   {
-    question: 'Do you provide rooftop proposal decoration?',
-    answer: 'Yes! We specialize in rooftop proposal decorations in Firozabad, using structural frameworks, LED neon signs, fairy lights, and glass candle jars to create a safe and spectacular surprise.'
+    question: 'Can you set up proposal decoration on a private terrace or rooftop?',
+    answer: 'Yes. We design outdoor terrace and rooftop proposal setups across Firozabad. For open-air spaces, we ensure structural stability for backdrop frameworks, secure lighting connections for neon signs and fairy lights, and arrange illumination suitable for evening photography.'
   },
   {
-    question: 'Can you arrange same day proposal decoration?',
-    answer: 'Yes, same-day bookings are available in Firozabad. Please call our team early in the morning so we can confirm decorator availability and material logistics.'
+    question: 'How early should we book a surprise proposal in Firozabad?',
+    answer: 'We recommend discussing your proposal setup at least 2 to 3 days in advance. This allows time to coordinate venue access, prepare custom floral arrangements, and test specialized lighting elements. Short-notice requests are evaluated based on decorator schedule and material availability.'
   },
   {
-    question: 'Do you provide hotel room proposal decoration?',
-    answer: 'Yes, we provide romantic surprise room makeovers. We decorate hotel rooms across Firozabad with rose petals, custom metallic balloons, and custom lighting setups.'
+    question: 'Can you decorate a hotel room or private dining space?',
+    answer: 'Yes, provided the hotel management or restaurant host permits outside event decorators. We coordinate setup access in advance so the room or private dining space is completely decorated before your scheduled arrival.'
   },
   {
-    question: 'Can you customize proposal themes?',
-    answer: 'Absolutely! We can customize themes using specific color palettes, custom neon text, fresh flowers, and live guitar players.'
+    question: 'Can proposal themes and color palettes be customized?',
+    answer: 'Absolutely. Every setup can be customized to your preferred color palette (such as classic crimson, blush rose gold, or warm ivory), personalized neon signage, balloon styling, and floral selections.'
   }
 ];
 
@@ -41,22 +42,26 @@ export default function FirozabadProposalPage() {
       <Header />
 
       {/* 1. Hero Section */}
-      <section className="relative h-[65vh] flex items-center justify-center text-center text-white overflow-hidden">
+      <section className="relative min-h-[65vh] pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 flex items-center justify-center text-center text-white overflow-hidden">
+        <Image
+          src="/images/firozabad/proposal-decoration-in-firozabad-hero.webp"
+          alt="Proposal decoration with illuminated romantic setup in Firozabad"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
         <div className="absolute inset-0 bg-black/60 z-10"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/hero-1.jpeg')" }}
-        ></div>
         <div className="container mx-auto px-4 relative z-20 max-w-4xl">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 tracking-tight leading-tight">
             Proposal Decoration in Firozabad
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl mb-8 text-gray-200">
-            Create an illuminated, romantic milestone in the Glass City. Premium surprise proposal decorations, customized balloon setups, and candlelit walkways designed to wow.
+            Plan an unforgettable surprise milestone in Firozabad. Custom room transformations, glowing candlelight pathways, and illuminated backdrops designed around your chosen venue and style.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="btn-primary text-lg px-8 py-3 rounded-lg shadow-lg">
-              Get Free Quote
+              Get Custom Quote
             </Link>
             <Link href="/wedding-planner-in-firozabad" className="btn-secondary text-lg px-8 py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white border-white/30">
               Firozabad Wedding Services
@@ -70,7 +75,7 @@ export default function FirozabadProposalPage() {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             
-            {/* Left/Main Content Column (1500+ Words) */}
+            {/* Left/Main Content Column */}
             <div className="lg:col-span-2 space-y-12 text-gray-700">
               
               {/* 2. Why Choose Eventkro */}
@@ -79,205 +84,274 @@ export default function FirozabadProposalPage() {
                   Why Choose Eventkro for Surprise Proposal Planning in Firozabad
                 </h2>
                 <p className="leading-relaxed mb-4">
-                  Firozabad, famously known across India as the Glass City, is a hub of light, color, and exquisite craftsmanship. The city's famous glasswork represents brightness and celebration, making it a beautiful and symbolic setting to plan a surprise marriage proposal. When you choose to pop the question in Firozabad, you want a setup that stands out with stunning visual depth. Eventkro specializes in designing premium surprise proposal decorations in Firozabad that incorporate local glass-lighting aesthetics with contemporary styling.
+                  Popping the question is one of the most personal milestones in a relationship. Firozabad, renowned as the Glass City, has a long-standing association with vibrant color, light, and craftsmanship. At Eventkro, we draw inspiration from this local affinity for light to create romantic atmospheres using warm fairy lights, protected candle arrangements, and illuminated neon statements that make your special moment unforgettable.
                 </p>
                 <p className="leading-relaxed mb-4">
-                  Planning a surprise requires flawless execution, complete secrecy, and reliable material sourcing. Eventkro provides comprehensive planning services in Firozabad. We coordinate directly with hotel owners, local venues, and private rooftops to secure exclusive access for your surprise. Our decorators handle the transportation, installation, and final clean-up, leaving you free to focus entirely on your partner.
+                  Organizing a surprise proposal demands strict secrecy, punctual setup execution, and thoughtful venue coordination. Whether you are arranging an intimate bedroom transformation at home, booking a private terrace, or planning decor at a local guest suite, our team manages every detail. We liaise directly with your venue host to secure setup access, test all lighting fixtures in advance, and ensure the space is pristine before you arrive.
                 </p>
                 <p className="leading-relaxed mb-4">
-                  Here is why couples trust Eventkro for proposal decorations in Firozabad:
+                  Couples choose Eventkro for proposal decorations in Firozabad because of our attention to practical execution:
                 </p>
                 <ul className="space-y-3 mb-6 list-disc pl-5">
-                  <li><strong>Illuminated Glass Themes:</strong> We use high-quality local glass candelabras, crystal hanging ornaments, and custom light layouts to create a glowing environment.</li>
-                  <li><strong>Custom Design Themes:</strong> From classic red rose heart walkways to bohemian cabana tents and customized "WILL YOU MARRY ME" neon signs.</li>
-                  <li><strong>Complete Secret Coordination:</strong> We work behind the scenes to coordinate setup times with hotel or cafe managers, ensuring the surprise is kept completely secret.</li>
-                  <li><strong>Premium Materials Only:</strong> We use helium-grade chrome balloons, sturdy metal backdrops, and safe LED lighting frameworks to ensure the setup looks premium in photos.</li>
+                  <li><strong>Discreet Planning & Confidentiality:</strong> We coordinate all logistics quietly so your partner remains completely unaware of the surprise until the door opens.</li>
+                  <li><strong>Warm Illumination & Glass Accents:</strong> We pair LED tea lights inside protective glass cylinders with ambient fairy light canopies and custom neon text to craft glowing photo settings.</li>
+                  <li><strong>Venue-Specific Customization:</strong> We tailor our frameworks to fit room dimensions, terrace railing limits, and ceiling heights without damaging property walls or surfaces.</li>
+                  <li><strong>Dependable Materials:</strong> We use helium-grade chrome balloons, sturdy metal backdrops, and safety-tested electrical fittings for clean, reliable setups.</li>
                 </ul>
               </div>
 
-              {/* 3. Romantic Proposal Decoration Packages */}
-              <div id="packages" className="prose max-w-none">
+              {/* 3. Proposal Setup Options */}
+              <div id="setup-options" className="prose max-w-none">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-gray-100">
-                  Romantic Proposal Decoration Packages in Firozabad
+                  Romantic Proposal Setup Options in Firozabad
                 </h2>
+                <div className="h-64 sm:h-72 md:h-80 relative rounded-xl overflow-hidden mb-6 shadow-sm not-prose">
+                  <Image
+                    src="/images/firozabad/illuminated-proposal-backdrop-firozabad.webp"
+                    alt="Illuminated proposal backdrop and marquee decoration in Firozabad"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 66vw"
+                    className="object-cover"
+                  />
+                </div>
                 <p className="leading-relaxed mb-6">
-                  We offer three customizable proposal packages in Firozabad, designed to suit different venue structures, spatial capacities, and budgets.
+                  Every love story is unique, and we do not believe in forcing fixed packages on personal celebrations. Instead, we offer three versatile setup options that can be tailored to your space, aesthetic preferences, and budget:
                 </p>
                 <div className="space-y-6 not-prose">
-                  {/* Basic Package */}
-                  <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                    <div className="flex flex-wrap justify-between items-start mb-4">
+                  {/* Option 1: Intimate Room Surprise */}
+                  <div className="p-6 bg-gray-50 rounded-xl border border-gray-200">
+                    <div className="flex flex-wrap justify-between items-start mb-3">
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900">1. Glass City Cozy Room Surprise (Basic)</h3>
-                        <p className="text-gray-500 text-sm mt-1">Ideal for indoor hotel room surprises and private home rooms</p>
+                        <h3 className="text-xl font-bold text-gray-900">Intimate Room Surprise Setup</h3>
+                        <p className="text-gray-500 text-sm mt-1">Recommended for private bedrooms, home spaces, or reserved hotel rooms</p>
                       </div>
-                      <span className="bg-[#ff5722]/10 text-[#ff5722] text-sm px-3 py-1 rounded-full font-bold">From ₹3,999</span>
+                      <span className="bg-[#ff5722]/10 text-[#ff5722] text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider">Custom Setup</span>
                     </div>
-                    <ul className="text-sm text-gray-600 space-y-2 pl-4 list-disc">
-                      <li>150 Metallic Balloons (custom colors: Red, Silver, Gold, or Pastel Rose)</li>
-                      <li>"Will You Marry Me" foil alphabet letters or standard backdrop garland</li>
-                      <li>Rose petal heart shape outline on the bed or floor</li>
-                      <li>Ceiling balloon cloud with dangling ribbons and couple photos</li>
-                      <li>Pathway with safe LED tea-light candles in glass jars</li>
+                    <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                      A cozy, romantic transformation designed for indoor spaces where privacy is your top priority. We focus on impactful focal points that create immediate emotion as you enter.
+                    </p>
+                    <ul className="text-sm text-gray-600 space-y-2 pl-4 list-disc mb-4">
+                      <li>Balloon styling using metallic, chrome, or pastel palettes tailored to your theme</li>
+                      <li>"Will You Marry Me" foil alphabet letters or customized hanging wall garland</li>
+                      <li>Heart-shaped outline on the bed or floor crafted with fresh rose petals</li>
+                      <li>Floating ceiling balloon cloud with ribbon strands and personalized couple photos</li>
+                      <li>Pathway illuminated with safe battery-operated LED candles inside glass votives</li>
                     </ul>
+                    <p className="text-xs text-gray-500 italic">
+                      * Final arrangement depends on room dimensions, ceiling height, and surface mounting rules.
+                    </p>
                   </div>
 
-                  {/* Premium Package */}
-                  <div className="p-6 bg-gray-50 rounded-xl border border-gray-200 relative">
-                    <span className="absolute -top-3 right-6 bg-red-600 text-white text-xs px-3 py-1 rounded-full font-semibold">Bestseller</span>
-                    <div className="flex flex-wrap justify-between items-start mb-4">
+                  {/* Option 2: Illuminated Proposal Backdrop & Marquee */}
+                  <div className="p-6 bg-gray-50 rounded-xl border border-gray-200">
+                    <div className="flex flex-wrap justify-between items-start mb-3">
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900">2. Illuminated Crystal Arch Setup (Premium)</h3>
-                        <p className="text-gray-500 text-sm mt-1">Perfect for private rooftops, spacious lawns, or resort terraces</p>
+                        <h3 className="text-xl font-bold text-gray-900">Illuminated Proposal Backdrop & Marquee Setup</h3>
+                        <p className="text-gray-500 text-sm mt-1">Recommended for private terraces, covered courtyards, or spacious living areas</p>
                       </div>
-                      <span className="bg-[#ff5722]/10 text-[#ff5722] text-sm px-3 py-1 rounded-full font-bold">From ₹9,999</span>
+                      <span className="bg-[#ff5722]/10 text-[#ff5722] text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider">Custom Setup</span>
                     </div>
-                    <ul className="text-sm text-gray-600 space-y-2 pl-4 list-disc">
-                      <li>3ft tall LED marquee letters spelling out "MARRY ME"</li>
-                      <li>7ft circular metal mesh ring backdrop decorated with premium roses, wisteria, and glass ornaments</li>
-                      <li>Red carpet runway flanked by fairy lights and candlelit glass jars</li>
-                      <li>2 cold pyro sparkler units to light up right at the proposal moment</li>
-                      <li>On-site coordinator to manage setup timings and music</li>
+                    <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                      A dramatic, photo-ready setting designed to create a grand impression. Features large freestanding illuminated letters combined with architectural arch frameworks.
+                    </p>
+                    <ul className="text-sm text-gray-600 space-y-2 pl-4 list-disc mb-4">
+                      <li>3ft tall illuminated LED marquee letters spelling out "MARRY ME"</li>
+                      <li>7ft circular or geometric metallic backdrop styled with fresh foliage, roses, and glass accents</li>
+                      <li>Red carpet walkway lined with warm fairy lighting and candlelit glass jars</li>
+                      <li>Cold pyro sparkler units to trigger right at the moment you pop the question</li>
+                      <li>On-site coordinator to manage lighting timing and background music synchronization</li>
                     </ul>
+                    <p className="text-xs text-gray-500 italic">
+                      * Requires access to standard electrical power outlets and adequate clearance height.
+                    </p>
                   </div>
 
-                  {/* Elite Package */}
-                  <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                    <div className="flex flex-wrap justify-between items-start mb-4">
+                  {/* Option 3: Cabana & Candlelight Proposal */}
+                  <div className="p-6 bg-gray-50 rounded-xl border border-gray-200">
+                    <div className="flex flex-wrap justify-between items-start mb-3">
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900">3. Royal Glass Chandelier Proposal (Elite)</h3>
-                        <p className="text-gray-500 text-sm mt-1">Our premium luxury option combining live music, dinner, and heavy decor</p>
+                        <h3 className="text-xl font-bold text-gray-900">Cabana & Candlelight Proposal Setup</h3>
+                        <p className="text-gray-500 text-sm mt-1">Recommended for private rooftops, outdoor lawns, or dining courtyards</p>
                       </div>
-                      <span className="bg-[#ff5722]/10 text-[#ff5722] text-sm px-3 py-1 rounded-full font-bold">From ₹17,999</span>
+                      <span className="bg-[#ff5722]/10 text-[#ff5722] text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider">Custom Setup</span>
                     </div>
-                    <ul className="text-sm text-gray-600 space-y-2 pl-4 list-disc">
-                      <li>Private decorated wooden cabana tent setup with flowing white drapes and a central glass chandelier</li>
-                      <li>Premium fresh flower backdrop (roses, orchids, and wisteria hangings)</li>
-                      <li>Large "WILL YOU MARRY ME" neon signage board mounted on a premium geometric backdrop</li>
-                      <li>Private candlelit dining table setup with customized multi-course dinner menu</li>
-                      <li>Live acoustic guitar player playing romantic melodies for 30 minutes</li>
-                      <li>4 cold pyro firework units and helium-filled balloon clouds</li>
+                    <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                      An immersive dining and proposal environment pairing open-air cabana drapery with soft candlelight and custom floral installations.
+                    </p>
+                    <ul className="text-sm text-gray-600 space-y-2 pl-4 list-disc mb-4">
+                      <li>Freestanding wooden cabana structure draped in flowing sheer white or champagne fabrics</li>
+                      <li>Floral backdrop styling incorporating fresh roses, orchids, and wisteria hangings</li>
+                      <li>Custom LED neon signage board mounted on a decorated mesh panel</li>
+                      <li>Intimate candlelit dining table arrangement with tailored table runners and glassware</li>
+                      <li>Optional live acoustic guitarist to perform your partner's favorite romantic melodies</li>
                     </ul>
+                    <p className="text-xs text-gray-500 italic">
+                      * Suitable for outdoor spaces with wind shielding and early afternoon setup access.
+                    </p>
                   </div>
+                </div>
+
+                <div className="mt-6 p-4 bg-orange-50 rounded-lg border border-orange-100 flex flex-col sm:flex-row items-center justify-between gap-4 not-prose">
+                  <div>
+                    <p className="font-semibold text-gray-900 text-sm">Need a custom combination or unique theme?</p>
+                    <p className="text-xs text-gray-600 mt-0.5">We customize lighting, colors, and backdrops to your exact venue specifications.</p>
+                  </div>
+                  <Link href="/contact" className="btn-primary text-sm px-5 py-2.5 rounded-lg whitespace-nowrap shadow">
+                    Discuss Your Proposal Setup
+                  </Link>
                 </div>
               </div>
 
               {/* 4. Rooftop Proposal Setup */}
               <div id="rooftop" className="prose max-w-none">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-gray-100">
-                  Rooftop Proposal Setup in Firozabad
+                  Terrace & Rooftop Proposal Setups in Firozabad
                 </h2>
                 <p className="leading-relaxed mb-4">
-                  Rooftop terraces in Firozabad offer a beautiful view of the city skyline, especially at night when the city lights up. Setting up a surprise on a rooftop provides an exclusive, intimate space with a dramatic sky view. Our **rooftop proposal decoration** services handle the challenges of outdoor installations, such as securing the backdrops against the wind and optimizing light for low-light photography.
+                  Open-air terraces in Firozabad provide an open sky backdrop and privacy that makes evening proposals feel truly magical. However, rooftop installations introduce unique technical challenges that require experienced event planning. Wind resistance is paramount: backdrops, floral meshes, and marquee letters must be securely counterweighted to ensure complete stability throughout the evening.
                 </p>
                 <p className="leading-relaxed mb-4">
-                  For a rooftop setup, we recommend utilizing large LED marquee letters, warm bulb strings, and a geometric floral arch. Flanking the walkway with lanterns and flower petals completes the pathway to your new beginning. We coordinate closely with the hotel owners or cafe managers to secure early entry, ensuring the setup is fully complete before you arrive.
+                  Lighting placement also requires careful calibration for night setups. We position warm ambient spotlights and bulb strings to illuminate you and your partner clearly without washing out the glowing "MARRY ME" letters or neon signs in photos. Our team coordinates directly with your terrace property host or management to secure early afternoon access, allowing us to finish installation and test all electrical connections well before dusk.
                 </p>
               </div>
 
               {/* 5. Candle Light Proposal Setup */}
               <div id="candle-light" className="prose max-w-none">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-gray-100">
-                  Candle Light Proposal Setup in Firozabad
+                  Candlelight & Pathway Proposal Setups in Firozabad
                 </h2>
+                <div className="h-64 sm:h-72 md:h-80 relative rounded-xl overflow-hidden mb-6 shadow-sm not-prose">
+                  <Image
+                    src="/images/firozabad/cabana-candlelight-proposal-firozabad.webp"
+                    alt="Cabana and candlelight proposal decoration setup in Firozabad"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 66vw"
+                    className="object-cover"
+                  />
+                </div>
                 <p className="leading-relaxed mb-4">
-                  Candlelight has an enduring association with romance. The soft, warm glow of flickering candles creates a quiet, intimate atmosphere that helps you express your feelings. Our **candle light proposal setup** in Firozabad utilizes dozens of high-quality wax candles placed safely inside protective glass cylinders, combined with battery-operated LED tea lights for absolute safety near fabrics.
+                  Candlelight creates a timeless atmosphere of intimacy and focus. In our candlelight proposal setups, we place deep emphasis on both aesthetic glow and venue safety. We utilize dozens of pillar wax candles placed inside tall cylindrical glass hurricane shades. These protect the flames from indoor drafts and outdoor breezes while reflecting light with high visual depth.
                 </p>
                 <p className="leading-relaxed mb-4">
-                  We build paths of deep red rose petals leading to a massive illuminated heart outline. Flanked by delicate glass vases and soft spotlighting, the candles illuminate your pathway. We coordinate table placement and seating layouts, ensuring you have the perfect angle to ask the big question.
+                  Near fabric drapery, carpets, and floral runners, we integrate battery-operated LED tea lights for absolute peace of mind. A lush walkway of fresh rose petals guides your partner toward an illuminated focal point, creating an unforgettable walk toward your proposal moment.
                 </p>
               </div>
 
-              {/* 6. Hotel Room Proposal Decoration */}
+              {/* 6. Hotel Room & Private Home Room Proposals */}
               <div id="hotel-room" className="prose max-w-none">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-gray-100">
-                  Surprise Hotel Room Proposal Decoration in Firozabad
+                  Hotel Room & Private Home Room Proposals
                 </h2>
+                <div className="h-64 sm:h-72 md:h-80 relative rounded-xl overflow-hidden mb-6 shadow-sm not-prose">
+                  <Image
+                    src="/images/firozabad/room-proposal-decoration-firozabad.webp"
+                    alt="Romantic room proposal decoration setup in Firozabad"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 66vw"
+                    className="object-cover"
+                  />
+                </div>
                 <p className="leading-relaxed mb-4">
-                  A **hotel room proposal decoration** is the perfect option if you want to keep the moment private and away from public spaces. Firozabad has many premium resorts, heritage properties, and modern hotels where room decoration is permitted.
+                  An indoor room makeover is an ideal option for couples who value complete privacy away from public spaces. We regularly coordinate proposal decorations in private home bedrooms and living spaces across Firozabad, as well as in booked hotel rooms where outside decorators are permitted.
                 </p>
                 <p className="leading-relaxed mb-4">
-                  Our decorators coordinate with the hotel reception or use your room key to gain access while you are out visiting local glass exhibitions or having lunch. Within 90 minutes, we transform the room. We fill the ceiling with chrome helium balloons, place a rose petal heart on the bed, set up a warm "Will You Marry Me" neon sign, and lay out candlelit pathways from the entryway. When you open the door, the visual surprise is immediate and highly emotional.
+                  When planning a hotel or guest room surprise, we advise guests to confirm outside decorator access policies with the front desk beforehand. Once permission is verified, our decorators coordinate timing to complete the transformation while you are out for dinner or sightseeing. Within 90 to 120 minutes, we prepare balloon canopies, petal arrangements, ambient LED lighting, and illuminated signage, leaving the room ready for an emotional entrance.
                 </p>
               </div>
 
-              {/* 7. Marriage Proposal Decoration */}
+              {/* 7. Creative Proposal Ideas */}
               <div id="marriage-proposal" className="prose max-w-none">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-gray-100">
-                  Unique Marriage Proposal Decoration Ideas
+                  Creative Proposal Decoration Themes & Concepts
                 </h2>
                 <p className="leading-relaxed mb-4">
-                  We believe that your marriage proposal decoration should be as unique as your relationship. That is why we provide custom styling options.
+                  Personalizing your proposal setup ensures it feels authentic to your journey as a couple. We collaborate with you to develop creative concepts that reflect your shared memories:
                 </p>
-                <p className="leading-relaxed mb-4">
-                  Some of our popular creative design concepts in Firozabad include:
-                </p>
-                <ul className="space-y-2 mb-4 list-disc pl-5">
-                  <li><strong>The Crystal Cabana:</strong> A decorated wooden cabana draped in white flowing sheets, with local wisteria highlight and hanging glass ornaments, combining tradition and modern styling.</li>
-                  <li><strong>The Neon Backdrop:</strong> A circular metal mesh panel decorated with pampas grass and pink/white roses, with a personalized neon sign of your choice.</li>
-                  <li><strong>The Memory Walkway:</strong> A path decorated with fairy lights and custom photo stands, showing key moments of your relationship leading up to the proposal.</li>
+                <ul className="space-y-3 mb-4 list-disc pl-5">
+                  <li><strong>The Memory Gallery Walk:</strong> A pathway featuring framed or ribbon-suspended photographs of your favorite relationship milestones, lit with gentle fairy lights that guide your partner to the proposal arch.</li>
+                  <li><strong>Modern Monochromatic & Pastel Palettes:</strong> Beyond traditional red, we style setups in elegant champagne gold, blush rose, lilac pastel, or midnight navy paired with warm white illumination.</li>
+                  <li><strong>Custom Neon Statements:</strong> Expressive neon phrases such as "Forever Starts Here", "Better Together", or your custom couple initials mounted on circular metal frames or acrylic boards.</li>
+                  <li><strong>Acoustic Music & Photography Coordination:</strong> Pairing your decor reveal with a live acoustic guitarist playing your partner's favorite romantic melody, and a discrete photographer to capture the genuine reaction.</li>
                 </ul>
               </div>
 
-              {/* 8. Surprise Proposal Planning */}
+              {/* 8. Surprise Proposal Planning Workflow */}
               <div id="surprise-planning" className="prose max-w-none">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-gray-100">
-                  How We Plan Your Surprise Proposal in Firozabad
+                  How We Coordinate Your Surprise Proposal
                 </h2>
                 <p className="leading-relaxed mb-4">
-                  Eventkro handles the complete planning process to keep the surprise a secret and ensure everything runs smoothly:
+                  Executing a surprise requires seamless communication and strict adherence to timelines. Here is how our coordination process works:
                 </p>
                 <ol className="space-y-3 mb-6 list-decimal pl-5">
-                  <li><strong>Consultation:</strong> We discuss your location preference, budget, and design ideas.</li>
-                  <li><strong>Site Recce & Booking:</strong> We coordinates with the hotel or rooftop manager to handle bookings and setup permissions.</li>
-                  <li><strong>Design Approval:</strong> We share a layout design showing the exact colors, backdrops, and lighting setups.</li>
-                  <li><strong>Setup Execution:</strong> Our local team sets up the decor, test the lights, and prepares the space hours before you arrive. We send progress updates via WhatsApp.</li>
-                  <li><strong>The Big Moment:</strong> We manage the music, coordinate the photographer, and trigger cold pyros as you propose.</li>
+                  <li><strong>Initial Discussion:</strong> We discuss your preferred date, venue format (home, terrace, or hotel), aesthetic vision, and personal preferences.</li>
+                  <li><strong>Requirement Scoping & Quotation:</strong> We map out the necessary decor elements, verify dimensions, and provide a clear quotation based on your exact requirements.</li>
+                  <li><strong>Venue Access Coordination:</strong> We confirm setup access hours, power outlet locations, and property permissions with your venue contact or hotel desk.</li>
+                  <li><strong>On-Site Installation:</strong> Our decorating crew arrives hours early to install backdrops, inflate balloons, test lighting circuits, and arrange fresh florals.</li>
+                  <li><strong>The Big Moment:</strong> You arrive at a fully lit, camera-ready setting to ask the question with complete confidence.</li>
                 </ol>
               </div>
 
-              {/* 9. Proposal Decoration Pricing */}
+              {/* 9. Proposal Decoration Cost in Firozabad */}
               <div id="pricing-details" className="prose max-w-none">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-gray-100">
-                  Proposal Decoration Pricing in Firozabad
+                  Proposal Decoration Cost in Firozabad
                 </h2>
                 <p className="leading-relaxed mb-4">
-                  We believe in upfront, transparent pricing. Below is a breakdown of our standard rates and popular additions:
+                  At Eventkro, we do not believe in rigid fixed packages because every proposal is unique. The cost of proposal decoration in Firozabad depends directly on your chosen venue, setup scale, and specific decorative requirements. Rather than paying for items you do not need, your quotation reflects only what is necessary to bring your vision to life.
                 </p>
-                <table className="min-w-full divide-y divide-gray-200 border border-gray-200 rounded-lg overflow-hidden my-6 not-prose">
-                  <thead className="bg-gray-50">
-                    <tr>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Service / Decor Item</th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Estimated Pricing</th>
-                    </tr>
-                  </thead>
-                  <tbody className="bg-white divide-y divide-gray-200 text-sm">
-                    <tr>
-                      <td className="px-6 py-4 font-medium text-gray-900">Standard Room Surprise Decoration</td>
-                      <td className="px-6 py-4">₹3,999 - ₹5,999</td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4 font-medium text-gray-900">Outdoor Heart Arch & Pathway Setup</td>
-                      <td className="px-6 py-4">₹8,999 - ₹11,999</td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4 font-medium text-gray-900">Premium Marquee "MARRY ME" LED Setup</td>
-                      <td className="px-6 py-4">₹11,999 - ₹14,999</td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4 font-medium text-gray-900">Add-on: Live Acoustic Guitarist (30 mins)</td>
-                      <td className="px-6 py-4">₹3,000</td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4 font-medium text-gray-900">Add-on: Proposal Photographer</td>
-                      <td className="px-6 py-4">₹4,000 - ₹6,500</td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4 font-medium text-gray-900">Add-on: Cold Pyro Sparklers (Set of 4)</td>
-                      <td className="px-6 py-4">₹1,500</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <p className="leading-relaxed mb-4">
+                  Here are the primary factors that shape the quotation for your setup:
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose my-6 text-sm">
+                  <div className="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                    <h4 className="font-bold text-gray-900 mb-1">1. Venue Format & Spatial Scale</h4>
+                    <p className="text-gray-600 leading-relaxed text-xs">
+                      An intimate bedroom makeover requires different quantities and mounting techniques compared to an open-air terrace or large private hall.
+                    </p>
+                  </div>
+                  <div className="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                    <h4 className="font-bold text-gray-900 mb-1">2. Backdrop & Structural Elements</h4>
+                    <p className="text-gray-600 leading-relaxed text-xs">
+                      Selections range from compact wall balloon arches to freestanding 7ft circular metal rings, wooden cabana tents, or geometric panels.
+                    </p>
+                  </div>
+                  <div className="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                    <h4 className="font-bold text-gray-900 mb-1">3. Lettering & Signage Choices</h4>
+                    <p className="text-gray-600 leading-relaxed text-xs">
+                      Options include foil balloon lettering, illuminated 3ft marquee alphabet letters, or custom-fabricated LED neon quote signage.
+                    </p>
+                  </div>
+                  <div className="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                    <h4 className="font-bold text-gray-900 mb-1">4. Floral Styling Preferences</h4>
+                    <p className="text-gray-600 leading-relaxed text-xs">
+                      Choice between fresh seasonal florals (cut roses, orchids, wisteria) and durable botanical silk floral arrangements.
+                    </p>
+                  </div>
+                  <div className="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                    <h4 className="font-bold text-gray-900 mb-1">5. Lighting Infrastructure</h4>
+                    <p className="text-gray-600 leading-relaxed text-xs">
+                      Number of ambient fairy light strands, warm Edison bulb arrays, protective glass candle cylinders, and cold pyro sparkler units.
+                    </p>
+                  </div>
+                  <div className="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                    <h4 className="font-bold text-gray-900 mb-1">6. Optional Add-On Services</h4>
+                    <p className="text-gray-600 leading-relaxed text-xs">
+                      Arranging a live acoustic guitarist for a 30-minute serenade, a proposal photographer, or customized private dining table styling.
+                    </p>
+                  </div>
+                </div>
+
+                <p className="leading-relaxed mb-6">
+                  To receive an accurate, transparent quotation, share your preferred date, venue location in Firozabad, and decor vision with our team. We provide a detailed estimate with zero hidden surprises.
+                </p>
+
+                <div className="not-prose text-center sm:text-left">
+                  <Link href="/contact" className="btn-primary text-base px-6 py-3 rounded-lg shadow font-semibold inline-block">
+                    Get Custom Quote
+                  </Link>
+                </div>
               </div>
 
               {/* 10. Areas We Serve */}
@@ -286,24 +360,24 @@ export default function FirozabadProposalPage() {
                   Localities and Areas We Serve in Firozabad
                 </h2>
                 <p className="leading-relaxed mb-4">
-                  Eventkro provides surprise decoration services across Firozabad and the wider Brij region. We travel to your chosen hotel, home, or resort.
+                  Eventkro delivers proposal decoration services across Firozabad city and adjacent areas in the district. We travel directly to your home, private terrace, or selected hotel location.
                 </p>
                 <p className="leading-relaxed mb-4">
-                  Our service coverage area in Firozabad includes:
+                  Our coverage areas in Firozabad include:
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 not-prose mb-6 text-sm text-gray-600">
-                  <div className="p-3 bg-gray-50 rounded border border-gray-100">✓ Suhag Nagar</div>
-                  <div className="p-3 bg-gray-50 rounded border border-gray-100">✓ Kotla Road</div>
-                  <div className="p-3 bg-gray-50 rounded border border-gray-100">✓ Glass Bazar</div>
-                  <div className="p-3 bg-gray-50 rounded border border-gray-100">✓ Station Road</div>
-                  <div className="p-3 bg-gray-50 rounded border border-gray-100">✓ Shikohabad Road</div>
-                  <div className="p-3 bg-gray-50 rounded border border-gray-100">✓ Tundla</div>
-                  <div className="p-3 bg-gray-50 rounded border border-gray-100">✓ Jalalpur</div>
-                  <div className="p-3 bg-gray-50 rounded border border-gray-100">✓ Dakhal</div>
-                  <div className="p-3 bg-gray-50 rounded border border-gray-100">✓ Asafabad</div>
+                  <div className="p-3 bg-gray-50 rounded border border-gray-100 font-medium">✓ Suhag Nagar</div>
+                  <div className="p-3 bg-gray-50 rounded border border-gray-100 font-medium">✓ Kotla Road</div>
+                  <div className="p-3 bg-gray-50 rounded border border-gray-100 font-medium">✓ Glass Bazar</div>
+                  <div className="p-3 bg-gray-50 rounded border border-gray-100 font-medium">✓ Station Road</div>
+                  <div className="p-3 bg-gray-50 rounded border border-gray-100 font-medium">✓ Shikohabad Road</div>
+                  <div className="p-3 bg-gray-50 rounded border border-gray-100 font-medium">✓ Tundla</div>
+                  <div className="p-3 bg-gray-50 rounded border border-gray-100 font-medium">✓ Jalalpur</div>
+                  <div className="p-3 bg-gray-50 rounded border border-gray-100 font-medium">✓ Dakhal</div>
+                  <div className="p-3 bg-gray-50 rounded border border-gray-100 font-medium">✓ Asafabad</div>
                 </div>
-                <p className="leading-relaxed">
-                  We also cover nearby surrounding locations in the Firozabad district. Contact us to verify travel coverage for rural resorts.
+                <p className="leading-relaxed text-sm">
+                  We also coordinate decorations for private venues across the wider Firozabad district. Contact us with your location details to confirm setup logistics.
                 </p>
               </div>
 
@@ -348,10 +422,10 @@ export default function FirozabadProposalPage() {
             <div className="lg:col-span-1">
               <div className="sticky top-24 space-y-6">
                 <div className="bg-gray-50 border border-gray-100 rounded-2xl p-6 shadow-sm">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Book Your Surprise</h3>
-                  <p className="text-gray-600 text-sm mb-6">Connect with our design team. We customize setups to fit your space, style, and budget perfectly.</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Plan Your Surprise</h3>
+                  <p className="text-gray-600 text-sm mb-6">Connect with our design team. We tailor proposal decorations to fit your venue, style, and budget perfectly.</p>
                   <Link href="/contact" className="btn-primary w-full text-center block py-3 rounded-lg shadow-lg font-semibold mb-4">
-                    Get Free Quote
+                    Get Custom Quote
                   </Link>
                   <div className="text-center text-gray-500 text-xs">
                     Or call our primary hotline: <br/>
@@ -385,10 +459,10 @@ export default function FirozabadProposalPage() {
         <div className="container mx-auto px-4 text-center max-w-3xl">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Plan the Perfect Proposal in Firozabad?</h2>
           <p className="text-lg mb-8 text-white/95 leading-relaxed">
-            Let's design a custom setup that tells your unique love story in the Glass City. Contact Eventkro to discuss package customizations.
+            Let's design a custom setup that tells your unique love story in the Glass City. Contact Eventkro to discuss setup ideas, venue permissions, and custom pricing.
           </p>
           <Link href="/contact" className="bg-white text-[#ff5722] hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-md">
-            Contact Us Now
+            Plan Your Surprise Now
           </Link>
         </div>
       </section>

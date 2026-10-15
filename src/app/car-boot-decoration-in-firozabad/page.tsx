@@ -184,7 +184,7 @@ export default function FirozabadCarBootPage() {
                   <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
                     <h3 className="text-xl font-bold text-gray-900 mb-2">3. Car Boot Proposal Decoration</h3>
                     <p className="text-gray-600 text-sm mb-2">
-                      Pop the question in the most romantic way possible. A <strong>car boot proposal decoration</strong> features glowing "MARRY ME" neon signs, heavy floral borders, fairy lights, and red roses. Combine this setup with a quiet spot outside town or a private parking area for an unforgettable proposal.
+                      Pop the question in the most romantic way possible. A <strong>car boot proposal decoration</strong> features glowing "MARRY ME" neon signs, heavy floral borders, fairy lights, and red roses. Combine this setup with a quiet spot outside town or a private parking area for an unforgettable proposal. If you prefer an expansive room transformation, glowing terrace setup, or marquee backdrop instead of a vehicle trunk surprise, explore our comprehensive <Link href="/proposal-decoration-in-firozabad" className="text-[#ff5722] hover:underline font-semibold">Proposal Decoration in Firozabad</Link> options.
                     </p>
                     <p className="text-xs text-gray-500 font-semibold">Recommended Themes: Dreamy White & Gold, Romantic Red Rose, Neon Glow Proposal.</p>
                   </div>
