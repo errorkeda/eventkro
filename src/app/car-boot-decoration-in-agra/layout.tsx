@@ -4,8 +4,8 @@ import { pageMetadata } from '../../lib/seo';
 import { siteUrl, SITE_PHONE_PRIMARY, SITE_PHONE_SECONDARY, SITE_EMAIL } from '../../lib/site';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Best Car Boot Decoration in Agra | Surprise Car Trunk Decor | Eventkro',
-  description: 'Looking for the best car boot decoration in Agra? Eventkro offers premium car dikki decoration, balloon & light setups for birthdays, anniversaries, proposals, and surprise car trunk decor in Agra.',
+  title: 'Car Boot Decoration in Agra | Surprise Car Trunk Decor | Eventkro',
+  description: 'Surprise car boot decoration in Agra by Eventkro. Doorstep car dikki balloon setups, fairy lights, and custom surprise themes for birthdays and anniversaries.',
   path: '/car-boot-decoration-in-agra',
   keywords: [
     'car boot decoration in agra',
@@ -24,42 +24,42 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What is car boot decoration and how does it work in Agra?',
+      name: 'What is a car boot decoration and how does the surprise work in Agra?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Car boot decoration (also known as car dikki decoration or trunk decoration) is a surprise setup arranged inside the trunk of a car. When the recipient opens the boot, they are greeted by a beautiful setup of balloons, LED lights, flowers, banners, and personalized messages. Eventkro provides this setup at your doorstep, public parking spaces, or selected surprise spots across Agra.'
+        text: 'A car boot decoration—also known as car trunk or car dikki decor—is a tailored celebration setup arranged inside the rear boot of your vehicle. Our decorator arrives at your chosen private location in Agra, styling the trunk with balloons, fairy lights, personalized photos, and thematic banners. You simply park the vehicle, bring the recipient over, and open the trunk latch to reveal the celebration.'
       }
     },
     {
       '@type': 'Question',
-      name: 'For which occasions can I book a car trunk decoration in Agra?',
+      name: 'How is the price calculated for car boot decoration in Agra?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Car boot decorations are perfect for romantic marriage proposals, birthday surprises, anniversary celebrations, welcoming a newborn baby, valentines day, or celebrating achievements. We design custom themes matching your specific occasion.'
+        text: 'Eventkro does not use fixed or rigid package rates. Pricing is custom-quoted based on your specific requirements: the vehicle type and boot dimensions (hatchback, sedan, or SUV), the density of balloon styling, choice of lighting, customized photo prints, neon sign rentals, and specific setup timings.'
       }
     },
     {
       '@type': 'Question',
-      name: 'How long does the setup take and do I need to bring my car to a shop?',
+      name: 'Where can a car trunk decoration be arranged in Agra?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No, you do not need to bring your car to us. Our decorators will travel to your preferred location in Agra (home, cafe, office, or public area) and complete the setup right in your trunk. The installation process takes approximately 30 to 45 minutes.'
+        text: 'Decorations are typically arranged at private residential driveways, apartment parking areas, private farmhouse grounds, or independent parking spaces where you have parking access. We ask clients to ensure the vehicle is parked in an accessible, legal spot where our decorator can safely work.'
       }
     },
     {
       '@type': 'Question',
-      name: 'What materials are used for surprise car decoration in Agra?',
+      name: 'How much advance notice is required to book a car surprise setup?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We use high-quality metallic and chrome latex balloons, foil letters, star/heart balloons, LED fairy lights, customize photo printouts, ribbon hangings, and fresh flowers or artificial flower garlands depending on the package you select.'
+        text: 'We recommend booking at least 24 to 48 hours in advance so our team can prepare custom photo prints, foil lettering, and coordinate vendor scheduling. However, same-day inquiries in Agra can often be accommodated depending on decorator availability.'
       }
     },
     {
       '@type': 'Question',
-      name: 'Which areas in Agra do you serve for car boot decoration?',
+      name: 'Will the decoration materials damage the car paint, glass, or weather seals?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We provide doorstep car boot decorations in all major localities of Agra, including Fatehabad Road, Sanjay Place, Kamla Nagar, Dayalbagh, Shahganj, Sikandra, Tajganj, Sastripuram, and near the Taj Mahal. We also cover nearby locations in Agra Mandal.'
+        text: 'No. Our decorators use non-marking painter\'s masking tape, soft ribbon ties, and suction cups specifically designed to protect automotive paint, rubber weather strips, and clear coats. No harsh adhesives or abrasive materials are applied to the vehicle.'
       }
     }
   ]
@@ -84,31 +84,24 @@ const breadcrumbSchema = {
   ]
 };
 
-const localBusinessSchema = {
+const serviceSchema = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'Eventkro Agra Car Boot Decoration',
-  image: 'https://www.eventkro.in/favicon-512x512.png',
-  '@id': 'https://www.eventkro.in/car-boot-decoration-in-agra#localbusiness',
-  url: 'https://www.eventkro.in/car-boot-decoration-in-agra',
-  telephone: [SITE_PHONE_PRIMARY, SITE_PHONE_SECONDARY],
-  email: SITE_EMAIL,
-  priceRange: '₹₹',
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 27.1767,
-    longitude: 78.0081
+  '@type': 'Service',
+  name: 'Car Boot Decoration in Agra',
+  serviceType: 'Car Boot Decoration',
+  provider: {
+    '@type': 'Organization',
+    name: 'Eventkro',
+    url: 'https://www.eventkro.in',
+    telephone: [SITE_PHONE_PRIMARY, SITE_PHONE_SECONDARY],
+    email: SITE_EMAIL,
+    image: 'https://www.eventkro.in/favicon-512x512.png'
   },
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Agra City Center',
-    addressLocality: 'Agra',
-    addressRegion: 'Uttar Pradesh',
-    postalCode: '282001',
-    addressCountry: 'IN'
+  areaServed: {
+    '@type': 'AdministrativeArea',
+    name: 'Agra, Uttar Pradesh, India'
   },
-  areaServed: 'Agra',
-  description: 'Premium surprise car boot decoration, car dikki balloon setups, and trunk decorations for birthdays, anniversaries, and proposals in Agra by Eventkro.'
+  description: 'Surprise car boot decoration, car dikki balloon setups, fairy lights, and personalized trunk decor in Agra by Eventkro.'
 };
 
 export default function AgraCarBootDecorationLayout({
@@ -124,8 +117,8 @@ export default function AgraCarBootDecorationLayout({
       <Script id="agra-car-boot-breadcrumb-schema" type="application/ld+json">
         {JSON.stringify(breadcrumbSchema)}
       </Script>
-      <Script id="agra-car-boot-localbusiness-schema" type="application/ld+json">
-        {JSON.stringify(localBusinessSchema)}
+      <Script id="agra-car-boot-service-schema" type="application/ld+json">
+        {JSON.stringify(serviceSchema)}
       </Script>
       {children}
     </>

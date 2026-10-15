@@ -129,7 +129,7 @@ export default function AgraPage() {
                   </p>
                   <p className="text-gray-600 mb-4">
                     Our event planning services in Agra specialize in creating memorable experiences that 
-                    leverage the city's unique character while ensuring world-class execution and attention to detail.
+                    leverage the city's unique character while ensuring world-class execution and attention to detail. For doorstep surprises and mobile trunk setups celebrating birthdays or anniversaries, we also coordinate specialized <Link href="/car-boot-decoration-in-agra" className="text-[#ff5722] hover:underline font-semibold">Car Boot Decoration in Agra</Link>.
                   </p>
 
                   <h3 className="text-2xl font-bold mt-8 mb-4">Why Choose Agra for Your Event</h3>
